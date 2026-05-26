@@ -13,13 +13,17 @@
         nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             modules = [
-                ./configuration.nix
-                home-manager.nixosModules.default
+                ./hosts/thinkpad
+                ./modules/nixos
+                home-manager.nixosModules.home-manager
                 {
                     home-manager = {
                         useGlobalPkgs = true;
                         useUserPackages = true;
-                        users.zhaolun = import ./home.nix;
+                        users.zhaolun = {
+                            imports = [ ./modules/home ];
+                            home.stateVersion = "25.11";
+                        };
                         backupFileExtension = "backup";
                     	extraSpecialArgs = { flakeRoot = self; };
                     };

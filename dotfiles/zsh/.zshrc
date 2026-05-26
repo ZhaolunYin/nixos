@@ -7,7 +7,6 @@ export ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/.zcompdump"
 # ========== OH-MY-ZSH CONFIGURATION ==========
 export ZSH="$HOME/.oh-my-zsh"
 
-# Remove Powerlevel10k theme, keep useful plugins
 plugins=(
     git
     colored-man-pages
@@ -35,11 +34,6 @@ else
 fi
 
 export SUDO_PROMPT="🔐 Password please: "
-
-precmd() {
-    # Reset to a steady beam cursor after full-screen apps like Neovim exit.
-    printf '\e[6 q'
-}
 
 # ========== EDITOR CONFIGURATION ==========
 # Neovim as default editor
@@ -138,12 +132,6 @@ ZSH_HIGHLIGHT_STYLES[command]=fg=green,bold
 ZSH_HIGHLIGHT_STYLES[builtin]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[alias]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[function]=fg=cyan,bold
-
-autoload -Uz compinit
-if [[ -n "$ZSH_COMPDUMP" ]]; then
-    mkdir -p "${ZSH_COMPDUMP:h}"
-fi
-compinit -C -d "$ZSH_COMPDUMP"
 
 # Better completion
 zstyle ':completion:*' menu no

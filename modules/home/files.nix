@@ -67,7 +67,6 @@
     ".config/tmux".source = "${flakeRoot}/dotfiles/tmux";
     ".config/waybar".source = "${flakeRoot}/dotfiles/waybar";
     ".config/yazi".source = "${flakeRoot}/dotfiles/yazi";
-    ".zshrc".source = "${flakeRoot}/dotfiles/zsh/.zshrc";
     ".zprofile".source = "${flakeRoot}/dotfiles/zsh/.zprofile";
     ".gitconfig".text = ''
 	[user]
