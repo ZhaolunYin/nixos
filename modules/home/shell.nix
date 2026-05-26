@@ -46,7 +46,7 @@
             shellAliases = {
                 ls = "eza --icons --group-directories-first";
                 tree = "eza --icons --group-directories-first -T";
-                cat = "bat -p --theme=Catppuccin\ Mocha";
+                cat = "bat -p --theme=Catppuccin\\ Mocha";
                 less = "bat --paging=always";
                 grep = "rg --color=auto --engine=auto";
                 find = "fd";
@@ -69,7 +69,7 @@
                 EDITOR = "nvim";
                 VISUAL = "nvim";
                 GIT_EDITOR = "nvim";
-                MANPAGER = "nvim +Man!";
+                MANPAGER = "less";
                 BROWSER = "firefox";
                 LANG="en_GB.UTF-8";
                 LC_CTYPE="en_GB.UTF-8";
@@ -86,7 +86,7 @@
                 LC_IDENTIFICATION="en_GB.UTF-8";
                 LC_ALL="en_GB.UTF-8";
 
-                BAT_THEME = "Catppuccin\ Mocha";
+                BAT_THEME = "Catppuccin Mocha";
                 FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git";
                 FZF_CTRL_T_COMMAND = "fd --type f --hidden --follow --exclude .git";
                 FZF_DEFAULT_OPTS = ''

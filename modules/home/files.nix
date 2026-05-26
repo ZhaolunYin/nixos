@@ -48,9 +48,7 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    ".config/btop".source = "${flakeRoot}/dotfiles/btop";
     ".config/dunst".source = "${flakeRoot}/dotfiles/dunst";
-    ".config/fastfetch".source = "${flakeRoot}/dotfiles/fastfetch";
     ".config/gtk-3.0".source = "${flakeRoot}/dotfiles/gtk/gtk-3.0";
     ".config/gtk-4.0".source = "${flakeRoot}/dotfiles/gtk/gtk-4.0";
     ".gtkrc-2.0".source = "${flakeRoot}/dotfiles/gtk/.gtkrc-2.0";
