@@ -1,0 +1,74 @@
+@import "mocha.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* BAR BASE */
+window#waybar {
+  background: transparent;
+  border-bottom: 2px solid transparent;
+}
+
+/* MODULE BASE */
+#window, #clock, #battery, #temperature, #backlight, #pulseaudio, #tray {
+  padding: 6px 14px;
+  margin: 6px 4px;
+  border-radius: 10px;
+
+  background: transparent;
+  color: @text;
+
+  border: 2px solid @mauve;
+}
+
+/* WORKSPACES */
+#workspaces {
+  margin-left: 8px;
+}
+
+#workspaces button {
+  padding: 4px 12px;
+  margin: 4px;
+  border-radius: 10px;
+
+  border: 2px solid @rosewater;
+  color: #444;
+  background: transparent;
+}
+
+/* ACTIVE WORKSPACE (main flex) */
+#workspaces button.active {
+  color: @mauve;
+  border: 2px solid @mauve
+}
+
+
+/* CLOCK = center highlight */
+#window, #clock {
+  font-weight: bold;
+  color: @blue;
+  background: @mantle;
+}
+
+/* AUDIO = pink accent */
+#pulseaudio {
+  min-width: 80px;
+}
+
+/* IDLE INHIBITOR */
+#idle_inhibitor {
+  padding: 6px 10px;
+  margin: 4px;
+  border-radius: 8px;
+
+  color: @crust;
+  background: @yellow;
+}
+
+#idle_inhibitor.activated {
+  background: @teal;
+}
+
