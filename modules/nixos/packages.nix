@@ -46,5 +46,7 @@
         zip
         unzip
         zoxide
+        yazi
+        kiwix
     ];
 }

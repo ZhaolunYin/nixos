@@ -21,7 +21,9 @@
                         useGlobalPkgs = true;
                         useUserPackages = true;
                         users.zhaolun = {
-                            imports = [ ./modules/home ];
+                            imports = [ 
+                                ./modules/home
+                            ];
                             home.stateVersion = "25.11";
                         };
                         backupFileExtension = "backup";

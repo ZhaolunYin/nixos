@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, catppuccin, ... }:
 
 {
     programs = {
@@ -37,7 +37,6 @@
                     "colored-man-pages"
                     "command-not-found"
                     "extract"
-                    "sudo"
                     "web-search"
                     "copyfile"
                     "copypath"
@@ -57,6 +56,7 @@
                 top = "btop";
                 f = "fastfetch";
                 icat = "kitten icat";
+                cd = "z";
                 ".." = "cd ..";
                 "..." = "cd ../..";
                 "...." = "cd ../../..";
@@ -71,9 +71,22 @@
                 GIT_EDITOR = "nvim";
                 MANPAGER = "nvim +Man!";
                 BROWSER = "firefox";
-                LANG = "en_GB.UTF-8";
-                LC_ALL = "en_GB.UTF-8";
-                BAT_THEME = "Catppuccin Mocha";
+                LANG="en_GB.UTF-8";
+                LC_CTYPE="en_GB.UTF-8";
+                LC_NUMERIC="en_GB.UTF-8";
+                LC_TIME="en_GB.UTF-8";
+                LC_COLLATE="en_GB.UTF-8";
+                LC_MONETARY="en_GB.UTF-8";
+                LC_MESSAGES="en_GB.UTF-8";
+                LC_PAPER="en_GB.UTF-8";
+                LC_NAME="en_GB.UTF-8";
+                LC_ADDRESS="en_GB.UTF-8";
+                LC_TELEPHONE="en_GB.UTF-8";
+                LC_MEASUREMENT="en_GB.UTF-8";
+                LC_IDENTIFICATION="en_GB.UTF-8";
+                LC_ALL="en_GB.UTF-8";
+
+                BAT_THEME = "Catppuccin\ Mocha";
                 FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git";
                 FZF_CTRL_T_COMMAND = "fd --type f --hidden --follow --exclude .git";
                 FZF_DEFAULT_OPTS = ''
@@ -86,12 +99,22 @@
                 SUDO_PROMPT = "🔐 Password: ";
             };
             initContent = ''
+                precmd() {
+                    printf '\e[6 q'
+                }
+                eval "$(zoxide init zsh)"
                 fastfetch
+            '';
+            profileExtra = ''
+                if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+                    exec start-hyprland
+                fi
             '';
         };
         starship = {
             enable = true;
             enableZshIntegration = true;
+            settings.add_newline = true;
         };
         fzf = {
             enable = true;

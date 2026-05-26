@@ -63,11 +63,8 @@
     ".config/nvim".source = "${flakeRoot}/dotfiles/nvim";
     ".config/pavucontrol.ini".source = "${flakeRoot}/dotfiles/pavucontrol/pavucontrol.ini";
     ".config/rofi".source = "${flakeRoot}/dotfiles/rofi";
-    ".config/starship.toml".source = "${flakeRoot}/dotfiles/starship/starship.toml";
-    ".config/tmux".source = "${flakeRoot}/dotfiles/tmux";
     ".config/waybar".source = "${flakeRoot}/dotfiles/waybar";
     ".config/yazi".source = "${flakeRoot}/dotfiles/yazi";
-    ".zprofile".source = "${flakeRoot}/dotfiles/zsh/.zprofile";
     ".gitconfig".text = ''
 	[user]
 		email = yinzhaolun2012@gmail.com
