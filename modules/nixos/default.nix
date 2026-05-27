@@ -5,5 +5,6 @@
         ./core.nix
         ./packages.nix
         ./display.nix
+        ./garbage.nix
     ];
 }
