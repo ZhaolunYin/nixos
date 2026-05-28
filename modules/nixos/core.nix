@@ -11,6 +11,8 @@
         };
     };
 
+    security.sudo.extraConfig = "Defaults pwfeedback";
+
     fonts.packages = with pkgs; [
         nerd-fonts.jetbrains-mono
         nerd-fonts.symbols-only
