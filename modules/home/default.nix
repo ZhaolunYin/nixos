@@ -6,9 +6,13 @@
         ./files.nix
         ./git.nix
         ./gnupg.nix
+        ./hypridle.nix
+        ./hyprland.nix
+        ./hyprlock.nix
         ./kitty.nix
         ./packages.nix
         ./neovim.nix
+        ./network.nix
         ./shell.nix
         ./tmux.nix
         ./vesktop.nix

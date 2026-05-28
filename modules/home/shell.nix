@@ -125,8 +125,8 @@
                 fastfetch
             '';
             profileExtra = ''
-                if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-                    exec start-hyprland
+                if uwsm check may-start && uwsm select; then
+                    exec uwsm start default
                 fi
             '';
         };

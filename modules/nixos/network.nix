@@ -15,6 +15,4 @@
             "8.8.8.8"
         ];
     };
-    # nm-applet
-    services.network-manager-applet.enable = true;
 }
