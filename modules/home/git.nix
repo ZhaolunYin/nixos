@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
     programs.git = {
         enable = true;
@@ -8,7 +7,7 @@
 		        name = "Zhaolun Yin";
             };
             credential = {
-                helper = "${pkgs.pass}/bin/pass";
+                helper = "cache --timeout=28800";
             };
             init = {
                 defaultBranch = "main";
