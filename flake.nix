@@ -24,7 +24,7 @@
                             imports = [ 
                                 ./modules/home
                             ];
-                            home.stateVersion = "25.11";
+                            home.stateVersion = "26.05";
                         };
                         backupFileExtension = "backup";
                     	extraSpecialArgs = { flakeRoot = self; };

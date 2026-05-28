@@ -66,11 +66,20 @@
                 nano = "nvim";
             };
             sessionVariables = {
+                # Shell
                 EDITOR = "nvim";
                 VISUAL = "nvim";
                 GIT_EDITOR = "nvim";
                 MANPAGER = "less";
                 BROWSER = "firefox";
+                # Hyprland
+                XCURSOR_SIZE = "36";
+                XCURSOR_THEME = "catppuccin-mocha-mauve-cursors";
+                HYPRCURSOR_SIZE = "36";
+                HYPRCURSOR_THEME = "catppuccin-mocha-mauve-cursors";
+                WLR_NO_HARDWARE_CURSORS = "1";
+                LIBVA_DRIVER_NAME = "amd";
+                # Locale
                 LANG="en_GB.UTF-8";
                 LC_CTYPE="en_GB.UTF-8";
                 LC_NUMERIC="en_GB.UTF-8";
@@ -85,7 +94,7 @@
                 LC_MEASUREMENT="en_GB.UTF-8";
                 LC_IDENTIFICATION="en_GB.UTF-8";
                 LC_ALL="en_GB.UTF-8";
-
+                # Theme
                 BAT_THEME = "Catppuccin Mocha";
                 FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git";
                 FZF_CTRL_T_COMMAND = "fd --type f --hidden --follow --exclude .git";
@@ -96,11 +105,21 @@
                     --color=selected-bg:#45475A \
                     --color=border:#6C7086,label:#CDD6F4
                 '';
+                # Sudo prompt
                 SUDO_PROMPT = "🔐 Password: ";
             };
             initContent = ''
                 precmd() {
                     printf '\e[6 q'
+                }
+                lazygit() {
+                    git add .
+                    if [ $1 > /dev/null ]; then
+                        git commit -m $1
+                    else
+                        git commit -m 'changed stuff'
+                    fi
+                    git push
                 }
                 eval "$(zoxide init zsh)"
                 fastfetch

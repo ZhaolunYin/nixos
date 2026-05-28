@@ -18,14 +18,11 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
         bat
-        btop
         duf
         dunst
         dust
         eza
-        fastfetch
         fd
-        gnupg
         google-chrome
         grimblast
         hypridle
@@ -39,10 +36,8 @@
         pinentry-curses
         procs
         ripgrep
-        starship
         trash-cli
         waybar
         yazi
-        zoxide
     ];
 }

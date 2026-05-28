@@ -10,9 +10,11 @@
             enable = true;
             wifi.backend = "iwd";
         };
-        interfaces = {
-            wlp2s0.useDHCP = true;
-            enp1s0f0.useDHCP = true;
-        };
+        nameservers = [
+            "1.1.1.1"
+            "8.8.8.8"
+        ];
     };
+    # nm-applet
+    services.network-manager-applet.enable = true;
 }

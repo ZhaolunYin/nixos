@@ -12,7 +12,7 @@
         brightnessctl
         fzf
         git
-        kitty
+        libnotify
         neovim
         rofi
         tmux
