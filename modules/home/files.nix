@@ -1,4 +1,4 @@
-{ flakeRoot, ... }:
+{ pkgs, ... }:
 
 {
   # The home.packages option allows you to install Nix packages into your
@@ -6,15 +6,15 @@
 
 
   home.file = {
-    ".config/gtk-3.0".source = "${flakeRoot}/dotfiles/gtk/gtk-3.0";
-    ".config/gtk-4.0".source = "${flakeRoot}/dotfiles/gtk/gtk-4.0";
-    ".gtkrc-2.0".source = "${flakeRoot}/dotfiles/gtk/.gtkrc-2.0";
-    ".local/share/themes".source = "${flakeRoot}/dotfiles/gtk/themes";
-    ".icons".source = "${flakeRoot}/dotfiles/icons";
-    ".config/Kvantum".source = "${flakeRoot}/dotfiles/Kvantum/Kvantum";
-    ".config/kvantum.kvconfig".source = "${flakeRoot}/dotfiles/Kvantum/kvantum.kvconfig";
-    ".config/pavucontrol.ini".source = "${flakeRoot}/dotfiles/pavucontrol/pavucontrol.ini";
-    ".config/rofi".source = "${flakeRoot}/dotfiles/rofi";
-    ".config/yazi".source = "${flakeRoot}/dotfiles/yazi";
+    ".config/gtk-3.0".source = ../../dotfiles/gtk/gtk-3.0;
+    ".config/gtk-4.0".source = ../../dotfiles/gtk/gtk-4.0;
+    ".gtkrc-2.0".source = ../../dotfiles/gtk/.gtkrc-2.0;
+    ".local/share/themes".source = ../../dotfiles/gtk/themes;
+    ".icons".source = ../../dotfiles/icons;
+    ".config/Kvantum".source = ../../dotfiles/Kvantum/Kvantum;
+    ".config/kvantum.kvconfig".source = ../../dotfiles/Kvantum/kvantum.kvconfig;
+    ".config/pavucontrol.ini".source = ../../dotfiles/pavucontrol/pavucontrol.ini;
+    ".config/rofi".source = ../../dotfiles/rofi;
+    ".config/yazi".source = ../../dotfiles/yazi;
   };
 }

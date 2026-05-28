@@ -9,6 +9,7 @@
         ./hypridle.nix
         ./hyprland.nix
         ./hyprlock.nix
+        ./hyprpaper.nix
         ./kitty.nix
         ./packages.nix
         ./neovim.nix
@@ -16,6 +17,7 @@
         ./shell.nix
         ./tmux.nix
         ./vesktop.nix
+        ./wallpaper.nix
         ./waybar.nix
     ];
     home.username = "zhaolun";

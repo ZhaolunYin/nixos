@@ -114,7 +114,7 @@
                 margin: 6px 4px;
                 border-radius: 10px;
 
-                background: transparent;
+                background: @mantle;
                 color: @text;
 
                 border: 2px solid @mauve;
@@ -131,8 +131,8 @@
                 border-radius: 10px;
 
                 border: 2px solid @rosewater;
-                color: #444;
-                background: transparent;
+                color: @text;
+                background: @mantle;
             }
 
             /* ACTIVE WORKSPACE (main flex) */

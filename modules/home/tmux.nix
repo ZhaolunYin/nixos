@@ -29,6 +29,9 @@
         ];
 
         extraConfig = ''
+
+            set -g default-command "$\{SHELL}"
+
             # titles
             set -g set-titles on
             set -g set-titles-string '#{pane_current_command}'
