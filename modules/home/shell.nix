@@ -70,7 +70,7 @@
                 EDITOR = "nvim";
                 VISUAL = "nvim";
                 GIT_EDITOR = "nvim";
-                MANPAGER = "less";
+                MANPAGER = "nvim +Man!";
                 BROWSER = "firefox";
                 # Hyprland
                 XCURSOR_SIZE = "36";

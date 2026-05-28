@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
     programs.hyprlock = {
         enable = true;
@@ -17,7 +19,6 @@
             background = [
                 {
                     monitor = "";
-                    path = "$HOME/.config/background";
                     blur_passes = 0;
                     color = "rgb(1e1e2e)";
                 }
@@ -62,9 +63,9 @@
             image = [
                 {
                     monitor = "";
-                    path = "/usr/share/pixmaps/archlinux-logo.png";
+                    path = "${pkgs.nixos-icons}/share/icons/hicolor/128x128/apps/nix-snowflake.png";
                     size = 200;
-                    border_color = "rgb(cba6f7)";
+                    border_size = 0;
                     position = "0, 150";
                     halign = "center";
                     valign = "center";

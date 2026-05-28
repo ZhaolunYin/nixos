@@ -17,7 +17,12 @@
     ];
 
     users.defaultUserShell = pkgs.zsh;
-    zramSwap.enable = true; # Creates a zram block device and uses it as a swap device
+    zramSwap = {
+        enable = true;
+    };
+
+    powerManagement.enable = true;
+
     nix.settings.experimental-features = [ "nix-command" "flakes"];
     system.stateVersion = "26.05";
 }

@@ -1,5 +1,12 @@
+{ config, ... }:
+
 {
-    # Use the systemd-boot EFI boot loader.
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    boot = {
+        # Use the systemd-boot EFI boot loader.
+        loader.systemd-boot.enable = true;
+        loader.efi.canTouchEfiVariables = true;
+        initrd.systemd.enable = true;
+        loader.systemd-boot.configurationLimit = 10;
+        resumeDevice = (builtins.head config.swapDevices).device;
+    };
 }

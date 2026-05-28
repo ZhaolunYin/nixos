@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
     programs.git = {
         enable = true;
@@ -7,7 +8,7 @@
 		        name = "Zhaolun Yin";
             };
             credential = {
-                helper = "store";
+                helper = "${pkgs.pass}/bin/pass";
             };
             init = {
                 defaultBranch = "main";

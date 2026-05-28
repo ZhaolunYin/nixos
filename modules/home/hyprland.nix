@@ -76,8 +76,6 @@
         hl.on("hyprland.start", function()
             hl.exec_cmd("wl-clip-persist --clipboard regular")
             hl.exec_cmd("fcitx5 -d")
-            hl.exec_cmd("surge server start")
-            hl.exec_cmd("systemctl --user restart wireplumber")
         end)
 
         -- Bezier Curves
@@ -161,6 +159,7 @@
                 hl.dispatch(hl.dsp.dpms({ action = "disable" }))
             end, { timeout = 400, type = "oneshot" })
         end, { locked = true })
+        hl.bind(shift_mod  .. " + ALT + L", hl.dsp.exec_cmd("systemctl hibernate"))
         hl.bind(main_mod  .. " + P",     hl.dsp.window.pseudo())
         hl.bind(main_mod  .. " + J",     hl.dsp.layout("togglesplit"))
         hl.bind(main_mod  .. " + F",     hl.dsp.exec_cmd("firefox"))
