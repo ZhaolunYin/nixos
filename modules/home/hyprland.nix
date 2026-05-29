@@ -72,12 +72,6 @@
             scale = 2,
         })
 
-        -- Startup
-        hl.on("hyprland.start", function()
-            hl.exec_cmd("wl-clip-persist --clipboard regular")
-            hl.exec_cmd("fcitx5 -d")
-        end)
-
         -- Bezier Curves
         hl.curve("snappy",     { type = "bezier", points = { { 0.18, 1.0  }, { 0.28, 1.0  } } })
         hl.curve("smooth",     { type = "bezier", points = { { 0.22, 1.0  }, { 0.36, 1.0  } } })

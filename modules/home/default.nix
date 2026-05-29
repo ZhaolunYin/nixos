@@ -1,6 +1,7 @@
 {
     imports = [
         ./btop.nix
+        ./clipboard.nix
         ./dunst.nix
         ./fastfetch.nix
         ./files.nix
