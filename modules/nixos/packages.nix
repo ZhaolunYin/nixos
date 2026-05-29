@@ -5,6 +5,8 @@
 
     programs.firefox.enable = true;
     programs.zsh.enable = true;  
+    security.polkit.enable = true;
+    services.fprintd.enable = true;
 
     # List packages installed in system profile.
     # You can use https://search.nixos.org/ to find more packages (and options).
@@ -12,6 +14,7 @@
         brightnessctl
         fzf
         git
+        hyprpolkitagent
         libnotify
         neovim
         rofi

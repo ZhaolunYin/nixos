@@ -1,4 +1,12 @@
 {
+    services.logind = {
+        lidSwitch = "suspend-then-hibernate";
+        lidSwitchExternalPower = "suspend-then-hibernate";
+        lidSwitchDocked = "ignore";
+    };
+    systemd.sleep.settings.Sleep = {
+        HibernateDelaySec = "30m";
+    };
     services.tlp = {
         enable = true;
         settings = {
