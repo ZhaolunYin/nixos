@@ -1,10 +1,11 @@
 {
     imports = [
         ./boot.nix
-        ./network.nix
         ./core.nix
-        ./packages.nix
         ./display.nix
+        ./displaylink.nix
         ./garbage.nix
+        ./network.nix
+        ./packages.nix
     ];
 }

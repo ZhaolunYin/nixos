@@ -8,7 +8,5 @@
         initrd.systemd.enable = true;
         loader.systemd-boot.configurationLimit = 10;
         resumeDevice = (builtins.head config.swapDevices).device;
-        extraModulePackages = [ config.boot.kernelPackages.evdi ];
-        initrd.kernelModules = [ "evdi" ];
     };
 }
