@@ -92,6 +92,7 @@
             @define-color mauve #cba6f7;
             @define-color yellow #f9e2af;
             @define-color teal #94e2d5;
+            @define-color sky #89dceb
             @define-color blue #89b4fa;
             @define-color text #cdd6f4;
             @define-color mantle #181825;
@@ -102,13 +103,11 @@
                 transition: all 0.2s ease;
             }
 
-            /* BAR BASE */
             window#waybar {
                 background: transparent;
                 border-bottom: 2px solid transparent;
             }
 
-            /* MODULE BASE */
             #window, #clock, #battery, #temperature, #backlight, #pulseaudio, #tray {
                 padding: 6px 14px;
                 margin: 6px 4px;
@@ -117,10 +116,17 @@
                 background: @mantle;
                 color: @text;
 
-                border: 2px solid @mauve;
+                //border: 2px solid @mauve;
             }
 
-            /* WORKSPACES */
+            #window, #battery, #backlight, #tray {
+                border: 2px solid @sky;
+            }
+
+            #clock, #temperature, #pulseaudio {
+                border: 2px solid @blue;
+            };
+
             #workspaces {
                 margin-left: 8px;
             }
@@ -135,7 +141,6 @@
                 background: @mantle;
             }
 
-            /* ACTIVE WORKSPACE (main flex) */
             #workspaces button.active {
                 color: @mauve;
                 border: 2px solid @mauve

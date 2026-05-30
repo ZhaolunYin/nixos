@@ -14,7 +14,6 @@
     ".config/Kvantum".source = ../../dotfiles/Kvantum/Kvantum;
     ".config/kvantum.kvconfig".source = ../../dotfiles/Kvantum/kvantum.kvconfig;
     ".config/pavucontrol.ini".source = ../../dotfiles/pavucontrol/pavucontrol.ini;
-    ".config/rofi".source = ../../dotfiles/rofi;
     ".config/yazi".source = ../../dotfiles/yazi;
   };
 }

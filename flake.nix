@@ -9,7 +9,7 @@
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, ... }: {
+    outputs = { nixpkgs, home-manager, ... }: {
         nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             modules = [
@@ -26,8 +26,7 @@
                             ];
                             home.stateVersion = "26.05";
                         };
-                        backupFileExtension = "backup";
-                    	extraSpecialArgs = { flakeRoot = self; };
+                        backupFileExtension = "bak";
                     };
                 }
             ];

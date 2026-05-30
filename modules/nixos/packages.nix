@@ -14,7 +14,6 @@
         brightnessctl
         fzf
         git
-        hyprpolkitagent
         libnotify
         neovim
         rofi

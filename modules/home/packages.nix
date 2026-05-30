@@ -31,11 +31,14 @@
         hyprshutdown
         kiwix
         networkmanagerapplet
+        noto-fonts-cjk-sans
+        noto-fonts-color-emoji
         papirus-icon-theme
         pass
         pinentry-curses
         procs
         ripgrep
+        speedtest
         trash-cli
         waybar
         yazi
