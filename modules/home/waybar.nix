@@ -92,7 +92,7 @@
             @define-color mauve #cba6f7;
             @define-color yellow #f9e2af;
             @define-color teal #94e2d5;
-            @define-color sky #89dceb
+            @define-color sky #89dceb;
             @define-color blue #89b4fa;
             @define-color text #cdd6f4;
             @define-color mantle #181825;
@@ -116,7 +116,6 @@
                 background: @mantle;
                 color: @text;
 
-                //border: 2px solid @mauve;
             }
 
             #window, #battery, #backlight, #tray {
@@ -125,7 +124,7 @@
 
             #clock, #temperature, #pulseaudio {
                 border: 2px solid @blue;
-            };
+            }
 
             #workspaces {
                 margin-left: 8px;

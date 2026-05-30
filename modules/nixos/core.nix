@@ -18,6 +18,11 @@
         nerd-fonts.symbols-only
     ];
 
+    hardware.bluetooth = {
+        enable = true;
+        powerOnBoot = true; # Powers on the controller on startup
+    };
+
     users.defaultUserShell = pkgs.zsh;
     zramSwap = {
         enable = true;
