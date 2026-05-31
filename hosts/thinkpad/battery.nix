@@ -1,8 +1,8 @@
 {
-    services.logind = {
-        lidSwitch = "suspend-then-hibernate";
-        lidSwitchExternalPower = "suspend-then-hibernate";
-        lidSwitchDocked = "ignore";
+    services.logind.settings.Login = {
+        HandleLidSwitch = "suspend-then-hibernate";
+        HandleLidSwitchExternalPower = "suspend-then-hibernate";
+        HandleLidSwitchDocked = "ignore";
     };
     systemd.sleep.settings.Sleep = {
         HibernateDelaySec = "30m";

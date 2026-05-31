@@ -17,7 +17,6 @@
         git
         libnotify
         neovim
-        rofi
         tmux
         unzip
         wget

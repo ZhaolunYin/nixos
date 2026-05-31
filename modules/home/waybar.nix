@@ -6,7 +6,7 @@
             mainBar = {
                 layer = "top";
                 position = "top";
-                height = 46;
+                height = 48;
 
                 modules-left = [
                     "hyprland/workspaces"
@@ -105,25 +105,42 @@
 
             window#waybar {
                 background: transparent;
-                border-bottom: 2px solid transparent;
+                min-height: 0;
+            }
+
+            .modules-left,
+            .modules-center,
+            .modules-right {
+                background: transparent;
+            }
+
+            /* Center island */
+            .modules-center {
+                background: @mantle;
+                border: 2px solid @blue;
+                border-radius: 16px;
+                padding: 0 6px;
+                margin: 6px 0;
+            }
+
+            /* Right island */
+            .modules-right {
+                background: @mantle;
+                border: 2px solid @sky;
+                border-radius: 16px;
+                padding: 0 6px;
+                margin: 6px 8px;
             }
 
             #window, #clock, #battery, #temperature, #backlight, #pulseaudio, #tray {
                 padding: 6px 14px;
-                margin: 6px 4px;
-                border-radius: 10px;
-
-                background: @mantle;
+                margin: 0 4px;
                 color: @text;
 
             }
 
-            #window, #battery, #backlight, #tray {
-                border: 2px solid @sky;
-            }
-
-            #clock, #temperature, #pulseaudio {
-                border: 2px solid @blue;
+            #window {
+                min-width: 0;
             }
 
             #workspaces {
