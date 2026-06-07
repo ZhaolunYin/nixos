@@ -31,6 +31,8 @@
         extraConfig = ''
 
             set -g default-command "$\{SHELL}"
+            set -g extended-keys on
+            set -g extended-keys-format csi-u
 
             # titles
             set -g set-titles on

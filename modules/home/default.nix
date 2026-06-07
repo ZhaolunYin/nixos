@@ -2,7 +2,7 @@
     imports = [
         ./btop.nix
         ./clipboard.nix
-        ./dunst.nix
+        #./dunst.nix
         ./fastfetch.nix
         ./files.nix
         ./fcitx.nix
@@ -11,18 +11,20 @@
         ./hypridle.nix
         ./hyprland.nix
         ./hyprlock.nix
-        ./hyprpaper.nix
-        ./hyprpolkitagent.nix
+        #./hyprpaper.nix
+        #./hyprpolkitagent.nix
         ./kitty.nix
-        ./packages.nix
         ./neovim.nix
         ./network.nix
-        ./rofi.nix
+        ./noctalia.nix
+        ./packages.nix
+        #./rofi.nix
         ./shell.nix
         ./tmux.nix
         ./vesktop.nix
+        ./vibe.nix
         ./wallpaper.nix
-        ./waybar.nix
+        #./waybar.nix
     ];
     home.username = "zhaolun";
     home.homeDirectory = "/home/zhaolun";

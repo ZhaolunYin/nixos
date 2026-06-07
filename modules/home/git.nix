@@ -19,6 +19,17 @@
             commit = {
                 gpgsign = false;
             };
+            "lfs \"customtransfer.xet\"" = {
+                path = "git-xet";
+                args = "transfer";
+                concurrent = true;
+            };
+            "filter \"lfs\"" = {
+                proces = "git-lfs filter-process";
+                required = true;
+                clean = "git-lfs clean -- %f";
+                smudge = "git-lfs smudge -- %f";
+            };
         };
     };
 }

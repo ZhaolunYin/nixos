@@ -3,10 +3,13 @@
 {
     home.packages = with pkgs; [
         bat
+        ddcutil
         duf
         dust
         eza
         fd
+        git-lfs
+        git-xet
         google-chrome
         grimblast
         hyprshutdown
@@ -20,6 +23,7 @@
         pavucontrol
         pinentry-curses
         procs
+        python3
         ripgrep
         trash-cli
         waybar
