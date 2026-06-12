@@ -26,6 +26,8 @@
                     render_power = 3,
                     color = "rgba(000000aa)",
                 },
+                active_opacity = 1.0,
+                inactive_opacity = 0.8,
             },
             dwindle = {
                 force_split = 0,
@@ -101,25 +103,6 @@
         hl.workspace_rule({ workspace = "r[4-8]", layout = "scrolling" })
         hl.workspace_rule({ workspace = "9",      layout = "monocle"   })
 
-        -- Window Rules
-        hl.window_rule({
-            name    = "kitty-hud",
-            match   = { class = "^(kitty)$", focus = true },
-            float   = true,
-            center  = true,
-            size    = { 1000, 650 },
-            opacity = "0.95 override 0.95 override",
-        })
-        hl.window_rule({
-            name    = "terminal-clarity",
-            match   = { class = "^(kitty)$" },
-            opacity = "0.97 override 0.97 override",
-        })
-        hl.window_rule({
-            name    = "global-opacity",
-            match   = { class = ".*" },
-            opacity = "0.92 override 0.75 override",
-        })
         hl.window_rule({
             name           = "suppress-maximize-events",
             match          = { class = ".*" },

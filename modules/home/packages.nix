@@ -11,7 +11,6 @@
         git-lfs
         git-xet
         google-chrome
-        grimblast
         hyprshutdown
         kdePackages.kamoso
         mousepad
@@ -26,7 +25,6 @@
         python3
         ripgrep
         trash-cli
-        waybar
         yazi
     ];
 }

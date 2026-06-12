@@ -24,7 +24,7 @@ in
                 /etc/profiles/per-user/zhaolun/bin/llama-server \
                 -m ${qwenModel} \
                 --device Vulkan0 \
-                --fit on \
+                -ngl 10 \
                 --reasoning off \
                 -c 131072
                 '';
@@ -41,12 +41,10 @@ in
     home.file = {
         ".pi/agent/settings.json".text = ''
             {
-                "lastChangelogVersion": "0.75.3",
                 "defaultProvider": "llama-cpp",
                 "defaultModel": "Qwen3.6-35B-A3B-UD-IQ4_NL.gguf",
                 "packages": [
-                    "npm:pi-mcp-adapter",
-                    "npm:pi-arcade-games"
+                    "npm:pi-mcp-adapter"
                 ]
             }
         '';

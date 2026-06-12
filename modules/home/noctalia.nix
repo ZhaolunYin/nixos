@@ -69,6 +69,10 @@
                 transition_duration = 1500;
                 edge_smoothness = 0.3;
                 directory = "~/Pictures/Wallpapers";
+                automation = {
+                    automation = true;
+                    interval_seconds = 120;
+                };
                 default = {
                     path = "~/Pictures/Wallpapers/nix-catppuccin.png";
                 };
@@ -144,9 +148,9 @@
             desktop_widgets = {
                 schema_version = 1;
                 widget_order = [
-                    "desktop-widget-0000000000000001"
-                    "desktop-widget-0000000000000002" 
-                    "desktop-widget-0000000000000003"
+                    "desktop-widget-1"
+                    "desktop-widget-2" 
+                    "desktop-widget-3"
                 ];
 
                 grid = {
@@ -155,16 +159,19 @@
                     visible = true;
                 };
 
-                widget.desktop-widget-0000000000000001 = {
+                widget.desktop-widget-1 = {
                     cx = 322.0;
                     cy = 290.5;
                     output = "";
                     rotation = 0.0;
                     scale = 1.0;
                     type = "clock";
+                    settings = {
+                        background = false;
+                    };
                 };
 
-                widget.desktop-widget-0000000000000002 = {
+                widget.desktop-widget-2 = {
                     cx = 1232.0;
                     cy = 900.0;
                     output = "";
@@ -175,16 +182,18 @@
                         aspect_ratio = 2.5;
                         bands = 32;
                         show_when_idle = true;
+                        background = false;
                     };
                 };
 
-                widget.desktop-widget-0000000000000003 = {
+                widget.desktop-widget-3 = {
                     cx = 1252.0;
                     cy = 321.5;
                     output = "";
                     rotation = 0.0;
                     scale = 1.0;
                     type = "sysmon";
+                    background = false;
                 };
             };
 

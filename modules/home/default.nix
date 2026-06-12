@@ -22,12 +22,11 @@
         ./shell.nix
         ./tmux.nix
         ./vesktop.nix
-        ./vibe.nix
+        #./vibe.nix
         ./wallpaper.nix
         #./waybar.nix
     ];
     home.username = "zhaolun";
     home.homeDirectory = "/home/zhaolun";
     programs.home-manager.enable = true;
-
 }
