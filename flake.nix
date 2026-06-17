@@ -9,16 +9,15 @@
         };
 
         noctalia = {
-            url = "github:noctalia-dev/noctalia-shell/v5";
+            url = "github:noctalia-dev/noctalia-shell";
         };
     };
 
     outputs = { nixpkgs, home-manager, noctalia, ... }: {
-        nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             modules = [
-                ./hosts/thinkpad
-                ./modules/nixos
+                ./thinkpad
                 home-manager.nixosModules.home-manager
                 {
                     home-manager = {
@@ -27,7 +26,7 @@
                         users.zhaolun = {
                             imports = [
                                 noctalia.homeModules.default
-                                ./modules/home
+                                ./thinkpad/modules/home
                             ];
                             home.stateVersion = "26.05";
                         };
