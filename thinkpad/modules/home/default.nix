@@ -5,18 +5,13 @@
     ./cursor.nix
     ./fastfetch.nix
     ./fcitx.nix
-    ./git.nix
     ./gnupg.nix
     ./hypridle.nix
     ./hyprland.nix
     ./hyprlock.nix
-    ./kitty.nix
-    ./nixvim.nix
     ./network.nix
     ./noctalia.nix
     ./packages.nix
-    ./shell.nix
-    ./tmux.nix
     ./vesktop.nix
     ./vibe.nix
     ./wallpaper.nix
