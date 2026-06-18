@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   home.file.".local/bin/launch-tmux" = {
@@ -23,7 +23,7 @@
           tmux kill-session -t "$session" 2>/dev/null || true
       }
       trap cleanup EXIT HUP INT TERM
-      tmux new-session -d -s "$session" -c "${PWD:-$HOME}"
+      tmux new-session -d -s "$session" -c "${"PWD:-$HOME"}"
       tmux attach-session -t "$session"
     '';
   };
