@@ -2,10 +2,11 @@
 
 {
 	imports = [
+		./hardware-configuration.nix
 		./modules/nixos
-        ../share/nixos
+ 	       ../share/nixos
 	];
-
+	  boot.loader.grub.enable = false;
     programs.zsh.enable = true;
 	users.users.admin = {
         isNormalUser = true;
