@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-    packages = with pkgs; [
+    environment.systemPackages = with pkgs; [
         bat
         duf
         dust
@@ -11,6 +11,7 @@
         python3
         ripgrep
         trash-cli
+        uwsm
     ];
 }
 
