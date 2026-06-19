@@ -1,9 +1,9 @@
 {
-    import = [
-        ./git.nix
-        ./kitty.nix
-        ./nixvim.nix
-        ./shell.nix
-        ./tmux.nix
-    ];
+	imports = [
+		./git.nix
+		./kitty.nix
+		./nixvim.nix
+		./shell.nix
+		./tmux.nix
+	];
 }

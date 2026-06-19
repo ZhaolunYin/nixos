@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-    home.file."Pictures/Wallpapers".source = ./Wallpapers;
+	home.file."Pictures/Wallpapers".source = ./Wallpapers;
 }

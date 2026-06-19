@@ -1,6 +1,6 @@
 {
-    programs.yazi = {
-        enable = true;
-        enableZshIntegration = true;
-    };
+	programs.yazi = {
+		enable = true;
+		enableZshIntegration = true;
+	};
 }

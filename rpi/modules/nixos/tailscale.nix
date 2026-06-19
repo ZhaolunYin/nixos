@@ -5,7 +5,7 @@
 	services.tailscale = {
 		enable = true;
 		# Enable subnet routing support
-		useRoutingFeatures = "best";
+		useRoutingFeatures = "server";
 		# Routes to advertise — change to match your local network
 		extraUpFlags = [ "--advertise-routes=192.168.1.0/24" ];
 	};
