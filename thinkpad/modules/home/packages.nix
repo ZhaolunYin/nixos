@@ -22,6 +22,7 @@
 		pavucontrol
 		pinentry-curses
 		procs
+        protonvpn-gui
 		python3
 		ripgrep
 		trash-cli

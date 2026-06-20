@@ -17,9 +17,18 @@
 		};
 
 		nixos-hardware.url = "github:nixos/nixos-hardware";
+
+		nur = {
+			url = "github:nix-community/NUR";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
-	outputs = { nixpkgs, home-manager, noctalia, nixvim, ... }:
+	outputs = { nixpkgs, home-manager, noctalia, nixvim, nur, ... }:
+		let
+			# NUR packages from the flake's legacyPackages
+			nurRepos = nur.legacyPackages."x86_64-linux".repos;
+		in
 		{
 			nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
@@ -34,13 +43,18 @@
 								imports = [
 									noctalia.homeModules.default
 									nixvim.homeModules.nixvim
-									./thinkpad/modules/home
-									./share/home
 								];
 								home.stateVersion = "26.05";
 							};
 							backupFileExtension = "bak";
 						};
+					}
+					{
+						home-manager.users.zhaolun._module.args = { inherit nurRepos; };
+						home-manager.users.zhaolun.imports = [
+							./thinkpad/modules/home
+							./share/home
+						];
 					}
 				];
 			};
@@ -49,7 +63,7 @@
 				system = "aarch64-linux";
 				modules = [
 					./rpi
-                    home-manager.nixosModules.home-manager
+					home-manager.nixosModules.home-manager
 					{
 						home-manager = {
 							useGlobalPkgs = true;
@@ -64,7 +78,6 @@
 							backupFileExtension = "bak";
 						};
 					}
-
 				];
 			};
 		};
