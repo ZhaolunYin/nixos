@@ -7,6 +7,10 @@
     ];
     boot.loader.grub.enable = false;
     programs.zsh.enable = true;
+    fileSystems."/" = { 
+        device = "/dev/disk/by-label/NIXOS_SD";
+        fsType = "ext4";
+    };
     users.users.admin = {
         isNormalUser = true;
         extraGroups = [ "wheel" ];
