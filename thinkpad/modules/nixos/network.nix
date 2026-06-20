@@ -20,4 +20,9 @@
 			"8.8.8.8"
 		];
 	};
+
+    services.tailscale = {
+        enable = true;
+        useRoutingFeatures = "client";
+    };
 }
