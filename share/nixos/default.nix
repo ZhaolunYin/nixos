@@ -1,7 +1,7 @@
 {
-	imports = [
-		./core.nix
-		./garbage.nix
-		./locale.nix
-	];
+    imports = [
+        ./core.nix
+        ./garbage.nix
+        ./locale.nix
+    ];
 }
