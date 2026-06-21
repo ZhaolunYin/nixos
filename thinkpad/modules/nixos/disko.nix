@@ -26,7 +26,7 @@
 
         content.partitions.esp = {
             name = "ESP";
-            size = "1G"
+            size = "1G";
             type = "EF00";
             content = {
                 type = "filesystem";

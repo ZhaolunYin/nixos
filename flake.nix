@@ -3,6 +3,12 @@
 
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable";
+        preservation.url = "github:nix-community/preservation";
+
+        disko = {
+            url = "github:nix-community/disko";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
         home-manager = {
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -19,12 +25,14 @@
         };
     };
 
-    outputs = { nixpkgs, home-manager, noctalia, nixvim, ... }:
+    outputs = { nixpkgs, disko, home-manager, noctalia, nixvim, preservation ... }:
         {
             nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 modules = [
                     ./thinkpad
+                    disko.nixosModules.disko
+                    preservation.nixosModules.default
                     home-manager.nixosModules.home-manager
                     {
                         home-manager = {
