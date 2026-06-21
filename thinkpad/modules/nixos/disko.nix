@@ -4,7 +4,7 @@
 
     disko.devices.nodev = {
         "/" = {
-            fsTyle = "tmpfs";
+            fsType = "tmpfs";
             mountOptions = [
                 "size=25%"
                 "mode=755"
@@ -35,7 +35,7 @@
             };
         };
 
-        content.partition.swap = {
+        content.partitions.swap = {
             size = "32G";
 
             content = {

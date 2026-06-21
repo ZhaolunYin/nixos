@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+    environment.systemPackages = with pkgs; [
+        displaylink
+    ];
+
     boot = {
         extraModulePackages = [ config.boot.kernelPackages.evdi ];
         initrd.kernelModules = [ "evdi" ];
