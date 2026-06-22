@@ -66,7 +66,7 @@
             scale = 1,
         })
         hl.monitor({
-            output = "eDP-1",
+            output = "",
             mode = "2880x1800@60",
             position = "1920x0",
             scale = 2,

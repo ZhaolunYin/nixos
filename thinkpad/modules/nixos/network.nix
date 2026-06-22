@@ -1,6 +1,6 @@
 {
-    networking.hostName = "thinkpad"; # Define your hostname.
-    # Configure network connections interactively with nmcli or nmtui.
+    networking.hostName = "thinkpad";
+    networking.hostId = "7c85846f";
 
     services.avahi = {
         enable = true;

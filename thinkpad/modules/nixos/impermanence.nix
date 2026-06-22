@@ -1,9 +1,11 @@
 { lib, ... }:
 {
+    fileSystems."/persist".neededForBoot = true;
+
     boot.initrd.systemd.services.rollback = {
         description = "Rollback root ZFS";
         wantedBy = [ "initrd.target" ];
-        after = [ "zfs-import-zroot-service" ];
+        after = [ "zfs-import-zroot.service" ];
         before = [ "sysroot.mount" ];
         unitConfig.DefaultDependencies = "no";
         serviceConfig.Type = "oneshot";
