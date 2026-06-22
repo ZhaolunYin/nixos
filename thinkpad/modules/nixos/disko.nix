@@ -17,6 +17,13 @@
                                 mountOptions = [ "umask=0077" ];
                             };
                         };
+                        swap = {
+                            size = "32G";
+                            content = {
+                                type = "swap";
+                                resumeDevice = true;
+                            };
+                        };
                         zfs = {
                             size = "100%";
                             content = {
