@@ -6,6 +6,6 @@
         loader.systemd-boot.enable = true;
         loader.efi.canTouchEfiVariables = true;
         initrd.systemd.enable = true;
-        loader.systemd-boot.configurationLimit = 10;
+        loader.systemd-boot.configurationLimit = 5;
     };
 }

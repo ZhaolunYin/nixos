@@ -1,11 +1,17 @@
-{ impermanence, lib, ... }:
+{ lib, ... }:
 {
-    boot.initrd.postDeviceCommands = lib.mkAfter ''
-    zfs rollback -r zroot/local/root@blank
-    '';
+    boot.initrd.systemd.services.rollback = {
+        description = "Rollback root ZFS";
+        wantedBy = [ "initrd.target" ];
+        after = [ "zfs-import-zroot-service" ];
+        before = [ "sysroot.mount" ];
+        unitConfig.DefaultDependencies = "no";
+        serviceConfig.Type = "oneshot";
+        script = "zfs rollback -r zroot/local/root@blank";
+    };
 
     environment.persistence."/persist" = {
-        enable = true;  # NB: Defaults to true, not needed
+        enable = true;
         hideMounts = true;
         directories = [
             "/etc/NetworkManager/system-connections"
@@ -13,7 +19,6 @@
             "/var/lib/bluetooth"
             "/var/lib/nixos"
             "/var/lib/systemd/coredump"
-            "/etc/NetworkManager/system-connections"
             {
                 directory = "/var/lib/colord"; 
                 user = "colord"; 
@@ -23,7 +28,6 @@
         ];
         files = [
             "/etc/machine-id"
-            { file = "/var/keys/secret_file"; parentDirectory = { mode = "u=rwx,g=,o="; }; }
         ];
     };
 }
