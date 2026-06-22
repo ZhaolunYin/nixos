@@ -1,65 +1,71 @@
 { disko, ... }:
 {
-    fileSystems."/nix".neededForBoot = true;
-
-    disko.devices.nodev = {
-        "/" = {
-            fsType = "tmpfs";
-            mountOptions = [
-                "size=25%"
-                "mode=755"
-            ];
-        };
-    };
-
-    disko.devices.disk.main = {
-        device = "/dev/nvme0n1";
-        type = "disk";
-
-        content.type = "gpt";
-
-        content.partitions.boot = {
-            name = "boot";
-            size = "1M";
-            type = "EF02";
-        };
-
-        content.partitions.esp = {
-            name = "ESP";
-            size = "1G";
-            type = "EF00";
-            content = {
-                type = "filesystem";
-                format = "vfat";
-                mountpoint = "/boot";
-            };
-        };
-
-        content.partitions.swap = {
-            size = "32G";
-
-            content = {
-                type = "swap";
-                resumeDevice = true;
-            };
-        };
-
-        content.partitions.root = {
-            name = "root";
-            size = "100%";
-
-            content = {
-                type = "btrfs";
-                extraArgs = [ "-f" ];
-                subvolumes = {
-                    "/persistent" = {
-                        mountOptions = [ "subvol=persist" "noatime" ];
-                        mountpoint = "/persistent";
+    disko.devices = {
+        disk = {
+            main = {
+                type = "disk";
+                content = {
+                    type = "gpt";
+                    partitions = {
+                        ESP = {
+                            size = "1G";
+                            type = "EF00";
+                            content = {
+                                type = "filesystem";
+                                format = "vfat";
+                                mountpoint = "/boot";
+                                mountOptions = [ "umask=0077" ];
+                            };
+                        };
+                        zfs = {
+                            size = "100%";
+                            content = {
+                                type = "zfs";
+                                pool = "zroot";
+                            };
+                        };
                     };
+                };
+            };
+        };
+        zpool = {
+            zroot = {
+                type = "zpool";
+                rootFsOptions = {
+                    acltype = "posixacl";
+                    atime = "off";
+                    compression = "zstd";
+                    mountpoint = "none";
+                    xattr = "sa";
+                };
+                options.ashift = "12";
 
-                    "/nix" = {
-                        mountOptions = [ "subvol=nix" "noatime" ];
+                datasets = {
+                    "local" = {
+                        type = "zfs_fs";
+                        options.mountpoint = "none";
+                    };
+                    "local/home" = {
+                        type = "zfs_fs";
+                        mountpoint = "/home";
+                        # Used by services.zfs.autoSnapshot options.
+                        options."com.sun:auto-snapshot" = "true";
+                    };
+                    "local/nix" = {
+                        type = "zfs_fs";
                         mountpoint = "/nix";
+                        options."com.sun:auto-snapshot" = "false";
+                    };
+                    "local/persist" = {
+                        type = "zfs_fs";
+                        mountpoint = "/persist";
+                        options."com.sun:auto-snapshot" = "false";
+                    };
+                    "local/root" = {
+                        type = "zfs_fs";
+                        mountpoint = "/";
+                        options."com.sun:auto-snapshot" = "false";
+                        postCreateHook = "zfs list -t snapshot -H -o name | grep -E '^zroot/local/root@blank$' || zfs snapshot zroot/local/root@blank";
                     };
                 };
             };

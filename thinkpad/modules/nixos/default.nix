@@ -3,9 +3,9 @@
         ./boot.nix
         ./disko.nix
         ./display.nix
-        ./displaylink.nix
+        #./displaylink.nix
+        ./impermanence.nix
         ./network.nix
         ./packages.nix
-        ./preservation.nix
     ];
 }
