@@ -14,7 +14,7 @@
             remmina
             qemu
             quickemu
-        ]
+        ];
     };
     users.users.root.hashedPassword = "!"; 
 }
