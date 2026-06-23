@@ -1,6 +1,15 @@
-_:
-
+{ pkgs, ... }:
 {
+    home.packages = with pkgs; [
+        bat
+        duf
+        dust
+        eza
+        fd
+        procs
+        ripgrep
+        trash-cli
+    ];
     programs = {
         zsh = {
             enable = true;
@@ -114,7 +123,7 @@ _:
             printf '\e[6 q'
         }
         lazygit() {
-            git add .
+            git add --all
             if [ $1 > /dev/null ]; then
                 git commit -m $1
             else

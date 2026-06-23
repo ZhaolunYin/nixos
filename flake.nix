@@ -75,5 +75,28 @@
                     }
                 ];
             };
+
+            nixosConfigurations.homelab = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                modules = [
+                    ./homelab
+                    disko.nixosModules.disko
+                    home-manager.nixosModules.home-manager
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                            users.lab = {
+                                imports = [
+                                    nixvim.homeModules.nixvim
+                                    ./share/home
+                                ];
+                                home.stateVersion = "26.05";
+                            };
+                            backupFileExtension = "bak";
+                        };
+                    }
+                ];
+            };
         };
 }

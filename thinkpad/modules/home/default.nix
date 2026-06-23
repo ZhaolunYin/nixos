@@ -3,13 +3,9 @@
         ./btop.nix
         ./clipboard.nix
         ./cursor.nix
-        ./fcitx.nix
-        ./firefox.nix
-        ./gnupg.nix
         ./hypridle.nix
         ./hyprland.nix
         ./hyprlock.nix
-        ./network.nix
         ./noctalia.nix
         ./packages.nix
         ./vesktop.nix
