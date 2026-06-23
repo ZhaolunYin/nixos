@@ -1,0 +1,28 @@
+{
+    networking.hostName = "thinkpad";
+    networking.hostId = "7c85846f";
+
+    services.avahi = {
+        enable = true;
+        nssmdns4 = true;
+    };
+
+    networking = {
+        wireless.iwd = {
+            enable = true;
+        };
+        networkmanager = {
+            enable = true;
+            wifi.backend = "iwd";
+        };
+        nameservers = [
+            "1.1.1.1"
+            "8.8.8.8"
+        ];
+    };
+
+    services.tailscale = {
+        enable = true;
+        useRoutingFeatures = "client";
+    };
+}
