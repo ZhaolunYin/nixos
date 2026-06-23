@@ -1,6 +1,5 @@
 {
-    networking.hostName = "thinkpad";
-    networking.hostId = "7c85846f";
+    networking.hostName = "homelab";
 
     services.avahi = {
         enable = true;
@@ -8,21 +7,10 @@
     };
 
     networking = {
-        wireless.iwd = {
-            enable = true;
-        };
-        networkmanager = {
-            enable = true;
-            wifi.backend = "iwd";
-        };
+        networkmanager.enable = true;
         nameservers = [
             "1.1.1.1"
             "8.8.8.8"
         ];
-    };
-
-    services.tailscale = {
-        enable = true;
-        useRoutingFeatures = "client";
     };
 }
