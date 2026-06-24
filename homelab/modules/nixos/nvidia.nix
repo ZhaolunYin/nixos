@@ -26,6 +26,8 @@
 
         nvidiaSettings = true;
 
+        cudaSupport = true;
+
         # Use the latest stable driver packaged with your kernel
         package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
