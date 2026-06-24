@@ -7,5 +7,7 @@
         ./nvidia.nix
         ./ssh.nix
         ./virtualisation.nix
+
+        ./services
     ];
 }
