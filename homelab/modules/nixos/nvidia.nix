@@ -12,7 +12,6 @@
 
     nixpkgs.config = {
         allowUnfree = true;
-        cudaSupport = true;
     };
 
     hardware.graphics.enable = true;
