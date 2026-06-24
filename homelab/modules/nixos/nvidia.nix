@@ -14,8 +14,7 @@
         # Required for modern NVIDIA drivers
         modesetting.enable = true;
 
-        # RTX 5070 requires the proprietary driver
-        open = false;
+        open = true;
 
         nvidiaSettings = true;
 
