@@ -12,7 +12,8 @@
             alias = "unsloth/Qwen3.6-35B-A3B";
 
             ctx-size = 131072;
-            n-gpu-layers = 99;
+            fit = "on";
+            device = "CUDA0";
 
             temp = 0.6;
             top-p = 0.95;
