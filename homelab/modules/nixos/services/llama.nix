@@ -11,6 +11,7 @@
 
             ctx-size = 131072;
             fit = "on";
+            device = "Vulkan1";
 
             temp = 0.6;
             top-p = 0.95;
