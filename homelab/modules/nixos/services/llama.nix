@@ -2,9 +2,7 @@
 {
     services.llama-cpp = {
         enable = true;
-        package = pkgs.llama-cpp.override {
-            cudaSupport = true;
-        };
+        package = pkgs.llama-cpp-vulkan;
 
         settings = {
             hf-repo = "unsloth/Qwen3.6-35B-A3B-GGUF";
@@ -13,7 +11,6 @@
 
             ctx-size = 131072;
             fit = "on";
-            device = "CUDA0";
 
             temp = 0.6;
             top-p = 0.95;
