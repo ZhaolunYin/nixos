@@ -12,9 +12,6 @@
             alias = "unsloth/Qwen3.6-35B-A3B";
 
             ctx-size = 131072;
-            n-batch = 512;
-            n-ubatch = 512;
-
             n-gpu-layers = 99;
 
             temp = 0.6;
