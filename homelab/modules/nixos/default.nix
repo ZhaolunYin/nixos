@@ -6,5 +6,6 @@
         ./network.nix
         ./nvidia.nix
         ./ssh.nix
+        ./virtualisation.nix
     ];
 }
