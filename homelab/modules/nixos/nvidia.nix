@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
     nix.settings = {
@@ -10,8 +10,12 @@
         ];
     };
 
+
+    environment.systemPackages = [ pkgs.cudatoolkit ];
+
     nixpkgs.config = {
         allowUnfree = true;
+        cudaSupport = true;
     };
 
     hardware.graphics.enable = true;
