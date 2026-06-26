@@ -9,7 +9,7 @@
     };
     users.users.yxk = {
         isNormalUser = true;
-        extraGroups = [ "networkmanager" "libvirtd" ];
+        extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
         hashedPassword = "$6$Dt.CpimXXd3AOKWS$ptEUS2z4TZp8IZjbA1GYF7XBdMb3I0Kx2wugi.6o4VGenV565TrTAK.DmdcdWDnR6rVh6Htl60E.n3ITCkMgU/";
         packages = with pkgs; [
             remmina
