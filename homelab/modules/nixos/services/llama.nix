@@ -21,7 +21,7 @@
             reasoning = "off";
 
             host = "0.0.0.0";
-            port = 1000;
+            port = 8080;
             threads = 8;
             parallel = 1;
         };
