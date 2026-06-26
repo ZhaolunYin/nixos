@@ -10,6 +10,7 @@
         ];
     };
 
+    boot.kernelModules = [ "nvidia" "nvidia_uvm" ];
 
     environment.systemPackages = [ pkgs.cudatoolkit ];
 
