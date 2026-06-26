@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-    services.llama-cpp = {
+/*    services.llama-cpp = {
         enable = true;
         package = pkgs.llama-cpp-vulkan;
 
@@ -26,5 +26,34 @@
             threads = 8;
             parallel = 1;
         };
-    };
+    };*/
+
+    environment.systemPackages = with pkgs; [
+        llama-cpp
+    ];
+
+    /*systemd.user.services.llama-server = {
+        Unit = {
+            Description = "llama.cpp server";
+            After = [ "network.target" ];
+        };
+
+        Service = {
+            ExecStart = ''
+                /etc/profiles/per-user/zhaolun/bin/llama-server \
+                -m ${qwenModel} \
+                --device Vulkan0 \
+                -ngl 10 \
+                --reasoning off \
+                -c 131072
+                '';
+
+            Restart = "on-failure";
+            RestartSec = 5;
+        };
+
+        Install = {
+            WantedBy = [ "default.target" ];
+        };
+    };*/
 }
