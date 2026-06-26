@@ -1,8 +1,8 @@
 {
     networking.firewall = {
         allowedTCPPorts = [
-            22
-            8080
+            22 # ssh
+            80 # llama.cpp
         ];
     };
 }
