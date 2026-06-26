@@ -1,8 +1,7 @@
 { pkgs, ... }:
 {
-/*    services.llama-cpp = {
+    services.llama-cpp = {
         enable = true;
-        package = pkgs.llama-cpp-vulkan;
 
         settings = {
             hf-repo = "unsloth/Qwen3.6-35B-A3B-GGUF";
@@ -11,7 +10,7 @@
 
             ctx-size = 131072;
             fit = "on";
-            device = "Vulkan1";
+            device = "CUDA0";
 
             temp = 0.6;
             top-p = 0.95;
@@ -26,34 +25,9 @@
             threads = 8;
             parallel = 1;
         };
-    };*/
+    };
 
     environment.systemPackages = with pkgs; [
         llama-cpp
     ];
-
-    /*systemd.user.services.llama-server = {
-        Unit = {
-            Description = "llama.cpp server";
-            After = [ "network.target" ];
-        };
-
-        Service = {
-            ExecStart = ''
-                /etc/profiles/per-user/zhaolun/bin/llama-server \
-                -m ${qwenModel} \
-                --device Vulkan0 \
-                -ngl 10 \
-                --reasoning off \
-                -c 131072
-                '';
-
-            Restart = "on-failure";
-            RestartSec = 5;
-        };
-
-        Install = {
-            WantedBy = [ "default.target" ];
-        };
-    };*/
 }
