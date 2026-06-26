@@ -20,8 +20,8 @@
 
             reasoning = "off";
 
-            host = "0.0.0.0";
-            port = 80;
+            host = "127.0.0.1";
+            port = 8080;
             threads = 8;
             parallel = 1;
         };
