@@ -24,7 +24,6 @@
                 Development = [
                     {
                         Forgejo = {
-                            icon = "mdi:git";
                             href = "http://homelab.local:2003";
                             description = "Forgejo self-hosted Git";
                         };
