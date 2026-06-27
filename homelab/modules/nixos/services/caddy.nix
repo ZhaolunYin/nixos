@@ -1,15 +1,9 @@
 {
     services.caddy = {
         enable = true;
-        virtualHosts."http://localhost" = {
+        virtualHosts."http://homelab.local" = {
             extraConfig = ''
-            handle /llama* {
-                uri strip_prefix /llama
-                reverse_proxy localhost:2000
-            }
-            handle {
-                redir / /llama 302
-            }
+            reverse_proxy localhost:2000
             '';
         };
     };
