@@ -6,6 +6,7 @@
         ./firewall.nix
         ./network.nix
         ./nvidia.nix
+        ./power.nix
         ./ssh.nix
         ./virtualisation.nix
 
