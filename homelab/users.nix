@@ -2,6 +2,8 @@
 {
     programs.zsh.enable = true;
     users.mutableUsers = false;
+    security.sudo.wheelNeedsPassword = false;
+
     users.users.lab = {
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
