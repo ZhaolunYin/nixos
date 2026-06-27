@@ -6,6 +6,7 @@
             2000 # homepage
             2001 # llama.cpp
             2002 # searxng
+            2003 # forgejo
         ];
     };
 }
