@@ -8,8 +8,8 @@
         ./hyprlock.nix
         ./noctalia.nix
         ./packages.nix
+        ./pi.nix
         ./vesktop.nix
-        ./vibe.nix
         ./wallpaper.nix
     ];
 

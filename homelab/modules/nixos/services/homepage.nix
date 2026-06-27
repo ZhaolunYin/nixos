@@ -5,13 +5,15 @@
         listenPort = 2000;
         services = [
             {
-                "AI" = [
+                AI = [
                     {
-                        "Llama" = {
+                        Llama = {
                             href = "http://homelab.local:2001";
-                            description = "Qwen3 35B";
+                            description = "Qwen3.6 35B A3B";
                         };
-                        "SearXNG" = {
+                    }
+                    {
+                        SearXNG = {
                             href = "http://homelab.local:2002";
                             description = "SearXNG search";
                         };
