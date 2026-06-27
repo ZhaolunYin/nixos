@@ -5,6 +5,7 @@
             80 # caddy
             2000 # homepage
             2001 # llama.cpp
+            2002 # searxng
         ];
     };
 }

@@ -13,6 +13,14 @@
                         };
                     }
                 ];
+                "Search" = [
+                    {
+                        "SearXNG" = {
+                            href = "http://homelab.local:2002";
+                            description = "SearXNG search";
+                        };
+                    }
+                ];
             }
         ];
     };
