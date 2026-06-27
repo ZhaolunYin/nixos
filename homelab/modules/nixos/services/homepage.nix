@@ -15,4 +15,7 @@
             }
         ];
     };
+    systemd.services.homepage-dashboard.environment = {
+        HOMEPAGE_ALLOWED_HOSTS = "*";
+    };
 }
