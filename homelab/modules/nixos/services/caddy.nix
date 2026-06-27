@@ -8,7 +8,7 @@
                 reverse_proxy localhost:2000
             }
             handle {
-                respond "no service here" 404
+                redir / /llama 302
             }
             '';
         };
