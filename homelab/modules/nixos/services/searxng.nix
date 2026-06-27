@@ -5,7 +5,7 @@
 
         settings = {
             server = {
-                bind_address = "127.0.0.1";
+                bind_address = "0.0.0.0";
                 port = 2002;
                 secret_key = "98udasdf2lqajshdas6d129931b10";
                 limiter = false;
