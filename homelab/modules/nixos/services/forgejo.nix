@@ -1,4 +1,3 @@
-{ lib, pkgs, config, ... }:
 {
     services.forgejo = {
         enable = true;
@@ -8,9 +7,6 @@
             server = {
                 HTTP_PORT = 2003;
             };
-        };
-        secrets = {
-            mailer.PASSWD = config.age.secrets.forgejo-mailer-password.path;
         };
     };
 }
