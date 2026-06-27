@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
     services.homepage-dashboard = {
         enable = true;
@@ -16,6 +17,6 @@
         ];
     };
     systemd.services.homepage-dashboard.environment = {
-        HOMEPAGE_ALLOWED_HOSTS = "*";
+        HOMEPAGE_ALLOWED_HOSTS = lib.mkForce "*";
     };
 }
