@@ -4,7 +4,7 @@
         virtualHosts."http://localhost" = {
             extraConfig = ''
             handle /llama* {
-                reverse_proxy localhost:1000
+                reverse_proxy localhost:2000
             }
             '';
         };
