@@ -11,10 +11,6 @@
                             href = "http://homelab.local:2001";
                             description = "Qwen3 35B";
                         };
-                    }
-                ];
-                "Search" = [
-                    {
                         "SearXNG" = {
                             href = "http://homelab.local:2002";
                             description = "SearXNG search";
