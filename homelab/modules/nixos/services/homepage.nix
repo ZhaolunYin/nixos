@@ -1,13 +1,13 @@
 {
     services.homepage-dashboard = {
         enable = true;
-        listenPort = 80;
+        listenPort = 2000;
         services = [
             {
                 "AI" = [
                     {
                         "Llama" = {
-                            href = "http://homelab.local:2000";
+                            href = "http://homelab.local:2001";
                             description = "Qwen3 35B";
                         };
                     }
