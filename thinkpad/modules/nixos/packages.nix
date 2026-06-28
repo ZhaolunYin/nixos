@@ -16,6 +16,7 @@
     environment.systemPackages = with pkgs; [
         brightnessctl
         fzf
+        gcc
         git
         libnotify
         neovim
