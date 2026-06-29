@@ -17,13 +17,13 @@ systemd.services.comfyui = {
       [
         "${lib.getExe pkgs.comfyui}"
         "--listen"
-        cfg.host
+        config.services.comfyui.host
         "--port"
-        (toString cfg.port)
+        (toString config.services.comfyui.port)
         "--user-directory"
         "/var/lib/comfyui"
       ]
-      ++ cfg.extraOptions
+      ++ config.services.comfyui.extraOptions
     );
 
     Restart = "on-failure";
@@ -34,18 +34,18 @@ systemd.services.comfyui = {
     ProtectHome = true;
 
     ReadWritePaths = [
-      cfg.modelsDir
-      cfg.customNodesPath
+      config.services.comfyui.modelsDir
+      config.services.comfyui.customNodesPath
     ];
 
     Environment = lib.mapAttrsToList
       (n: v: "${n}=${v}")
-      cfg.environmentVariables;
+      config.services.comfyui.environmentVariables;
   };
 
   preStart = ''
-    mkdir -p ${cfg.modelsDir}
-    mkdir -p ${cfg.customNodesPath}
+    mkdir -p ${config.services.comfyui.modelsDir}
+    mkdir -p ${config.services.comfyui.customNodesPath}
   '';
 };
 }
