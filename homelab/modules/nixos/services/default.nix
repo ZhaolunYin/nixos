@@ -1,6 +1,5 @@
 {
     imports = [
-        ./comfyui.nix
         ./caddy.nix
         ./forgejo.nix
         ./homepage.nix

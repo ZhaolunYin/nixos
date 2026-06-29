@@ -7,7 +7,6 @@
             2001 # llama.cpp
             2002 # searxng
             2003 # forgejo
-            8188 # comfyui
         ];
     };
 }
