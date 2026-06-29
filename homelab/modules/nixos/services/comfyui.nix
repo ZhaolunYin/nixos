@@ -1,3 +1,5 @@
+{ lib, pkgs, ... }:
+{
 systemd.services.comfyui = {
   description = "ComfyUI";
   wantedBy = [ "multi-user.target" ];
@@ -46,3 +48,4 @@ systemd.services.comfyui = {
     mkdir -p ${cfg.customNodesPath}
   '';
 };
+}
