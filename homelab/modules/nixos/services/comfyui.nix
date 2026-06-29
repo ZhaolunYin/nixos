@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
 systemd.services.comfyui = {
   description = "ComfyUI";
