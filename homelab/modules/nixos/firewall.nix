@@ -9,8 +9,8 @@
             2003 # forgejo
         ];
 /*
-Services with ports not included: 
-- Sunshine
+Services with self-managed ports: 
+- Wolf
 - Steam
 */
     };

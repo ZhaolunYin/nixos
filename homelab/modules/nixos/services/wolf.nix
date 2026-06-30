@@ -4,6 +4,9 @@
     virtualisation.oci-containers.backend = "docker";
     hardware.nvidia-container-toolkit.enable = true;
 
+    networking.firewall.allowedTCPPorts = [ 47984 47989 48010 ];
+    networking.firewall.allowedUDPPorts = [ 47999 48100 48200 ];
+
     virtualisation.oci-containers.containers.wolf = {
         image = "ghcr.io/games-on-whales/wolf:stable";
         autoStart = true;
