@@ -1,7 +1,8 @@
 {
     virtualisation.docker.enable = true;
+    virtualisation.docker.daemon.settings.features.cdi = true;
     virtualisation.oci-containers.backend = "docker";
-    hardware.nvidia-container-toolkit.enable = true; # enables --gpus=all support
+    hardware.nvidia-container-toolkit.enable = true;
 
     virtualisation.oci-containers.containers.wolf = {
         image = "ghcr.io/games-on-whales/wolf:stable";
@@ -22,7 +23,7 @@
             "--device=/dev/uinput"
             "--device=/dev/uhid"
             "--device-cgroup-rule=c 13:* rmw"
-            "--gpus=all"
+            "--device=nvidia.com/gpu=all"
         ];
     };
 }
