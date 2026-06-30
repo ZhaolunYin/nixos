@@ -8,5 +8,9 @@
             2002 # searxng
             2003 # forgejo
         ];
+/*
+Services with ports not included: 
+ - Sunshine
+*/
     };
 }

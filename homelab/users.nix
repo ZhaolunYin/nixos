@@ -20,6 +20,11 @@
         extraGroups = [ "wheel" "networkmanager" ];
         hashedPassword = "$y$j9T$Cur1cOb.2uQWpyl4zQrYZ/$28ebqpkeYmFAI4eHXDIkmt/gNnvIzTyYIJUbdCqIYq6";
     };
+    users.users.gaming = {
+        isNormalUser = true;
+        extraGroups = [ "networkmanager" "uinput" ];
+        hashedPassword = "$6$2zvICzUP99Ww87pL$u.o6R7LRjA3m1LdWzWo2u1r6WABZgecEvNqDpk1tQTglDQTFvg9sI5JRcGuFPsKx641l58M.g91w8D7QkgUq90";
+    };
     users.users.yxk = {
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" "libvirtd" ];

@@ -5,5 +5,6 @@
         ./homepage.nix
         ./llama.nix
         ./searxng.nix
+        ./sunshine.nix
     ];
 }
