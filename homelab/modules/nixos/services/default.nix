@@ -5,6 +5,7 @@
         ./homepage.nix
         ./llama.nix
         ./searxng.nix
+        ./steam.nix
         ./sunshine.nix
     ];
 }

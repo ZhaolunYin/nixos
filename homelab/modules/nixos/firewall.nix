@@ -10,7 +10,8 @@
         ];
 /*
 Services with ports not included: 
- - Sunshine
+- Sunshine
+- Steam
 */
     };
 }

@@ -24,11 +24,6 @@
         isNormalUser = true;
         extraGroups = [ "video" "render" "networkmanager" "uinput" ];
         hashedPassword = "$6$2zvICzUP99Ww87pL$u.o6R7LRjA3m1LdWzWo2u1r6WABZgecEvNqDpk1tQTglDQTFvg9sI5JRcGuFPsKx641l58M.g91w8D7QkgUq90";
-        packages = with pkgs; [
-            steam
-            gamemode
-            protonup-qt
-        ];
     };
     users.users.yxk = {
         isNormalUser = true;
