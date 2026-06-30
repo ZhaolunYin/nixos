@@ -6,6 +6,6 @@
         ./llama.nix
         ./searxng.nix
         ./steam.nix
-        ./sunshine.nix
+        ./wolf.nix
     ];
 }
