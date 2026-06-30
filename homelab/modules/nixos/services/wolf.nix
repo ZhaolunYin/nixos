@@ -1,5 +1,6 @@
 {
     virtualisation.docker.enable = true;
+    virtualisation.oci-containers.backend = "docker";
     hardware.nvidia-container-toolkit.enable = true; # enables --gpus=all support
 
     virtualisation.oci-containers.containers.wolf = {
