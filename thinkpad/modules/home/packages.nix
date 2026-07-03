@@ -6,7 +6,6 @@
         google-chrome
         hyprshutdown
         kdePackages.kamoso
-        moonlight-qt
         mousepad
         noto-fonts-cjk-sans
         noto-fonts-color-emoji

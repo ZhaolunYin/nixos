@@ -5,8 +5,5 @@
         ./homepage.nix
         ./llama.nix
         ./searxng.nix
-        ./steam.nix
-        ./wayvnc.nix
-        ./wolf.nix
     ];
 }
