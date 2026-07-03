@@ -48,7 +48,7 @@
                                 ];
                                 home.stateVersion = "26.05";
                             };
-                            backupFileExtension = "bak";
+                            backupFileExtension = "hm-backup";
                         };
                     }
                 ];
@@ -70,7 +70,7 @@
                                 ];
                                 home.stateVersion = "26.05";
                             };
-                            backupFileExtension = "bak";
+                            backupFileExtension = "hm-backup";
                         };
                     }
                 ];
@@ -93,7 +93,7 @@
                                 ];
                                 home.stateVersion = "26.05";
                             };
-                            backupFileExtension = "bak";
+                            backupFileExtension = "hm-backup";
                         };
                     }
                 ];

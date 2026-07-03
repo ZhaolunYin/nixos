@@ -1,9 +1,40 @@
-{
-pkgs,
-...
-}:
+{ pkgs, ... }:
 
 {
+    systemd.user.services.llama-cpp = {
+        Unit = {
+            Description = "llama.cpp server";
+            After = [ "network.target" ];
+        };
+
+        Service = {
+            ExecStart = ''
+                ${pkgs.llama-cpp}/bin/llama-server \
+                --hf-repo unsloth/Qwen3-0.6B-GGUF \
+                --hf-file Qwen3-0.6B-Q4_K_M.gguf \
+                --alias unsloth/Qwen3-0.6B \
+                --ctx-size 4096 \
+                --fit on \
+                --temp 0.6 \
+                --top-p 0.95 \
+                --top-k 20 \
+                --min-p 0.0 \
+                --presence-penalty 1.5 \
+                --reasoning off \
+                --host 127.0.0.1 \
+                --port 8080 \
+                --parallel 1
+            '';
+
+            Restart = "always";
+            RestartSec = 2;
+        };
+
+        Install = {
+            WantedBy = [ "default.target" ];
+        };
+    };
+
     # ---------------------------------------------------------------------------
     # Program configuration
     # ---------------------------------------------------------------------------
@@ -114,7 +145,7 @@ pkgs,
                     return nil
                 end
             end
-                    '';
+            '';
                     formatters_by_ft = { };
                 };
             };
@@ -125,18 +156,49 @@ pkgs,
                 settings = {
                     keymap.preset = "default";
                     appearance.nerd_font_variant = "mono";
-                    completion.documentation.auto_show = false;
-                    completion.documentation.auto_show_delay_ms = 500;
+                    completion = {
+                        documentation.auto_show = false;
+                        documentation.auto_show_delay_ms = 500;
+                    };
                     sources.default = [
                         "lsp"
                         "path"
                         "snippets"
+                        "minuet"
                     ];
+                    sources.providers.minuet = {
+                        name = "minuet";
+                        module = "minuet.blink";
+                        async = true;
+                    };
                     fuzzy.implementation = "lua";
                     signature.enabled = true;
+                    completion.trigger.show_on_keyword = true;
+                    completion.trigger.show_on_trigger_character = true;
                 };
             };
-            luasnip.enable = true;
+
+            minuet = {
+                enable = true;
+
+                settings = {
+                    provider = "openai_fim_compatible";
+
+                    provider_options.openai_fim_compatible = {
+                        name = "llama.cpp";
+                        api_key = "TERM";
+                        model = "unsloth/Qwen3-0.6B";
+                        end_point = "http://127.0.0.1:8080/v1/completions";
+                    };
+                };
+            };
+
+            luasnip = {
+                enable = true;
+                fromVscode = [
+                    { }
+                ];
+            };
 
             # Todo comments
             todo-comments = {
@@ -518,6 +580,16 @@ pkgs,
 
       -- autopairs
       require('nvim-autopairs').setup {}
+
+      -- Fix minuet is_available for local llama.cpp (no API key needed)
+      do
+          local ok, backend = pcall(require, 'minuet.backends.openai_fim_compatible')
+          if ok then
+              backend.is_available = function()
+                  return true
+              end
+          end
+      end
       '';
     };
 }

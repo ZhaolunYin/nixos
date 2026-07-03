@@ -8,7 +8,10 @@
             name = "default";
             isDefault = true;
 
-            search.default = "google";
+            search = {
+                force = true;
+                default = "google";
+            };
 
             bookmarks = {
                 force = true;
