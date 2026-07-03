@@ -1,24 +1,16 @@
 { pkgs, ... }:
 {
-    services = {
-        desktopManager.plasma6.enable = false;
-        displayManager.sddm.enable = false;
+    programs.wayvnc = {
+        enable = true;
     };
 
-    programs = {
-        sway = {
-            enable = true;
-            wrapperFeatures.base = true;
-            wrapperFeatures.gtk = true;
-            xwayland.enable = true;
-        };
-
-        wayvnc = {
-            enable = true;
+    systemd.services.wayvnc = {
+        description = "wayvnc VNC server for headless Wayland";
+        after = [ "multi-user.target" ];
+        wantedBy = [ "multi-user.target" ];
+        serviceConfig = {
+            Type = "simple";
+            ExecStart = "${pkgs.wayvnc}/bin/wayvnc --detached 0.0.0.0";
         };
     };
-
-    environment.etc."sway/config.d/wayvnc.conf".text = ''
-        exec ${pkgs.wayvnc}/bin/wayvnc &
-    '';
 }
