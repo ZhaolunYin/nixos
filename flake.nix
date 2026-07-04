@@ -108,6 +108,7 @@
                 system = "x86_64-linux";
                 modules = [
                     ./projector
+                    disko.nixosModules.disko
                     home-manager.nixosModules.home-manager
                     {
                         home-manager = {
