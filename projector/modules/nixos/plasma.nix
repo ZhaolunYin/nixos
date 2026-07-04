@@ -23,4 +23,8 @@
         #jack.enable = true;
     };
 
+    services.udev.extraHwdb = ''
+    evdev:input:b0003v*p*e*
+    KEYBOARD_KEY_c0183=reserved
+    '';
 }
