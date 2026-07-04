@@ -4,6 +4,8 @@
     imports = [
         ./modules/nixos
         ../share/nixos
+
+        ./hardware-configuration.nix
     ];
     programs.zsh.enable = true;
     users.mutableUsers = false;

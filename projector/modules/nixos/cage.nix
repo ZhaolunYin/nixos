@@ -7,8 +7,4 @@
         user = "projector";
         program = "${pkgs.firefox}/bin/firefox";
     };
-
-    environment = {
-        MOZ_ENABLE_WAYLAND = "1";
-    };
 }
