@@ -22,9 +22,4 @@
         # If you want to use JACK applications, uncomment the following
         #jack.enable = true;
     };
-
-    services.udev.extraHwdb = ''
-    evdev:input:b0003v0E8Fp2517*
-    KEYBOARD_KEY_111b4=reserved
-    '';
 }
