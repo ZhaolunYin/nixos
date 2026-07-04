@@ -5,6 +5,6 @@
     services.cage = {
         enable = true;
         user = "projector";
-        program = "${pkgs.firefox}/bin/firefox";
+        program = "${pkgs.firefox}/bin/firefox --kiosk";
     };
 }
