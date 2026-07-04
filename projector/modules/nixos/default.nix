@@ -1,9 +1,10 @@
 {
     imports = [
         ./boot.nix
-        ./broadcom.nix
         ./cage.nix
         ./disko.nix
+        ./network.nix
+        ./power.nix
         ./ssh.nix
     ];
 }
