@@ -9,7 +9,7 @@
         ./noctalia.nix
         ./packages.nix
         ./pi.nix
-        ./vesktop.nix
+        ./profile.nix
         ./wallpaper.nix
     ];
 

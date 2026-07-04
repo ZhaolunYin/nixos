@@ -62,7 +62,7 @@
             shellAliases = {
                 ls = "eza --icons --group-directories-first";
                 tree = "eza --icons --group-directories-first -T";
-                cat = "bat -p --theme=Catppuccin\\ Mocha";
+                cat = "bat -p --no-paging --theme=Catppuccin\\ Mocha";
                 less = "bat --paging=always";
                 grep = "rg --color=auto --engine=auto";
                 find = "fd";
@@ -119,25 +119,20 @@
                 SUDO_PROMPT = "🔐 Password: ";
             };
             initContent = ''
-        precmd() {
-            printf '\e[6 q'
-        }
-        lazygit() {
-            git add --all
-            if [ $1 > /dev/null ]; then
-                git commit -m $1
-            else
-                git commit -m 'changed stuff'
-            fi
-            git push
-        }
-        eval "$(zoxide init zsh)"
-        fastfetch
-            '';
-            profileExtra = ''
-        if uwsm check may-start && uwsm select; then
-            exec uwsm start default
-        fi
+            precmd() {
+                printf '\e[6 q'
+            }
+            lazygit() {
+                git add --all
+                if [ $1 > /dev/null ]; then
+                    git commit -m $1
+                else
+                    git commit -m 'changed stuff'
+                fi
+                git push
+            }
+            eval "$(zoxide init zsh)"
+            fastfetch
             '';
         };
         starship = {

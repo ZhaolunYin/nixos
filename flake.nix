@@ -1,6 +1,11 @@
 {
     description = "My Nixos config";
 
+    nixConfig = {
+        substituters = [ "https://noctalia.cachix.org" ];
+        extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
+    };
+
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable";
         impermanence.url = "github:nix-community/impermanence";
@@ -87,6 +92,28 @@
                             useGlobalPkgs = true;
                             useUserPackages = true;
                             users.lab = {
+                                imports = [
+                                    nixvim.homeModules.nixvim
+                                    ./share/home
+                                ];
+                                home.stateVersion = "26.05";
+                            };
+                            backupFileExtension = "hm-backup";
+                        };
+                    }
+                ];
+            };
+
+            nixosConfigurations.projector = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                modules = [
+                    ./projector
+                    home-manager.nixosModules.home-manager
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                            users.projector = {
                                 imports = [
                                     nixvim.homeModules.nixvim
                                     ./share/home
