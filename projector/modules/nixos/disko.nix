@@ -3,7 +3,7 @@
         disk = {
             system = {
                 type = "disk";
-                device = "/dev/disk/by-id/ata-ST9500420ASG_5VJDAS2S";
+                device = "/dev/sda";
 
                 content = {
                     type = "gpt";
@@ -33,7 +33,7 @@
 
             home = {
                 type = "disk";
-                device = "/dev/disk/by-id/ata-ST9500420ASG_5VJDC3W9";
+                device = "/dev/sdb";
 
                 content = {
                     type = "gpt";
