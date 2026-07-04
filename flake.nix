@@ -24,9 +24,15 @@
             url = "github:nix-community/nixvim";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        plasma-manager = {
+            url = "github:nix-community/plasma-manager";
+            inputs.nixpkgs.follows = "nixpkgs";
+            inputs.home-manager.follows = "home-manager";
+        };
     };
 
-    outputs = { nixpkgs, disko, home-manager, impermanence, noctalia, nixvim, ... }:
+    outputs = { nixpkgs, disko, home-manager, impermanence, noctalia, nixvim, plasma-manager, ... }:
         {
             nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
@@ -112,6 +118,7 @@
                             users.projector = {
                                 imports = [
                                     nixvim.homeModules.nixvim
+                                    plasma-manager.homeManagerModules.plasma-manager
                                     ./share/home
                                     ./projector/modules/home
                                 ];
