@@ -113,6 +113,7 @@
                                 imports = [
                                     nixvim.homeModules.nixvim
                                     ./share/home
+                                    ./projector/modules/home
                                 ];
                                 home.stateVersion = "26.05";
                             };
