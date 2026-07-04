@@ -24,7 +24,7 @@
     };
 
     services.udev.extraHwdb = ''
-    evdev:input:b0003v*p*e*
-    KEYBOARD_KEY_c0183=reserved
+    evdev:input:b0003v0E8Fp2517*
+    KEYBOARD_KEY_111b4=reserved
     '';
 }
