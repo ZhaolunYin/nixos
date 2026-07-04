@@ -1,7 +1,7 @@
 {
     disko.devices = {
         disk = {
-            system = {
+            main = {
                 type = "disk";
                 device = "/dev/sda";
 
@@ -31,25 +31,6 @@
                                 type = "filesystem";
                                 format = "ext4";
                                 mountpoint = "/";
-                            };
-                        };
-                    };
-                };
-            };
-
-            home = {
-                type = "disk";
-                device = "/dev/sdb";
-
-                content = {
-                    type = "gpt";
-                    partitions = {
-                        home = {
-                            size = "100%";
-                            content = {
-                                type = "filesystem";
-                                format = "ext4";
-                                mountpoint = "/home";
                             };
                         };
                     };
