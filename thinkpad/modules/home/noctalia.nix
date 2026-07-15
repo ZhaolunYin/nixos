@@ -106,11 +106,10 @@
                     {
                         fill = "surface_variant";
                         id = "g1";
-                        members = [ "active_window" "clock" "media" ];
+                        members = [ "active_window" "clock" ];
                         opacity = 1.0;
                         padding = 6.0;
                     }
-
                     {
                         fill = "surface_variant";
                         id = "g2";

@@ -134,7 +134,6 @@
                 hl.dispatch(hl.dsp.dpms({ action = "disable" }))
             end, { timeout = 400, type = "oneshot" })
         end, { locked = true })
-        hl.bind(shift_mod  .. " + ALT + L", hl.dsp.exec_cmd("systemctl hibernate"))
         hl.bind(main_mod  .. " + F",     hl.dsp.exec_cmd("firefox"))
         hl.bind(shift_mod .. " + P",     hl.dsp.exec_cmd("firefox --private-window"))
         hl.bind(shift_mod .. " + C",     hl.dsp.exec_cmd("google-chrome-stable"))

@@ -15,6 +15,7 @@
         pinentry-curses
         proton-vpn
         python3
+        valgrind
         yazi
     ];
 }

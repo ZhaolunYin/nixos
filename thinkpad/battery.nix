@@ -1,14 +1,9 @@
-{ config, ... }:
 {
     services.logind.settings.Login = {
-        HandleLidSwitch = "suspend-then-hibernate";
+        HandleLidSwitch = "suspend";
         HandleLidSwitchExternalPower = "ignore";
         HandleLidSwitchDocked = "ignore";
     };
-    systemd.sleep.settings.Sleep = {
-        HibernateDelaySec = "30m";
-    };
-    boot.resumeDevice = (builtins.head config.swapDevices).device;
     powerManagement.enable = true;
 
     services.tlp = {

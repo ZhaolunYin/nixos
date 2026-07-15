@@ -8,5 +8,6 @@
         ./impermanence.nix
         ./network.nix
         ./packages.nix
+        ./printing.nix
     ];
 }

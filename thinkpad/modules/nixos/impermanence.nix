@@ -21,6 +21,7 @@
             "/var/lib/bluetooth"
             "/var/lib/fprint"
             "/var/lib/nixos"
+            "/var/lib/tailscale"
             "/var/lib/systemd/coredump"
             {
                 directory = "/var/lib/colord"; 

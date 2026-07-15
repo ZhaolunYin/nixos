@@ -18,6 +18,7 @@
         gcc
         git
         libnotify
+        lm_sensors
         neovim
         nodejs
         tmux
