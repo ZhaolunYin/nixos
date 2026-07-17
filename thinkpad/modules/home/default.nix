@@ -1,6 +1,7 @@
 {
     imports = [
         ./btop.nix
+        ./cava.nix
         ./clipboard.nix
         ./cursor.nix
         ./hypridle.nix

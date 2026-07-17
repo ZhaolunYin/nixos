@@ -3,10 +3,7 @@
     home.packages = with pkgs; [
         bat
         duf
-        dust
         eza
-        fd
-        procs
         ripgrep
         trash-cli
     ];
@@ -52,11 +49,7 @@
                     "git"
                     "colored-man-pages"
                     "command-not-found"
-                    "extract"
-                    "web-search"
                     "copyfile"
-                    "copypath"
-                    "dirhistory"
                 ];
             };
             shellAliases = {
@@ -64,13 +57,8 @@
                 tree = "eza --icons --group-directories-first -T";
                 cat = "bat -p --no-paging --theme=Catppuccin\\ Mocha";
                 less = "bat --paging=always";
-                grep = "rg --color=auto --engine=auto";
-                find = "fd";
-                du = "dust -X /tmp -X /mnt";
                 df = "duf";
-                ps = "procs";
                 top = "btop";
-                f = "fastfetch";
                 icat = "kitten icat";
                 cd = "z";
                 ".." = "cd ..";
@@ -132,7 +120,6 @@
                 git push
             }
             eval "$(zoxide init zsh)"
-            fastfetch
             '';
         };
         starship = {
