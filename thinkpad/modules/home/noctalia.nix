@@ -87,6 +87,7 @@
                 background_opacity = 0.58;
                 radius = 14;
                 margin_ends = 10;
+                margin_edge = 2;
                 thickness = 32;
                 widget_spacing = 12;
                 shadow = true;
@@ -211,7 +212,7 @@
 
             widget = {
                 workspaces = {
-                    minimal = true;
+                    style = "minimal";
                 };
             };
 
