@@ -47,7 +47,6 @@
                 enable = true;
                 plugins = [
                     "git"
-                    "colored-man-pages"
                     "command-not-found"
                     "copyfile"
                 ];
@@ -83,6 +82,8 @@
                 HYPRCURSOR_THEME = "catppuccin-mocha-mauve-cursors";
                 WLR_NO_HARDWARE_CURSORS = "1";
                 LIBVA_DRIVER_NAME = "amd";
+                # Data dirs
+                XDG_DATA_DIRS = "$XDG_DATA_DIRS:/var/lib/flatpak/exports/share";
                 # Locale
                 LANG = "en_GB.UTF-8";
                 LC_CTYPE = "en_GB.UTF-8";

@@ -40,6 +40,10 @@
                                 name = "Reddit";
                                 url = "https://reddit.com";
                             }
+                            {
+                                name = "Github";
+                                url = "https://github.com";
+                            }
                         ];
                     }
                 ];

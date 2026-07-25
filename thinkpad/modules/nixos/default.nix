@@ -4,6 +4,7 @@
         ./disko.nix
         ./display.nix
         #./displaylink.nix
+        ./flatpak.nix
         ./fprintd.nix
         ./impermanence.nix
         ./network.nix

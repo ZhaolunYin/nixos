@@ -4,6 +4,7 @@
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable";
         impermanence.url = "github:nix-community/impermanence";
+        nix-flatpak.url = "github:gmodena/nix-flatpak";
 
         disko = {
             url = "github:nix-community/disko";
@@ -22,7 +23,6 @@
 
         nixvim = {
             url = "github:nix-community/nixvim";
-            inputs.nixpkgs.follows = "nixpkgs";
         };
 
         plasma-manager = {
@@ -32,7 +32,7 @@
         };
     };
 
-    outputs = { nixpkgs, disko, home-manager, impermanence, noctalia, nixvim, plasma-manager, ... }:
+    outputs = { nixpkgs, disko, home-manager, impermanence, noctalia, nix-flatpak, nixvim, plasma-manager, ... }:
         {
             nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
@@ -40,6 +40,7 @@
                     ./thinkpad
                     disko.nixosModules.disko
                     impermanence.nixosModules.impermanence
+                    nix-flatpak.nixosModules.nix-flatpak
                     home-manager.nixosModules.home-manager
                     {
                         home-manager = {

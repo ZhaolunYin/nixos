@@ -3,7 +3,9 @@
 {
     home.packages = with pkgs; [
         ddcutil
+        gdb
         google-chrome
+        hugo
         hyprshutdown
         kdePackages.kamoso
         mousepad
@@ -15,9 +17,9 @@
         pinentry-curses
         proton-vpn
         python3
-        qbittorrent
         unrar
         valgrind
         yazi
+        zathura
     ];
 }
