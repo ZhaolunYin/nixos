@@ -102,6 +102,7 @@
                     "group:g5"
                     "group:g3"
                     "group:g4"
+                    "tray"
                 ];
                 capsule_group = [
                     {

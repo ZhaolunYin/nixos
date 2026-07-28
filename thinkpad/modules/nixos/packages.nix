@@ -14,6 +14,7 @@
     # You can use https://search.nixos.org/ to find more packages (and options).
     environment.systemPackages = with pkgs; [
         brightnessctl
+        cargo
         fzf
         gcc
         git
@@ -24,6 +25,7 @@
         man-pages-posix
         neovim
         nodejs
+        rustc
         tmux
         unzip
         wget
