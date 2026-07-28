@@ -5,6 +5,7 @@
 
     programs.firefox.enable = true;
     programs.zsh.enable = true;  
+    programs.fuse.userAllowOther = true;
     security.polkit.enable = true;
     services.fwupd.enable = true;
     services.upower.enable = true;
@@ -26,6 +27,7 @@
         neovim
         nodejs
         rustc
+        rustup
         tmux
         unzip
         wget
