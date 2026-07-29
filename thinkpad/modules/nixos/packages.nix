@@ -6,6 +6,7 @@
     programs.firefox.enable = true;
     programs.zsh.enable = true;  
     programs.fuse.userAllowOther = true;
+    programs.steam.enable = true;
     security.polkit.enable = true;
     services.fwupd.enable = true;
     services.upower.enable = true;
