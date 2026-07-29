@@ -16,12 +16,6 @@
             fit = "on";
             device = "CUDA0";
 
-            temp = 0.6;
-            top-p = 0.95;
-            top-k = 20;
-            min-p = 0.0;
-            presence-penalty = 1.5;
-
             reasoning = "off";
 
             host = "0.0.0.0";

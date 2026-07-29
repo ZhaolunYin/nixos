@@ -3,6 +3,7 @@
 
     inputs = {
         disko.url = "github:nix-community/disko";
+        flake-parts.url = "github:hercules-ci/flake-parts";
         home-manager.url = "github:nix-community/home-manager";
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
