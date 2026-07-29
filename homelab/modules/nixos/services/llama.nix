@@ -2,6 +2,10 @@
 {
     services.llama-cpp = {
         enable = true;
+        package = pkgs.llama-cpp.override {
+            cudaSupport = true;
+        };
+
 
         settings = {
             hf-repo = "unsloth/Qwen3.6-35B-A3B-GGUF";
