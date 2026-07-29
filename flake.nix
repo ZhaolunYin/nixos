@@ -115,7 +115,7 @@
                             users.projector = {
                                 imports = [
                                     nixvim.homeModules.nixvim
-                                    plasma-manager.homeManagerModules.plasma-manager
+                                    plasma-manager.homeModules.plasma-manager
                                     (import-tree ./projector/modules/_home)
                                     (import-tree ./share/_home)
                                 ];
