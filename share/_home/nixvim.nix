@@ -74,6 +74,14 @@
                     rust_analyzer = {
                         enable = true;
 
+                        /*
+                        Do not auto install cargo and rustc
+                        because if they are not installed
+                        I will not be writing rust code
+                        */
+                        installCargo = false;
+                        installRustc = false;
+
                         settings = {
                             rust-analyzer = {
                                 cargo.allFeatures = true;
