@@ -2,42 +2,35 @@
     description = "My Nixos config";
 
     inputs = {
-        nixpkgs.url = "nixpkgs/nixos-unstable";
+        disko.url = "github:nix-community/disko";
+        home-manager.url = "github:nix-community/home-manager";
         impermanence.url = "github:nix-community/impermanence";
+        import-tree.url = "github:denful/import-tree";
+        nixpkgs.url = "nixpkgs/nixos-unstable";
+        nixvim.url = "github:nix-community/nixvim";
         nix-flatpak.url = "github:gmodena/nix-flatpak";
-
-        disko = {
-            url = "github:nix-community/disko";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        home-manager = {
-            url = "github:nix-community/home-manager";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        noctalia = {
-            url = "github:noctalia-dev/noctalia-shell";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        nixvim = {
-            url = "github:nix-community/nixvim";
-        };
-
-        plasma-manager = {
-            url = "github:nix-community/plasma-manager";
-            inputs.nixpkgs.follows = "nixpkgs";
-            inputs.home-manager.follows = "home-manager";
-        };
+        noctalia.url = "github:noctalia-dev/noctalia-shell";
+        plasma-manager.url = "github:nix-community/plasma-manager";
     };
 
-    outputs = { nixpkgs, disko, home-manager, impermanence, noctalia, nix-flatpak, nixvim, plasma-manager, ... }:
+    outputs = {
+    disko,
+    home-manager,
+    impermanence,
+    import-tree,
+    nixpkgs,
+    nixvim,
+    nix-flatpak,
+    noctalia,
+    plasma-manager,
+    ...
+    }:
         {
             nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 modules = [
-                    ./thinkpad
+                    (import-tree ./thinkpad)
+                    (import-tree ./share)
                     disko.nixosModules.disko
                     impermanence.nixosModules.impermanence
                     nix-flatpak.nixosModules.nix-flatpak
@@ -50,8 +43,8 @@
                                 imports = [
                                     noctalia.homeModules.default
                                     nixvim.homeModules.nixvim
-                                    ./thinkpad/modules/home
-                                    ./share/home
+                                    (import-tree ./thinkpad/modules/_home)
+                                    (import-tree ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
@@ -64,7 +57,8 @@
             nixosConfigurations.rpi = nixpkgs.lib.nixosSystem {
                 system = "aarch64-linux";
                 modules = [
-                    ./rpi
+                    (import-tree ./rpi)
+                    (import-tree ./share)
                     home-manager.nixosModules.home-manager
                     {
                         home-manager = {
@@ -73,7 +67,7 @@
                             users.admin = {
                                 imports = [
                                     nixvim.homeModules.nixvim
-                                    ./share/home
+                                    (import-tree ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
@@ -86,7 +80,8 @@
             nixosConfigurations.homelab = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 modules = [
-                    ./homelab
+                    (import-tree ./homelab)
+                    (import-tree ./share)
                     disko.nixosModules.disko
                     home-manager.nixosModules.home-manager
                     {
@@ -96,7 +91,7 @@
                             users.lab = {
                                 imports = [
                                     nixvim.homeModules.nixvim
-                                    ./share/home
+                                    (import-tree ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
@@ -109,7 +104,8 @@
             nixosConfigurations.projector = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 modules = [
-                    ./projector
+                    (import-tree ./projector)
+                    (import-tree ./share)
                     disko.nixosModules.disko
                     home-manager.nixosModules.home-manager
                     {
@@ -120,8 +116,8 @@
                                 imports = [
                                     nixvim.homeModules.nixvim
                                     plasma-manager.homeManagerModules.plasma-manager
-                                    ./share/home
-                                    ./projector/modules/home
+                                    (import-tree ./projector/modules/_home)
+                                    (import-tree ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
