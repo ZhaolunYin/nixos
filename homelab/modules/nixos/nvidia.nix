@@ -14,10 +14,7 @@
 
     environment.systemPackages = [ pkgs.cudatoolkit ];
 
-    nixpkgs.config = {
-        allowUnfree = true;
-        cudaSupport = true;
-    };
+    nixpkgs.config.allowUnfree = true;
 
     hardware.graphics.enable = true;
 
