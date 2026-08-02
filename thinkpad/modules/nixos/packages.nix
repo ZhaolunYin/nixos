@@ -27,6 +27,8 @@
         man-pages-posix
         neovim
         nodejs
+        OVMF
+        qemu
         rustc
         rustup
         tmux
