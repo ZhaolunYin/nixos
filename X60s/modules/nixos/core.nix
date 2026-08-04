@@ -11,7 +11,6 @@
 
     security.sudo.extraConfig = "Defaults pwfeedback";
 
-    users.defaultUserShell = pkgs.zsh;
     zramSwap = {
         enable = true;
     };

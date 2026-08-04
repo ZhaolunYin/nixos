@@ -7,6 +7,7 @@
         neovim
         slstatus
         st
+        xorg.xinit
     ];
 }
 
