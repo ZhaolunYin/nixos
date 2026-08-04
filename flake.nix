@@ -14,6 +14,10 @@
         };
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
+        import-tree-23_11 = {
+            url = "github:denful/import-tree";
+            inputs.nixpkgs.follows = "nixpkgs-23_11";
+        };
         nixpkgs.url = "nixpkgs/nixos-unstable";
         nixpkgs-23_11.url = "nixpkgs/nixos-23.11";
         nixvim.url = "github:nix-community/nixvim";
