@@ -13,12 +13,6 @@
         chown zhaolun:users /home/zhaolun/.xinitrc
         chmod 644 /home/zhaolun/.xinitrc
     '';
-    environment.etc."X11/xorg.conf.d/20-intel.conf".text = ''
-        Section "Device"
-            Identifier "Intel Graphics"
-            Driver "intel"
-        EndSection
-    '';
     environment.systemPackages = with pkgs; [
         xorg.xf86videointel
     ];
