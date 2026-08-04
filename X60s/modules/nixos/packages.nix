@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+    nixpkgs.config.doCheck = false;
     environment.systemPackages = with pkgs; [
         dmenu
         git
