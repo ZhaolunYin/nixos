@@ -1,11 +1,6 @@
 {
     networking.hostName = "X60s";
 
-    services.avahi = {
-        enable = true;
-        nssmdns4 = true;
-    };
-
     networking = {
         wireless.iwd = {
             enable = true;
