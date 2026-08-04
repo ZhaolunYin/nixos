@@ -134,7 +134,6 @@
                 system = "i686-linux";
                 modules = [
                     (import-tree ./X60s)
-                    (import-tree ./share)
                     disko.nixosModules.disko
                 ];
             };
