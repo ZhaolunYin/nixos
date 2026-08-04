@@ -4,7 +4,11 @@
         windowManager.dwm.enable = true;
         displayManager.lightdm.enable = false;
     };
-    environment.etc."skel/.xinitrc".text = ''
+    system.activationScripts.xinitrc.text = ''
+        cat > /home/zhaolun/.xinitrc <<'EOF'
         exec dwm
+        EOF
+        chown zhaolun:users /home/zhaolun/.xinitrc
+        chmod 644 /home/zhaolun/.xinitrc
     '';
 }
