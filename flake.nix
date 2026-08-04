@@ -3,6 +3,10 @@
 
     inputs = {
         disko.url = "github:nix-community/disko";
+        disko-23_11 = {
+            url = "github:nix-community/disko";
+            inputs.nixpkgs.follows = "nixpkgs-23_11";
+        };
         home-manager.url = "github:nix-community/home-manager";
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
@@ -16,6 +20,7 @@
 
     outputs = {
     disko,
+    disko-23_11,
     home-manager,
     impermanence,
     import-tree,
@@ -134,7 +139,7 @@
                 system = "i686-linux";
                 modules = [
                     (import-tree ./X60s)
-                    disko.nixosModules.disko
+                    disko-23_11.nixosModules.disko
                 ];
             };
         };
