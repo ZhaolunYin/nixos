@@ -3,8 +3,15 @@
 
     inputs = {
         disko.url = "github:nix-community/disko";
-        flake-parts.url = "github:hercules-ci/flake-parts";
+        disko-23_11 = {
+            url = "github:nix-community/disko";
+            inputs.nixpkgs.follows = "nixpkgs-23_11";
+        };
         home-manager.url = "github:nix-community/home-manager";
+        home-manager-23_11 = {
+            url = "github:nix-community/home-manager";
+            inputs.nixpkgs.follows = "nixpkgs-23_11";
+        };
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
         nixpkgs.url = "nixpkgs/nixos-unstable";
@@ -17,7 +24,9 @@
 
     outputs = {
     disko,
+    disko-23_11,
     home-manager,
+    home-manager-23_11,
     impermanence,
     import-tree,
     nixpkgs,
@@ -134,8 +143,8 @@
                 modules = [
                     (import-tree ./X60s)
                     (import-tree ./share)
-                    disko.nixosModules.disko
-                    home-manager.nixosModules.home-manager
+                    disko-23_11.nixosModules.disko
+                    home-manager-23_11.nixosModules.home-manager
                     {
                         home-manager = {
                             useGlobalPkgs = true;
