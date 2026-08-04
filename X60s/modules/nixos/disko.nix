@@ -14,7 +14,7 @@
                     {
                         name = "root";
                         start = "1MiB";
-                        end = "-2G";
+                        end = "-2GiB";
 
                         content = {
                             type = "filesystem";

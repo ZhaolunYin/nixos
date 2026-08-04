@@ -134,12 +134,17 @@
                     (import-tree ./share)
                     disko.nixosModules.disko
                 ];
-                users.zhaolun = {
-                    imports = [
-                        nixvim.homeModules.nixvim
-                        (import-tree ./share/_home)
-                    ];
-                    home.stateVersion = "26.05";
+                home-manager = {
+                    useGlobalPkgs = true;
+                    useUserPackages = true;
+                    users.projector = {
+                        imports = [
+                            nixvim.homeModules.nixvim
+                            (import-tree ./share/_home)
+                        ];
+                        home.stateVersion = "26.05";
+                    };
+                    backupFileExtension = "hm-backup";
                 };
             };
         };
