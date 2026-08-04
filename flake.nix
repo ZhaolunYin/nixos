@@ -24,9 +24,7 @@
 
     outputs = {
     disko,
-    disko-23_11,
     home-manager,
-    home-manager-23_11,
     impermanence,
     import-tree,
     nixpkgs,
@@ -145,6 +143,7 @@
                 modules = [
                     (import-tree ./X60s)
                     (import-tree ./share)
+                    /*
                     disko-23_11.nixosModules.disko
                     home-manager-23_11.nixosModules.home-manager
                     {
@@ -160,6 +159,7 @@
                             backupFileExtension = "hm-backup";
                         };
                     }
+                    */
                 ];
             };
         };
