@@ -14,6 +14,6 @@
         chmod 644 /home/zhaolun/.xinitrc
     '';
     environment.systemPackages = with pkgs; [
-        xf86-video-intel
+        xorg.xf86videointel
     ];
 }
