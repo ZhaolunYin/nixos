@@ -132,7 +132,7 @@
             nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
                 system = "i686-linux";
                 modules = [
-                    (import-tree ./x60s)
+                    (import-tree ./X60s)
                     (import-tree ./share)
                     disko.nixosModules.disko
                     home-manager.nixosModules.home-manager
