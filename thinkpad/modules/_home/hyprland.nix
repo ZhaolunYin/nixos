@@ -102,9 +102,7 @@
             hl.animation({ leaf = "zoomFactor",     enabled = true, speed = 2, bezier = "snappy"   })
 
             -- Workspace Rules
-            hl.workspace_rule({ workspace = "r[1-3]", layout = "dwindle"   })
-            hl.workspace_rule({ workspace = "r[4-8]", layout = "scrolling" })
-            hl.workspace_rule({ workspace = "9",      layout = "monocle"   })
+            hl.workspace_rule({ workspace = "r[1-9]", layout = "dwindle"   })
 
             hl.window_rule({
                 name           = "suppress-maximize-events",

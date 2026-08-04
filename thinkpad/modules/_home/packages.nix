@@ -2,6 +2,7 @@
 
 {
     home.packages = with pkgs; [
+        bambu-studio
         ddcutil
         gdb
         google-chrome

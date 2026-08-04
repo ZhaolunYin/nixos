@@ -127,5 +127,20 @@
                     }
                 ];
             };
+            nixosConfigurations.X60s = nixpkgs.lib.nixosSystem {
+                system = "i686-linux";
+                modules = [
+                    (import-tree ./x60s)
+                    (import-tree ./share)
+                    disko.nixosModules.disko
+                ];
+                users.zhaolun = {
+                    imports = [
+                        nixvim.homeModules.nixvim
+                        (import-tree ./share/_home)
+                    ];
+                    home.stateVersion = "26.05";
+                };
+            };
         };
 }
