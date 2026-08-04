@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-    fonts.packages = with pkgs; [
-        legacyPackages.i686-linux.jetbrains-mono
-    ];
-
     security.sudo.extraConfig = "Defaults pwfeedback";
 
     users.defaultUserShell = pkgs.zsh;
