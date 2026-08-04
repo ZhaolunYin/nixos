@@ -8,6 +8,7 @@
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
         nixpkgs.url = "nixpkgs/nixos-unstable";
+        nixpkgs-23_11.url = "nixpkgs/nixos-23.11";
         nixvim.url = "github:nix-community/nixvim";
         nix-flatpak.url = "github:gmodena/nix-flatpak";
         noctalia.url = "github:noctalia-dev/noctalia-shell";
@@ -20,6 +21,7 @@
     impermanence,
     import-tree,
     nixpkgs,
+    nixpkgs-23_11,
     nixvim,
     nix-flatpak,
     noctalia,
@@ -127,7 +129,7 @@
                     }
                 ];
             };
-            nixosConfigurations.X60s = nixpkgs.lib.nixosSystem {
+            nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
                 system = "i686-linux";
                 modules = [
                     (import-tree ./x60s)
