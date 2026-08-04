@@ -21,6 +21,10 @@
         nixpkgs.url = "nixpkgs/nixos-unstable";
         nixpkgs-23_11.url = "nixpkgs/nixos-23.11";
         nixvim.url = "github:nix-community/nixvim";
+        nixvim-23_11 = {
+            url = "github:nix-community/nixvim";
+            inputs.nixpkgs.follows = "nixpkgs-23_11";
+        };
         nix-flatpak.url = "github:gmodena/nix-flatpak";
         noctalia.url = "github:noctalia-dev/noctalia-shell";
         plasma-manager.url = "github:nix-community/plasma-manager";
@@ -33,9 +37,11 @@
     home-manager-23_11,
     impermanence,
     import-tree,
+    import-tree-23_11,
     nixpkgs,
     nixpkgs-23_11,
     nixvim,
+    nixvim-23_11,
     nix-flatpak,
     noctalia,
     plasma-manager,
@@ -145,18 +151,18 @@
             nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
                 system = "i686-linux";
                 modules = [
-                    (import-tree ./X60s)
-                    (import-tree ./share)
+                    (import-tree-23_11 ./X60s)
+                    (import-tree-23_11 ./share)
                     disko-23_11.nixosModules.disko
                     home-manager-23_11.nixosModules.home-manager
                     {
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
-                            users.projector = {
+                            users.zhaolun = {
                                 imports = [
-                                    nixvim.homeModules.nixvim
-                                    (import-tree ./share/_home)
+                                    nixvim-23_11.homeModules.nixvim
+                                    (import-tree-23_11 ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
