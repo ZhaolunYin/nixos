@@ -2,7 +2,7 @@
 
 {
     fonts.packages = with pkgs; [
-        jetbrains-mono
+        legacyPackages.i686-linux.jetbrains-mono
     ];
 
     security.sudo.extraConfig = "Defaults pwfeedback";
