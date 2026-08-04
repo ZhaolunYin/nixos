@@ -3,6 +3,7 @@
         enable = true;
         windowManager.dwm.enable = true;
         displayManager.lightdm.enable = false;
+        videoDrivers = [ "intel" ];
     };
     system.activationScripts.xinitrc.text = ''
         cat > /home/zhaolun/.xinitrc <<'EOF'
