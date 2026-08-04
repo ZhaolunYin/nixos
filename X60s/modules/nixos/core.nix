@@ -1,6 +1,14 @@
 { pkgs, ... }:
 
 {
+    fonts = {
+        enableDefaultPackages = false;
+
+        packages = with pkgs; [
+            dejavu_fonts
+        ];
+    };
+
     security.sudo.extraConfig = "Defaults pwfeedback";
 
     users.defaultUserShell = pkgs.zsh;
@@ -12,7 +20,7 @@
 
     nix.settings.experimental-features = [
         "nix-command"
-        "flakes"
+            "flakes"
     ];
     system.stateVersion = "23.11";
 }
