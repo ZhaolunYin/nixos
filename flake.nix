@@ -3,7 +3,6 @@
 
     inputs = {
         disko.url = "github:nix-community/disko";
-        disko.url = "github:nix-community/disko";
         home-manager.url = "github:nix-community/home-manager";
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
