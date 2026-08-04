@@ -55,6 +55,7 @@
                                 imports = [
                                     noctalia.homeModules.default
                                     nixvim.homeModules.nixvim
+                                    (import-tree ./share/_home/_nixvim.nix)
                                     (import-tree ./thinkpad/modules/_home)
                                     (import-tree ./share/_home)
                                 ];
@@ -79,6 +80,7 @@
                             users.admin = {
                                 imports = [
                                     nixvim.homeModules.nixvim
+                                    (import-tree ./share/_home/_nixvim.nix)
                                     (import-tree ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
@@ -103,6 +105,7 @@
                             users.lab = {
                                 imports = [
                                     nixvim.homeModules.nixvim
+                                    (import-tree ./share/_home/_nixvim.nix)
                                     (import-tree ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
@@ -126,7 +129,6 @@
                             useUserPackages = true;
                             users.projector = {
                                 imports = [
-                                    nixvim.homeModules.nixvim
                                     plasma-manager.homeModules.plasma-manager
                                     (import-tree ./projector/modules/_home)
                                     (import-tree ./share/_home)
