@@ -14,10 +14,6 @@
         };
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
-        import-tree-23_11 = {
-            url = "github:denful/import-tree";
-            inputs.nixpkgs.follows = "nixpkgs-23_11";
-        };
         nixpkgs.url = "nixpkgs/nixos-unstable";
         nixpkgs-23_11.url = "nixpkgs/nixos-23.11";
         nixvim.url = "github:nix-community/nixvim";
@@ -37,7 +33,6 @@
     home-manager-23_11,
     impermanence,
     import-tree,
-    import-tree-23_11,
     nixpkgs,
     nixpkgs-23_11,
     nixvim,
@@ -151,8 +146,8 @@
             nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
                 system = "i686-linux";
                 modules = [
-                    (import-tree-23_11 ./X60s)
-                    (import-tree-23_11 ./share)
+                    (import-tree ./X60s)
+                    (import-tree ./share)
                     disko-23_11.nixosModules.disko
                     home-manager-23_11.nixosModules.home-manager
                     {
@@ -162,7 +157,7 @@
                             users.zhaolun = {
                                 imports = [
                                     nixvim-23_11.homeModules.nixvim
-                                    (import-tree-23_11 ./share/_home)
+                                    (import-tree ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
