@@ -4,6 +4,10 @@
     inputs = {
         disko.url = "github:nix-community/disko";
         home-manager.url = "github:nix-community/home-manager";
+        home-manager-23_11 = {
+            url = "github:nix-community/home-manager/release-23.11";
+            inputs.nixpkgs.follows = "nixpkgs-23_11";
+        };
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
         nixpkgs.url = "nixpkgs/nixos-unstable";
@@ -17,6 +21,7 @@
     outputs = {
     disko,
     home-manager,
+    home-manager-23_11,
     impermanence,
     import-tree,
     nixpkgs,
@@ -132,6 +137,17 @@
                 system = "i686-linux";
                 modules = [
                     (import-tree ./X60s)
+                    home-manager-23_11.nixosModules.home-manager
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                            user.zhaolun = {
+                                home.stateVersion = "23.11";
+                            };
+                        };
+                        backupFileExtension = "hm-backup";
+                    }
                 ];
             };
         };
