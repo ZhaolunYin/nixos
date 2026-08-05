@@ -3,6 +3,6 @@
     home.homeDirectory = "/home/zhaolun";
     home.stateVersion = "23.11";
     imports = [
-        ../share/_home/shell.nix
+        ../share/_home/shell-core.nix
     ];
 }

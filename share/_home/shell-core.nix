@@ -122,7 +122,7 @@
             }
             eval "$(zoxide init zsh)"
             '';
-        }; 
+        };
         fzf.enable = true;
         zoxide = {
             enable = true;
