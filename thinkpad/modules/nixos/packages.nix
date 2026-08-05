@@ -25,7 +25,6 @@
         lm_sensors
         man-pages
         man-pages-posix
-        neovim
         nodejs
         OVMF
         qemu
