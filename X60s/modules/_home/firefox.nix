@@ -1,0 +1,79 @@
+{ pkgs, ... }:
+{
+    programs.firefox = {
+        enable = true;
+        package = pkgs.firefox-esr;
+
+        profiles.default = {
+            name = "default";
+            isDefault = true;
+
+            search = {
+                force = true;
+                default = "google";
+            };
+
+            bookmarks = {
+                force = true;
+                settings = [
+                    {
+                        name = "Frequent";
+                        toolbar = true;
+                        bookmarks = [
+                            {
+                                name = "ChatGPT";
+                                url = "https://chatgpt.com";
+                            }
+                            {
+                                name = "Claude";
+                                url = "https://claude.ai";
+                            }
+                            {
+                                name = "YouTube";
+                                url = "https://youtube.com";
+                            }
+                            {
+                                name = "Proton Mail";
+                                url = "https://mail.proton.me";
+                            }
+                            {
+                                name = "Reddit";
+                                url = "https://reddit.com";
+                            }
+                            {
+                                name = "Github";
+                                url = "https://github.com";
+                            }
+                        ];
+                    }
+                ];
+            };
+
+            # Catppuccin theme
+            settings = {
+                "browser.newtabpage.enabled" = true;
+                "browser.startup.homepage" = "";
+                # Vertical tabs
+                "sidebar.verticalTabs" = true;
+                "sidebar.visibility" = "expand-on-hover";
+
+                # Firefox Home
+                "browser.newtabpage.activity-stream.feeds.system.topstories" = false;
+                "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+                "browser.newtabpage.activity-stream.showWeather" = false;
+                "browser.newtabpage.activity-stream.feeds.topsites" = false;
+
+                # Use dark mode
+                "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
+                "ui.systemUsesDarkTheme" = 1;
+                "browser.theme.toolbar-theme" = 0;
+                "browser.theme.content-theme" = 0;
+                "layout.css.prefers-color-scheme.content-override" = 0;
+            };
+
+            extensions = {
+
+            };
+        };
+    };
+}
