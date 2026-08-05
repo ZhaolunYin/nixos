@@ -70,7 +70,7 @@
                 FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git";
                 FZF_CTRL_T_COMMAND = "fd --type f --hidden --follow --exclude .git";
                 # Sudo prompt
-                SUDO_PROMPT = "🔐 Password: ";
+                SUDO_PROMPT = "Password: ";
             };
         };
         fzf.enable = true;
