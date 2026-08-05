@@ -70,10 +70,6 @@
                 "browser.theme.content-theme" = 0;
                 "layout.css.prefers-color-scheme.content-override" = 0;
             };
-
-            extensions = {
-
-            };
         };
     };
 }
