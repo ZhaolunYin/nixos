@@ -142,7 +142,11 @@
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
-                            users.zhaolun = import ./X60s/_home.nix;
+                            users.zhaolun = {
+                                imports = [
+                                    (import-tree ./X60s/modules/_home)
+                                ];
+                            };
                         };
                     }
                 ];
