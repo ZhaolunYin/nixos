@@ -3,6 +3,18 @@
     home.packages = with pkgs; [
         bat
         duf
+        (eza.overrideAttrs (old: {
+            nativeBuildInputs = builtins.filter (x: x != pkgs.pandoc) old.nativeBuildInputs;
+
+            outputs = [ "out" ];
+
+            postInstall = ''
+                installShellCompletion \
+                --bash completions/bash/eza \
+                --fish completions/fish/eza.fish \
+                --zsh completions/zsh/_eza
+            '';
+        }))
         fd
         ripgrep
         trash-cli
@@ -30,7 +42,7 @@
             shellAliases = {
                 ls = "eza --group-directories-first";
                 tree = "eza --group-directories-first -T";
-                cat = "bat -p --no-paging";
+                cat = "bat -p --no-paging --theme=Catppuccin\\ Mocha";
                 less = "bat --paging=always";
                 df = "duf";
                 top = "btop";
@@ -45,14 +57,12 @@
                 nano = "nvim";
             };
             sessionVariables = {
-                # Shell
                 EDITOR = "nvim";
                 VISUAL = "nvim";
                 GIT_EDITOR = "nvim";
                 MANPAGER = "nvim +Man!";
-                # Data dirs
-                XDG_DATA_DIRS = "$XDG_DATA_DIRS:/var/lib/flatpak/exports/share";
-                # Locale
+                BROWSER = "firefox";
+
                 LANG = "en_GB.UTF-8";
                 LC_CTYPE = "en_GB.UTF-8";
                 LC_NUMERIC = "en_GB.UTF-8";
@@ -67,9 +77,10 @@
                 LC_MEASUREMENT = "en_GB.UTF-8";
                 LC_IDENTIFICATION = "en_GB.UTF-8";
                 LC_ALL = "en_GB.UTF-8";
+
                 FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git";
                 FZF_CTRL_T_COMMAND = "fd --type f --hidden --follow --exclude .git";
-                # Sudo prompt
+
                 SUDO_PROMPT = "Password: ";
             };
         };
