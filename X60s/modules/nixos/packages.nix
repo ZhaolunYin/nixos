@@ -7,6 +7,7 @@
         dmenu
         git
         neovim
+        pass
         slstatus
         st
         xorg.xinit
