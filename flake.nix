@@ -142,9 +142,7 @@
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
-                            user.zhaolun = {
-                                home.stateVersion = "23.11";
-                            };
+                            user.zhaolun = import ./X60s/home.nix;
                         };
                     }
                 ];
