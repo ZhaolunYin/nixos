@@ -146,7 +146,6 @@
                                 home.stateVersion = "23.11";
                             };
                         };
-                        backupFileExtension = "hm-backup";
                     }
                 ];
             };
