@@ -1,5 +1,6 @@
 {
     home.file.".xinitrc".text = ''
+    slstatus &
     exec dwm
     '';
     programs.zsh.profileExtra = ''
