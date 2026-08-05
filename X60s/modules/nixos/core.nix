@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+    users.defaultUserShell = pkgs.zsh;
+
     fonts = {
         enableDefaultPackages = false;
 
