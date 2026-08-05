@@ -133,7 +133,7 @@
                     }
                 ];
             };
-            nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
+            nixosConfigurations.X60s = nixpkgs.lib.nixosSystem {
                 system = "i686-linux";
                 modules = [
                     (import-tree ./X60s)
