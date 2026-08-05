@@ -14,7 +14,6 @@
         }
     ];
 
-
     users.users.lab = {
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
