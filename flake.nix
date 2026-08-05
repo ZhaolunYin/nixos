@@ -142,7 +142,7 @@
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
-                            user.zhaolun = import ./X60s/home.nix;
+                            users.zhaolun = import ./X60s/home.nix;
                         };
                     }
                 ];
