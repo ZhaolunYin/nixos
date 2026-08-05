@@ -27,14 +27,6 @@
                     "function" = "fg=cyan,bold";
                 };
             };
-            history = {
-                append = true;
-                ignoreDups = true;
-                ignoreAllDups = true;
-                findNoDups = true;
-                share = true;
-                extended = true;
-            };
             oh-my-zsh = {
                 enable = true;
                 plugins = [

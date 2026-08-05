@@ -9,6 +9,14 @@
                     "completion"
                 ];
             };
+            history = {
+                append = true;
+                ignoreDups = true;
+                ignoreAllDups = true;
+                findNoDups = true;
+                share = true;
+                extended = true;
+            };
             initContent = ''
             precmd() {
                 printf '\e[6 q'
