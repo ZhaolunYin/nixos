@@ -1,6 +1,6 @@
 {
     imports = [
-        ../share/_home/shell-core.nix
+        ../../../share/_home/shell-core.nix
     ];
 
     home.username = "zhaolun";
