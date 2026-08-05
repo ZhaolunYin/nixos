@@ -11,14 +11,6 @@
         zsh = {
             enable = true;
             enableCompletion = true;
-            autosuggestion = {
-                enable = true;
-                highlight = "fg=#808080";
-                strategy = [
-                    "history"
-                    "completion"
-                ];
-            };
             syntaxHighlighting = {
                 enable = true;
                 highlighters = [
