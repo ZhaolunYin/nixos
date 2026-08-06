@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
     home.packages = with pkgs; [
-        pinentry
+        pinentry-curses
+	gnupg
     ];
 
     home.file.".gnupg/gpg-agent.conf".text = ''

@@ -57,6 +57,27 @@
         "type": "github"
       }
     },
+    "home-manager-23_11": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-23_11"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719827415,
+        "narHash": "sha256-pvh+1hStXXAZf0sZ1xIJbWGx4u+OGBC1rVx6Wsw0fBw=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "f2e3c19867262dbe84fdfab42467fc8dd83a2005",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "release-23.11",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
     "home-manager_2": {
       "inputs": {
         "nixpkgs": [
@@ -331,6 +352,7 @@
       "inputs": {
         "disko": "disko",
         "home-manager": "home-manager",
+        "home-manager-23_11": "home-manager-23_11",
         "impermanence": "impermanence",
         "import-tree": "import-tree",
         "nix-flatpak": "nix-flatpak",

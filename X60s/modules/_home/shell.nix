@@ -42,11 +42,10 @@
             shellAliases = {
                 ls = "eza --group-directories-first";
                 tree = "eza --group-directories-first -T";
-                cat = "bat -p --no-paging --theme=Catppuccin\\ Mocha";
+                cat = "bat -p --no-paging";
                 less = "bat --paging=always";
                 df = "duf";
                 top = "btop";
-                icat = "kitten icat";
                 cd = "z";
                 ".." = "cd ..";
                 "..." = "cd ../..";
