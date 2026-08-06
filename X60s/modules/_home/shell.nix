@@ -22,7 +22,9 @@
     programs = {
         zsh = {
             enable = true;
-            autosuggestions.enable = true;
+            enableBashCompletion = true;
+            enableAutosuggestions = true;
+            enableCompletion = true;
             syntaxHighlighting = {
                 enable = true;
                 highlighters = [
