@@ -10,8 +10,5 @@ in
         falkon
 
         unstable.btop
-        unstable.mpv
-        unstable.ytfzf
-        unstable.yt-dlp
     ];
 }
