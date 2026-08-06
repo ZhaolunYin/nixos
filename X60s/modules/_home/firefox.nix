@@ -19,41 +19,38 @@ in
                 default = "google";
             };
 
-            bookmarks = {
-                force = true;
-                settings = [
-                    {
-                        name = "Frequent";
-                        toolbar = true;
-                        bookmarks = [
-                            {
-                                name = "ChatGPT";
-                                url = "https://chatgpt.com";
-                            }
-                            {
-                                name = "Claude";
-                                url = "https://claude.ai";
-                            }
-                            {
-                                name = "YouTube";
-                                url = "https://youtube.com";
-                            }
-                            {
-                                name = "Proton Mail";
-                                url = "https://mail.proton.me";
-                            }
-                            {
-                                name = "Reddit";
-                                url = "https://reddit.com";
-                            }
-                            {
-                                name = "Github";
-                                url = "https://github.com";
-                            }
-                        ];
-                    }
-                ];
-            };
+            bookmarks = [
+                {
+                    name = "Frequent";
+                    toolbar = true;
+                    bookmarks = [
+                        {
+                            name = "ChatGPT";
+                            url = "https://chatgpt.com";
+                        }
+                        {
+                            name = "Claude";
+                            url = "https://claude.ai";
+                        }
+                        {
+                            name = "YouTube";
+                            url = "https://youtube.com";
+                        }
+                        {
+                            name = "Proton Mail";
+                            url = "https://mail.proton.me";
+                        }
+                        {
+                            name = "Reddit";
+                            url = "https://reddit.com";
+                        }
+                        {
+                            name = "Github";
+                            url = "https://github.com";
+                        }
+                    ];
+                }
+            ];
 
             settings = {
                 "browser.newtabpage.enabled" = true;
