@@ -7,7 +7,7 @@ let
 in
 {
     home.packages = with pkgs; [
-        kdePackages.falkon
+        falkon
         unstable.btop
     ];
 }
