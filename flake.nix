@@ -18,7 +18,7 @@
         plasma-manager.url = "github:nix-community/plasma-manager";
     };
 
-    outputs = {
+    outputs = inputs@{
     disko,
     home-manager,
     home-manager-23_11,
@@ -142,6 +142,9 @@
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
+                            extraSpecialArgs = {
+                                inherit inputs;
+                            };
                             users.zhaolun = {
                                 imports = [
                                     (import-tree ./X60s/modules/_home)
