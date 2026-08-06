@@ -21,9 +21,11 @@
     outputs = {
     disko,
     home-manager,
+    home-manager-23_11,
     impermanence,
     import-tree,
     nixpkgs,
+    nixpkgs-23_11,
     nixvim,
     nix-flatpak,
     noctalia,
@@ -131,11 +133,11 @@
                     }
                 ];
             };
-            nixosConfigurations.X60s = nixpkgs.lib.nixosSystem {
+            nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
                 system = "i686-linux";
                 modules = [
                     (import-tree ./X60s)
-                    home-manager.nixosModules.home-manager
+                    home-manager-23_11.nixosModules.home-manager
                     {
                         home-manager = {
                             useGlobalPkgs = true;
