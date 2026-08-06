@@ -1,5 +1,6 @@
 {
     home.file.".xinitrc".text = ''
+    setxkbmap -option caps:escape &
     slstatus &
     exec dwm
     '';
