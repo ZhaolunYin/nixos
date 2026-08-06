@@ -12,7 +12,9 @@ in
         git
         neovim
         pass
-        slstatus
+        (slstatus.override {
+            conf = ./patches/slstatus.h;
+        })
         st
         xorg.xinit
     ];
