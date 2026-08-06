@@ -128,6 +128,13 @@
                                 ];
                                 home.stateVersion = "26.05";
                             };
+                            users.admin = {
+                                imports = [
+                                    nixvim.homeModules.nixvim
+                                    (import-tree ./share/_home)
+                                ];
+                                home.stateVersion = "26.05";
+                            };
                             backupFileExtension = "hm-backup";
                         };
                     }
