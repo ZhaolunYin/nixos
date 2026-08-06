@@ -135,7 +135,7 @@
             };
             nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
                 system = "i686-linux";
-                extraSpecialArgs = {
+                specialArgs = {
                     inherit inputs;
                 };
                 modules = [
