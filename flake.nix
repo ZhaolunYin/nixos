@@ -135,23 +135,26 @@
             };
             nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
                 system = "i686-linux";
+                extraSpecialArgs = {
+                    inherit inputs;
+                };
                 modules = [
                     (import-tree ./X60s)
-                    home-manager-23_11.nixosModules.home-manager
-                    {
-                        home-manager = {
-                            useGlobalPkgs = true;
-                            useUserPackages = true;
-                            extraSpecialArgs = {
-                                inherit inputs;
+                        home-manager-23_11.nixosModules.home-manager
+                        {
+                            home-manager = {
+                                useGlobalPkgs = true;
+                                useUserPackages = true;
+                                extraSpecialArgs = {
+                                    inherit inputs;
+                                };
+                                users.zhaolun = {
+                                    imports = [
+                                        (import-tree ./X60s/modules/_home)
+                                    ];
+                                };
                             };
-                            users.zhaolun = {
-                                imports = [
-                                    (import-tree ./X60s/modules/_home)
-                                ];
-                            };
-                        };
-                    }
+                        }
                 ];
             };
         };
