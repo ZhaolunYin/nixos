@@ -6,6 +6,9 @@
                 email = "yinzhaolun2012@gmail.com";
                 name = "Zhaolun Yin";
             };
+            pull = {
+                rebase = true;
+            };
             credential = {
                 helper = "cache --timeout=28800";
             };
