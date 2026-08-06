@@ -8,6 +8,7 @@ in
 {
     home.packages = with pkgs; [
         falkon
+        firefox-esr-115
         unstable.btop
     ];
 }
