@@ -13,7 +13,7 @@ in
         neovim
         pass
         (slstatus.override {
-            patches = [ ./patches/slstatus.patch ];
+            conf = ./patches/slstatus.h;
         })
         st
         xorg.xinit
