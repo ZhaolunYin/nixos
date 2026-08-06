@@ -39,7 +39,6 @@
                     "function" = "fg=cyan,bold";
                 };
             };
-            autosuggestion.enable = true;
             shellAliases = {
                 ls = "eza --group-directories-first";
                 tree = "eza --group-directories-first -T";
