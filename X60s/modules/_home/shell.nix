@@ -70,6 +70,8 @@
                 git push
             }
             eval "$(zoxide init zsh)"
+	    bindkey '^[[1;5D' backward-word
+	    bindkey '^[[1;5C' forward-word
             '';
 
             sessionVariables = {
