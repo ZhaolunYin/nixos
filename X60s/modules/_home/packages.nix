@@ -8,6 +8,10 @@ in
 {
     home.packages = with pkgs; [
         falkon
+
         unstable.btop
+        unstable.mpv
+        unstable.ytfzf
+        unstable.yt-dlp
     ];
 }

@@ -9,7 +9,6 @@ in
     nixpkgs.config.allowBroken = true;
     environment.systemPackages = with pkgs; [
         dmenu
-        unstable.firefox-esr
         git
         neovim
         pass
