@@ -4,6 +4,10 @@
     inputs = {
         disko.url = "github:nix-community/disko";
         home-manager.url = "github:nix-community/home-manager";
+        home-manager-stable = {
+            url = "github:nix-community/home-manager/release-26.05";
+            inputs.nixpkgs.follows = "nixpkgs-stable";
+        };
         home-manager-23_11 = {
             url = "github:nix-community/home-manager/release-23.11";
             inputs.nixpkgs.follows = "nixpkgs-23_11";
@@ -11,6 +15,7 @@
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
         nixpkgs.url = "nixpkgs/nixos-unstable";
+        nixpkgs-stable.url = "nixpkgs/nixos-26.05";
         nixpkgs-23_11.url = "nixpkgs/nixos-23.11";
         nixvim.url = "github:nix-community/nixvim";
         nix-flatpak.url = "github:gmodena/nix-flatpak";
@@ -21,11 +26,11 @@
     outputs = {
     disko,
     home-manager,
-    home-manager-23_11,
+    home-manager-stable,
     impermanence,
     import-tree,
     nixpkgs,
-    nixpkgs-23_11,
+    nixpkgs-stable,
     nixvim,
     nix-flatpak,
     noctalia,
@@ -133,11 +138,11 @@
                     }
                 ];
             };
-            nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
+            nixosConfigurations.X60s = nixpkgs-stable.lib.nixosSystem {
                 system = "i686-linux";
                 modules = [
                     (import-tree ./X60s)
-                    home-manager-23_11.nixosModules.home-manager
+                    home-manager-stable.nixosModules.home-manager
                     {
                         home-manager = {
                             useGlobalPkgs = true;

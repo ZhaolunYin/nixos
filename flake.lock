@@ -78,6 +78,27 @@
         "type": "github"
       }
     },
+    "home-manager-stable": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-stable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1785119570,
+        "narHash": "sha256-Rgs2xKnGLFWQscxUaXX07oyZeuMDOHEbqDOsgliLFGM=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "d4fd24667c8cbef124bb70a20380cab75ec8474d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "release-26.05",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
     "home-manager_2": {
       "inputs": {
         "nixpkgs": [
@@ -197,6 +218,20 @@
       "original": {
         "id": "nixpkgs",
         "ref": "nixos-23.11",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 315532800,
+        "narHash": "sha256-JNJY0nz1CZwZGvB9F6Rq+YSPPz0rItOYNcqUcd5M/NU=",
+        "rev": "04607e1165ac22c5fde6dcc54c9e0b3c0487c555",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.6916.04607e1165ac/nixexprs.tar.xz?lastModified=1785858998"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-26.05",
         "type": "indirect"
       }
     },
@@ -353,11 +388,13 @@
         "disko": "disko",
         "home-manager": "home-manager",
         "home-manager-23_11": "home-manager-23_11",
+        "home-manager-stable": "home-manager-stable",
         "impermanence": "impermanence",
         "import-tree": "import-tree",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-23_11": "nixpkgs-23_11",
+        "nixpkgs-stable": "nixpkgs-stable",
         "nixvim": "nixvim",
         "noctalia": "noctalia",
         "plasma-manager": "plasma-manager"
