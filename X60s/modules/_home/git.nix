@@ -9,6 +9,8 @@
             credential.helper = "cache --timeout=28800";
 
             init.defaultBranch = "main";
+            pull.rebase = true;
+            rebase.autoStash = true;
 
             core = {
                 ignorecase = false;
