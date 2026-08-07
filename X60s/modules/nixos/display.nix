@@ -2,7 +2,12 @@
 {
     services.xserver = {
         enable = true;
-        windowManager.dwm.enable = true;
+        windowManager.dwm = {
+            enable = true;
+            package = pkgs.dwm.override {
+                conf = ./patches/dwm.h;
+            };
+        };
         displayManager.startx.enable = true;
         videoDrivers = [ "intel" ];
     };
