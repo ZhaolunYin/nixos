@@ -9,9 +9,11 @@ in
     nixpkgs.config.allowBroken = true;
     environment.systemPackages = with pkgs; [
         dmenu
+        feh
         git
         neovim
         pass
+        slock
         (slstatus.override {
             conf = ./patches/slstatus.h;
         })

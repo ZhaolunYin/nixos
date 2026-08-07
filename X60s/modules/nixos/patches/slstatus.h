@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 1000;
+const unsigned int interval = 500;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -66,8 +66,11 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
     /* function format          argument */
-    { battery_perc, "BAT %s ",    "BAT0" },
-    { wifi_essid, "%s ",          "wlan0" },
-    { run_command, "VOL %s ",     "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{printf \"%d%%\", $2*100}'" },
-    { datetime, "%s",               "%F %T" },
+    { cpu_perc,     "%s%% ",    NULL },
+    { ram_used,     "%sB ",    NULL },
+    { temp,         "%s°C ",    "/sys/class/thermal/thermal_zone0/temp" },
+    { battery_perc, "BAT %s ",  "BAT0" },
+    { wifi_perc,    "WIFI %s ", "wlan0" },
+    { run_command,  "VOL %s ",  "wpctl get-volume @DEFAULT_SINK@ | awk '{printf \"%d%% %s\", $2*100, $3}'" },
+    { datetime,     "%s",       "%F %T" },
 };
