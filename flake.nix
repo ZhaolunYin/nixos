@@ -13,6 +13,10 @@
         nixpkgs.url = "nixpkgs/nixos-unstable";
         nixpkgs-23_11.url = "nixpkgs/nixos-23.11";
         nixvim.url = "github:nix-community/nixvim";
+	nixvim-23_11 = {
+            url = "github:nix-community/nixvim/nixos-23.11";
+	    inputs.nixpkgs.follows = "nixpkgs-23_11";
+	};
         nix-flatpak.url = "github:gmodena/nix-flatpak";
         noctalia.url = "github:noctalia-dev/noctalia-shell";
         plasma-manager.url = "github:nix-community/plasma-manager";
@@ -157,6 +161,7 @@
                                 };
                                 users.zhaolun = {
                                     imports = [
+                                        nixvim.homeModules.nixvim
                                         (import-tree ./X60s/modules/_home)
                                     ];
                                 };

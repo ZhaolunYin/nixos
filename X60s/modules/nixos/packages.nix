@@ -15,7 +15,9 @@ in
         (slstatus.override {
             conf = ./patches/slstatus.h;
         })
-        st
+	(st.override {
+	    patches = [ ./patches/st-scrollback-20210507-4536f46.diff ];
+	})
         xorg.xinit
     ];
 }
