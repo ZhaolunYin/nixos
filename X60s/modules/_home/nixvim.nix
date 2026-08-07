@@ -190,21 +190,5 @@
                 nbsp = "␣";
             };
         };
-
-        # ---------------------------------------------------------------------------
-        # Diagnostics
-        # ---------------------------------------------------------------------------
-        diagnostic = {
-            settings = {
-                update_in_insert = false;
-                severity_sort = true;
-                float.border = "rounded";
-                float.source = "if_many";
-                underline.severity.min = "WARN";
-                virtual_text = true;
-                virtual_lines = false;
-                jump.float = true;
-            };
-        };
     };
 }

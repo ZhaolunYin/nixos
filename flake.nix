@@ -31,6 +31,7 @@
     nixpkgs,
     nixpkgs-23_11,
     nixvim,
+    nixvim-23_11,
     nix-flatpak,
     noctalia,
     plasma-manager,
@@ -161,7 +162,7 @@
                                 };
                                 users.zhaolun = {
                                     imports = [
-                                        nixvim.homeModules.nixvim
+                                        nixvim-23_11.homeManagerModules.nixvim
                                         (import-tree ./X60s/modules/_home)
                                     ];
                                 };
