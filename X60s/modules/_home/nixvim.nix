@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
     # ---------------------------------------------------------------------------
     # Program configuration
@@ -12,30 +11,13 @@
         # ---------------------------------------------------------------------------
         # Extra packages — LSP servers, formatters, and tools Neovim needs on PATH.
         # ---------------------------------------------------------------------------
-        extraPackages = with pkgs; [
-            # LSP servers
-            lua-language-server
-            clang-tools
-            rust-analyzer
-            nixd
-            pyright
-        ];
 
         # ---------------------------------------------------------------------------
         # Plugins
         # ---------------------------------------------------------------------------
         plugins = {
             # Git signs in the gutter
-            gitsigns = {
-                enable = true;
-                settings.signs = {
-                    add.text = "+";
-                    change.text = "~";
-                    delete.text = "_";
-                    topdelete.text = "‾";
-                    changedelete.text = "~";
-                };
-            };
+            gitsigns.enable = true;
 
             # Markdown previewer
             markview = {
@@ -51,87 +33,26 @@
                 };
             };
 
-            # LSP
-            fidget.enable = true;
-
-            lsp = {
-                enable = true;
-
-                servers = {
-                    lua_ls = {
-                        enable = true;
-                    };
-
-                    clangd = {
-                        enable = true;
-                        cmd = [
-                            "clangd"
-                            "--background-index"
-                            "--clang-tidy"
-                        ];
-                    };
-
-                    rust_analyzer = {
-                        enable = true;
-
-                        /*
-                        Do not auto install cargo and rustc
-                        because if they are not installed
-                        I will not be writing rust code
-                        */
-                        installCargo = false;
-                        installRustc = false;
-
-                        settings = {
-                            rust-analyzer = {
-                                cargo.allFeatures = true;
-                            };
-                        };
-                    };
-
-                    nixd.enable = true;
-                    pyright.enable = true;
-                };
-            };
-
             # Completion
-            blink-cmp = {
-                enable = true;
-                settings = {
-                    keymap.preset = "default";
-                    appearance.nerd_font_variant = "mono";
-                    completion = {
-                        documentation.auto_show = true;
-                        documentation.auto_show_delay_ms = 200;
-                    };
-                    sources.default = [
-                        "lsp"
-                        "path"
-                        "snippets"
-                    ];
-                    fuzzy.implementation = "lua";
-                    signature.enabled = true;
-                    completion.trigger.show_on_keyword = true;
-                    completion.trigger.show_on_trigger_character = true;
-                };
-            };
-
+            nvim-cmp.enable = true;
             luasnip.enable = true;
 
             # Todo comments
-            todo-comments = {
-                enable = true;
-                settings.signs = false;
-            };
+            todo-comments.enable = true;
 
             # Mini collection
-            mini-ai.enable = true;
-            mini-surround.enable = true;
-            mini-hipatterns.enable = true;
-            mini-statusline.enable = true;
-            mini-icons = {
+            mini = {
                 enable = true;
-                mockDevIcons = true;
+                modules = {
+                    ai = {};
+                    surround = {};
+                    hipatterns = {};
+                    statusline = {};
+
+                    icons = {
+                        mock_nvim_web_devicons = true;
+                    };
+                };
             };
 
             # Treesitter — all grammars (default)
@@ -141,14 +62,10 @@
             };
 
             # Indent blankline
-            indent-blankline = {
-                enable = true;
-            };
+            indent-blankline.enable = true;
 
             # Autopairs
-            nvim-autopairs = {
-                enable = true;
-            };
+            nvim-autopairs.enable = true;
         };
 
         # Colorscheme
@@ -157,38 +74,38 @@
         # ---------------------------------------------------------------------------
         # Options
         # ---------------------------------------------------------------------------
-        opts = {
+        extraConfigLua = ''
             # Number columns
-            number = true;
+            vim.opt.number = true
             # tab width 4
-            tabstop = 4;
-            shiftwidth = 4;
-            expandtab = true;
+            vim.opt.tabstop = 4
+            vim.opt.shiftwidth = 4
+            vim.opt.expandtab = true
             # use unnamedplus for clipboard
-            clipboard = "unnamedplus";
+            vim.opt.clipboard = "unnamedplus"
             # enable mouse support
-            mouse = "a";
-            showmode = false;
-            breakindent = true;
-            undofile = true;
-            ignorecase = true;
-            smartcase = true;
-            signcolumn = "yes";
-            updatetime = 250;
-            timeoutlen = 300;
-            splitright = true;
-            splitbelow = true;
-            list = true;
-            inccommand = "split";
-            cursorline = true;
-            scrolloff = 10;
-            confirm = true;
+            vim.opt.mouse = "a"
+            vim.opt.showmode = false
+            vim.opt.breakindent = true
+            vim.opt.undofile = true
+            vim.opt.ignorecase = true
+            vim.opt.smartcase = true
+            vim.opt.signcolumn = "yes"
+            vim.opt.updatetime = 250
+            vim.opt.timeoutlen = 300
+            vim.opt.splitright = true
+            vim.opt.splitbelow = true
+            vim.opt.list = true
+            vim.opt.inccommand = "split"
+            vim.opt.cursorline = true
+            vim.opt.scrolloff = 10
+            vim.opt.confirm = true
             # hidden character chars
-            listchars = {
-                tab = "» ";
-                trail = "·";
-                nbsp = "␣";
-            };
-        };
+            vim.opt.listchars = {
+                tab = "» "
+                trail = "·"
+                nbsp = "␣"
+            }
+        '';
     };
 }
