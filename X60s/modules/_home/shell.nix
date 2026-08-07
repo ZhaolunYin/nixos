@@ -22,6 +22,7 @@
     programs = {
         zsh = {
             enable = true;
+            defaultKeymap = "emacs";
             enableAutosuggestions = true;
             enableCompletion = true;
             syntaxHighlighting = {
