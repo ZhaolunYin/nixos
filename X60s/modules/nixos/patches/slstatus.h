@@ -65,12 +65,12 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-    /* function format          argument */
-    { cpu_perc,     "%s%% ",    NULL },
-    { ram_used,     "%sB ",    NULL },
-    { temp,         "%s°C ",    "/sys/class/thermal/thermal_zone0/temp" },
-    { battery_perc, "BAT %s ",  "BAT0" },
-    { wifi_perc,    "WIFI %s ", "wlan0" },
-    { run_command,  "VOL %s ",  "wpctl get-volume @DEFAULT_SINK@ | awk '{printf \"%d%% %s\", $2*100, $3}'" },
-    { datetime,     "%s",       "%F %T" },
+    /* function     format          argument */
+    { cpu_perc,     "%s%%|",    NULL },
+    { ram_used,     "%sB|",    NULL },
+    { temp,         "%s°C|",    "/sys/class/thermal/thermal_zone0/temp" },
+    { battery_perc, "BAT %s%%|",  "BAT0" },
+    { wifi_perc,    "WIFI %s%%|", "wlan0" },
+    { run_command,  "VOL %s|",  "wpctl get-volume @DEFAULT_SINK@ | awk '{printf \"%d%% %s\", $2*100, $3}'" },
+    { datetime,     "%s",       "%F|%T" },
 };

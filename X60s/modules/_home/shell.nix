@@ -79,8 +79,7 @@
                 EDITOR = "nvim";
                 VISUAL = "nvim";
                 GIT_EDITOR = "nvim";
-                MANPAGER = "nvim +Man!";
-                BROWSER = "firefox";
+                BROWSER = "falkon";
 
                 LANG = "en_GB.UTF-8";
                 LC_CTYPE = "en_GB.UTF-8";
@@ -99,8 +98,6 @@
 
                 FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git";
                 FZF_CTRL_T_COMMAND = "fd --type f --hidden --follow --exclude .git";
-
-                SUDO_PROMPT = "Password: ";
             };
         };
         fzf.enable = true;

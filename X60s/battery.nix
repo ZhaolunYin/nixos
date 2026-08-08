@@ -1,8 +1,8 @@
 {
-    services.logind.settings.Login = {
-        HandleLidSwitch = "suspend";
-        HandleLidSwitchExternalPower = "ignore";
-        HandleLidSwitchDocked = "ignore";
+    services.upower = {
+        enable = true;
+        criticalPowerAction = "PowerOff";
+        percentageLow = 20;
     };
     powerManagement.enable = true;
 
