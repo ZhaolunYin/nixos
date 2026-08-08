@@ -25,6 +25,12 @@
         displayManager.startx.enable = true;
         videoDrivers = [ "intel" ];
     };
+    security.wrappers.slock = {
+        source = "${pkgs.slock}/bin/slock";
+        owner = "root";
+        group = "root";
+        setuid = true;
+    };
     environment.systemPackages = with pkgs; [
         xorg.xf86videointel
     ];

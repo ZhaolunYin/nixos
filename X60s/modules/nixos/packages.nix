@@ -13,7 +13,6 @@ in
         git
         neovim
         pass
-        slock
         (slstatus.override {
             conf = ./patches/slstatus.h;
         })
