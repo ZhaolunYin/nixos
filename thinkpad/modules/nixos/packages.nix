@@ -21,6 +21,7 @@
         gcc
         git
         gnumake
+        jq
         libnotify
         lm_sensors
         man-pages
