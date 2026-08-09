@@ -71,6 +71,6 @@ static const struct arg args[] = {
     { temp,         "%s°C|",    "/sys/class/thermal/thermal_zone0/temp" },
     { battery_perc, "BAT %s%%|",  "BAT0" },
     { wifi_perc,    "WIFI %s%%|", "wlan0" },
-    { run_command,  "VOL %s|",  "wpctl get-volume @DEFAULT_SINK@ | awk '{printf \"%d%% %s\", $2*100, $3}'" },
+    { run_command,  "VOL %s|",  "wpctl get-volume @DEFAULT_SINK@ | awk '{printf \"%d%%%s\", $2*100, $3}'" },
     { datetime,     "%s",       "%F|%T" },
 };

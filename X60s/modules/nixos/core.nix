@@ -1,5 +1,10 @@
-{ pkgs, ... }:
-
+{ pkgs, inputs, ... }:
+let 
+    unstable = import inputs.nixpkgs {
+        inherit (pkgs.stdenv.hostPlatform) system;
+        config = pkgs.config;
+    };
+in
 {
     users.defaultUserShell = pkgs.zsh;
 
@@ -8,6 +13,7 @@
 
         packages = with pkgs; [
             dejavu_fonts
+            unstable.nerd-fonts.symbols-only
         ];
     };
 

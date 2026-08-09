@@ -71,8 +71,14 @@
                 git push
             }
             eval "$(zoxide init zsh)"
-	    bindkey '^[[1;5D' backward-word
-	    bindkey '^[[1;5C' forward-word
+            # Ctrl + arrow keys
+            bindkey '^[[1;5D' backward-word
+            bindkey '^[[1;5C' forward-word
+            # Home, End, Delete & Insert
+            bindkey "\e[1~" beginning-of-line
+            bindkey "\e[4~" end-of-line
+            bindkey "\e[3~" delete-char
+            bindkey "\e[2~" overwrite-mode
             '';
 
             sessionVariables = {
@@ -99,6 +105,10 @@
                 FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git";
                 FZF_CTRL_T_COMMAND = "fd --type f --hidden --follow --exclude .git";
             };
+        };
+        starship = {
+            enable = true;
+            enableZshIntegration = true;
         };
         fzf.enable = true;
         zoxide = {
