@@ -1,4 +1,15 @@
 {
+    security.sudo.extraRules = [
+        {
+            users = [ "admin" ];
+            commands = [
+                {
+                    command = "ALL";
+                    options = [ "NOPASSWD" ];
+                }
+            ];
+        }
+    ];
     programs.zsh.enable = true;
     users.mutableUsers = false;
     users.users.projector = {
