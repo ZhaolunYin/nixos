@@ -26,8 +26,8 @@
         lm_sensors
         man-pages
         man-pages-posix
-        nodejs
         OVMF
+        pkg-config
         qemu
         rustc
         rustup
