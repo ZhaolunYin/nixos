@@ -44,6 +44,24 @@
                 trail = "·",
                 nbsp = "␣",
             }
+
+            -- Plugins
+            require("gitsigns").setup()
+            require("which-key").setup()
+            require("todo-comments").setup()
+            require("mini.ai").setup()
+            require("mini.comment").setup()
+            require("nvim-treesitter.configs").setup({
+                highlight = {
+                    enable = true,
+                },
+                indent = {
+                    enable = true,
+                },
+            })
+            require("ibl").setup()
+            require("nvim-autopairs").setup()
+            require("nvim-surround").setup()
         '';
     };
 }
