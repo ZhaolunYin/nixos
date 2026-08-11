@@ -9,14 +9,14 @@
 
         settings = {
             hf-repo = "unsloth/Qwen3.6-35B-A3B-GGUF";
-            hf-file = "Qwen3.6-35B-A3B-UD-IQ4_NL_XL.gguf";
+            hf-file = "Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf";
             alias = "unsloth/Qwen3.6-35B-A3B";
 
             ctx-size = 131072;
             fit = "on";
             device = "CUDA0";
 
-            reasoning = "off";
+            reasoning = "on";
 
             host = "0.0.0.0";
             port = 2001;

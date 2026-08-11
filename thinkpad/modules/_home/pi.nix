@@ -10,7 +10,9 @@
                 "defaultProvider": "llama-cpp",
                 "defaultModel": "unsloth/Qwen3.6-35B-A3B",
                 "packages": [
-                    "npm:pi-mcp-adapter"
+                    "npm:pi-mcp-adapter",
+                    "npm:pi-agenticoding",
+                    "npm:pi-subagents"
                 ]
             }
         '';
@@ -35,13 +37,13 @@
                 "mcpServers": {
                     "searxng": {
                         "command": "npx",
-                        "args": [
-                        "-y",
-                        "mcp-searxng"
-                        ],
-                        "env": {
-                            "SEARXNG_URL": "http://192.168.1.11:2002"
-                        }
+                            "args": [
+                                "-y",
+                            "mcp-searxng"
+                            ],
+                            "env": {
+                                "SEARXNG_URL": "http://192.168.1.11:2002"
+                            }
                     }
                 }
             }
