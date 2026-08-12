@@ -11,10 +11,8 @@
             which-key-nvim
             todo-comments-nvim
             mini-nvim
-            nvim-treesitter
             indent-blankline-nvim
             nvim-autopairs
-            vim-surround
         ];
         extraLuaConfig = ''
             vim.opt.number = true
@@ -51,17 +49,8 @@
             require("todo-comments").setup()
             require("mini.ai").setup()
             require("mini.comment").setup()
-            require("nvim-treesitter.configs").setup({
-                highlight = {
-                    enable = true,
-                },
-                indent = {
-                    enable = true,
-                },
-            })
             require("ibl").setup()
             require("nvim-autopairs").setup()
-            require("nvim-surround").setup()
         '';
     };
 }
