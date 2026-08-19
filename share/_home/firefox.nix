@@ -1,8 +1,12 @@
 { pkgs, ... }:
-
 {
     programs.firefox = {
         enable = true;
+
+        policies = {
+            DisableFirefoxAccounts = true;
+            DisableTelemetry = true;
+        };
 
         profiles.default = {
             name = "default";
@@ -70,9 +74,11 @@
                 "browser.theme.content-theme" = 0;
                 "layout.css.prefers-color-scheme.content-override" = 0;
             };
-
             extensions = {
-
+                packages = with pkgs.nur.repos.rycee.firefox-addons; [
+                    onetab
+                    ublock-origin
+                ];
             };
         };
     };

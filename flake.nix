@@ -13,11 +13,12 @@
         nixpkgs.url = "nixpkgs/nixos-unstable";
         nixpkgs-23_11.url = "nixpkgs/nixos-23.11";
         nixvim.url = "github:nix-community/nixvim";
-	nixvim-23_11 = {
+        nixvim-23_11 = {
             url = "github:nix-community/nixvim/nixos-23.11";
-	    inputs.nixpkgs.follows = "nixpkgs-23_11";
-	};
+            inputs.nixpkgs.follows = "nixpkgs-23_11";
+        };
         nix-flatpak.url = "github:gmodena/nix-flatpak";
+        nur.url = "github:nix-community/NUR";
         noctalia.url = "github:noctalia-dev/noctalia-shell";
         plasma-manager.url = "github:nix-community/plasma-manager";
     };
@@ -33,6 +34,7 @@
     nixvim,
     nixvim-23_11,
     nix-flatpak,
+    nur,
     noctalia,
     plasma-manager,
     ...
@@ -44,9 +46,10 @@
                     (import-tree ./thinkpad)
                     (import-tree ./share)
                     disko.nixosModules.disko
+                    home-manager.nixosModules.home-manager
                     impermanence.nixosModules.impermanence
                     nix-flatpak.nixosModules.nix-flatpak
-                    home-manager.nixosModules.home-manager
+                    nur.modules.nixos.default
                     {
                         home-manager = {
                             useGlobalPkgs = true;
@@ -72,6 +75,7 @@
                     (import-tree ./rpi)
                     (import-tree ./share)
                     home-manager.nixosModules.home-manager
+                    nur.modules.nixos.default
                     {
                         home-manager = {
                             useGlobalPkgs = true;
@@ -96,6 +100,7 @@
                     (import-tree ./share)
                     disko.nixosModules.disko
                     home-manager.nixosModules.home-manager
+                    nur.modules.nixos.default
                     {
                         home-manager = {
                             useGlobalPkgs = true;
@@ -120,6 +125,7 @@
                     (import-tree ./share)
                     disko.nixosModules.disko
                     home-manager.nixosModules.home-manager
+                    nur.modules.nixos.default
                     {
                         home-manager = {
                             useGlobalPkgs = true;
