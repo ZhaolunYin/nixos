@@ -4,12 +4,15 @@
     nixpkgs.config.allowUnfree = true;
 
     programs.firefox.enable = true;
-    programs.zsh.enable = true;  
-    programs.fuse.userAllowOther = true;
+    programs.nix-ld.enable = true;
     programs.steam.enable = true;
-    security.polkit.enable = true;
-    services.fwupd.enable = true;
+    programs.zsh.enable = true;  
+
     services.upower.enable = true;
+    services.fwupd.enable = true;
+
+    security.polkit.enable = true;
+
     documentation.dev.enable = true;
 
     # List packages installed in system profile.

@@ -125,7 +125,7 @@
             hl.bind(main_mod  .. " + E",     hl.dsp.exec_cmd("EDITOR=nvim kitty -e yazi"))
             hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd("kitty -e btop"))
             hl.bind(main_mod  .. " + V",     hl.dsp.window.float())
-            hl.bind(main_mod  .. " + M",     hl.dsp.exec_cmd("pkill -USR1 hyprlock 2>/dev/null; hyprshutdown"), { locked = true, long_press = true })
+            hl.bind(main_mod  .. " + M",     hl.dsp.exec_cmd("pkill -USR1 hyprlock 2>/dev/null; hyprshutdown"), { long_press = true })
             hl.bind(main_mod  .. " + R",     hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
             hl.bind(main_mod  .. " + L",     hl.dsp.exec_cmd("hyprlock"))
             hl.bind(main_mod  .. " + ALT + L", hl.dsp.exec_cmd("systemctl suspend"))

@@ -1,0 +1,1 @@
+Now let me attempt a Nix evaluation to catch real errors:
