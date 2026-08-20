@@ -14,11 +14,12 @@
         # ---------------------------------------------------------------------------
         extraPackages = with pkgs; [
             # LSP servers
-            lua-language-server
+            autotools-language-server
             clang-tools
-            rust-analyzer
+            lua-language-server
             nixd
             pyright
+            rust-analyzer
         ];
 
         # ---------------------------------------------------------------------------
@@ -58,10 +59,6 @@
                 enable = true;
 
                 servers = {
-                    lua_ls = {
-                        enable = true;
-                    };
-
                     clangd = {
                         enable = true;
                         cmd = [
@@ -89,6 +86,8 @@
                         };
                     };
 
+                    autotools_ls.enable = true;
+                    lua_ls.enable = true;
                     nixd.enable = true;
                     pyright.enable = true;
                 };
