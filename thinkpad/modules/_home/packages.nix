@@ -18,6 +18,7 @@
         pinentry-curses
         proton-vpn
         python3
+        otpclient
         unrar
         valgrind
         yazi
