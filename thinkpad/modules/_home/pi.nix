@@ -26,11 +26,8 @@
                         "apiKey": "none",
                         "models": [
                             {
-                                "id": "Qwen3.6-35B-A3B"
+                                "id": "Qwen3.8"
                             },
-                            {
-                                "id": "Qwen3.8-27B"
-                            }
                         ]
                     }
                 }
