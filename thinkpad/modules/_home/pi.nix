@@ -26,8 +26,8 @@
                         "apiKey": "none",
                         "models": [
                             {
-                                "id": "Qwen3.8"
-                            },
+                                "id": "Ornith-1.5-35B-A3B"
+                            }
                         ]
                     }
                 }
