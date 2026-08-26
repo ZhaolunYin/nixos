@@ -26,7 +26,10 @@
                         "apiKey": "none",
                         "models": [
                             {
-                                "id": "unsloth/Qwen3.6-35B-A3B"
+                                "id": "Qwen3.6-35B-A3B"
+                            },
+                            {
+                                "id": "Qwen3.8-27B"
                             }
                         ]
                     }
