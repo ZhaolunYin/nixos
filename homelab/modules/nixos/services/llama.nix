@@ -16,7 +16,7 @@
             hf-file = "Ornith-1.5-35B-Q4_K_M.gguf";
             alias = "Ornith-1.5-35B-A3B";
 
-            ctx-size = 131072;
+            ctx-size = 196608;
             fit = "on";
             device = "CUDA0";
 
