@@ -15,14 +15,6 @@
 
     documentation.dev.enable = true;
 
-    virtualisation.docker = { 
-        enable = true;
-        rootless = {
-            enable = true;
-            setSocketVariable = true;
-        };
-    };
-
 # List packages installed in system profile.
     # You can use https://search.nixos.org/ to find more packages (and options).
     environment.systemPackages = with pkgs; [
