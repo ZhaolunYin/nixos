@@ -9,7 +9,6 @@
         ".pi/agent/settings.json".text = ''
             {
                 "defaultProvider": "llama-cpp",
-                "defaultModel": "unsloth/Qwen3.6-35B-A3B",
                 "packages": [
                     "npm:pi-mcp-adapter",
                     "npm:pi-agenticoding",
@@ -26,7 +25,8 @@
                         "apiKey": "none",
                         "models": [
                             {
-                                "id": "Ornith-1.5-35B-A3B"
+                                "id": "Ornith-1.5-35B-A3B",
+                                "contextWindow": 196608,
                             }
                         ]
                     }

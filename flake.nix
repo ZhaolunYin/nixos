@@ -10,6 +10,8 @@
         };
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
+        llama-cpp.url = "github:ggml-org/llama.cpp";
+        minesweeper.url = "github:zhaolunyin/minesweeper-tui";
         nixpkgs.url = "nixpkgs/nixos-unstable";
         nixpkgs-23_11.url = "nixpkgs/nixos-23.11";
         nixvim.url = "github:nix-community/nixvim";
@@ -29,6 +31,8 @@
     home-manager-23_11,
     impermanence,
     import-tree,
+    llama-cpp,
+    minesweeper,
     nixpkgs,
     nixpkgs-23_11,
     nixvim,
@@ -58,6 +62,7 @@
                                 imports = [
                                     noctalia.homeModules.default
                                     nixvim.homeModules.nixvim
+                                    minesweeper.homeModules.default
                                     (import-tree ./thinkpad/modules/_home)
                                     (import-tree ./share/_home)
                                 ];
@@ -95,6 +100,9 @@
 
             nixosConfigurations.homelab = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
+                specialArgs = {
+                    inherit inputs;
+                };
                 modules = [
                     (import-tree ./homelab)
                     (import-tree ./share)

@@ -1,11 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
     services.llama-cpp = {
         enable = true;
-        package = pkgs.llama-cpp.override {
-            cudaSupport = true;
-        };
-
+        package = inputs.llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda;
 
         settings = {
             # hf-repo = "unsloth/Qwen3.6-35B-A3B-GGUF";
@@ -29,7 +26,7 @@
         };
     };
 
-    environment.systemPackages = with pkgs; [
-        (llama-cpp.override { cudaSupport = true; })
+    environment.systemPackages = [
+        inputs.llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
     ];
 }
