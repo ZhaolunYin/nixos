@@ -9,9 +9,10 @@
             # hf-file = "Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf";
             # hf-repo = "unsloth/Qwen3.8-27B-GGUF";
             # hf-file = "Qwen3.8-27B-UD-IQ3_XXS.gguf";
-            hf-repo = "ornith-ai/Ornith-1.5-35B-A3B-GGUF";
-            hf-file = "Ornith-1.5-35B-Q4_K_M.gguf";
-            alias = "Ornith-1.5-35B-A3B";
+            # hf-repo = "ornith-ai/Ornith-1.5-35B-A3B-GGUF";
+            # hf-file = "Ornith-1.5-35B-Q4_K_M.gguf";
+            hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ3_XXS";
+            alias = "Qwen3.8-Flash-Next";
 
             ctx-size = 196608;
             fit = "on";
