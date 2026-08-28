@@ -18,7 +18,7 @@
             fit = "on";
             device = "CUDA0";
 
-            reasoning = "on";
+            reasoning = "off";
 
             host = "0.0.0.0";
             port = 2001;

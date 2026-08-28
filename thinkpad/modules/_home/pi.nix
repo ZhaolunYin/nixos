@@ -25,7 +25,7 @@
                         "apiKey": "none",
                         "models": [
                             {
-                                "id": "Ornith-1.5-35B-A3B",
+                                "id": "Qwen3.8-Flash-Next",
                                 "contextWindow": 196608,
                             }
                         ]
