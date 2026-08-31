@@ -15,12 +15,11 @@
             hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ1_M";
             alias = "Qwen3.8-Flash-Next";
 
-            ctx-size = 196608;
-            fit = "on";
             device = "CUDA0";
 
-            reasoning = "off";
-            tensor-read-lazy = "auto";
+            load-mode = "mmap";
+            tensor-read-lazy = "on";
+            flash-attn = "on";
 
             host = "0.0.0.0";
             port = 2001;
