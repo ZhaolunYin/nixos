@@ -11,7 +11,8 @@
             # hf-file = "Qwen3.8-27B-UD-IQ3_XXS.gguf";
             # hf-repo = "ornith-ai/Ornith-1.5-35B-A3B-GGUF";
             # hf-file = "Ornith-1.5-35B-Q4_K_M.gguf";
-            hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ3_XXS";
+            # hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ3_XXS";
+            hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ1_M";
             alias = "Qwen3.8-Flash-Next";
 
             ctx-size = 196608;
