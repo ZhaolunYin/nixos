@@ -12,25 +12,10 @@
                 "packages": [
                     "npm:pi-mcp-adapter",
                     "npm:pi-agenticoding",
-                    "npm:pi-subagents"
-                ]
-            }
-        '';
-        ".pi/agent/models.json".text = ''
-            {
-                "providers": {
-                    "llama-cpp": {
-                        "baseUrl": "http://192.168.1.11:2001/v1",
-                        "api": "openai-completions",
-                        "apiKey": "none",
-                        "models": [
-                            {
-                                "id": "Qwen3.8-Flash-Next",
-                                "contextWindow": 196608,
-                            }
-                        ]
-                    }
-                }
+                    "npm:pi-subagents",
+                    "npm:pi-llama-cpp"
+                ],
+                "llamaServerUrl": "http://127.0.0.1:9931;http://192.168.1.11:2001"
             }
         '';
         ".config/mcp/mcp.json".text = ''

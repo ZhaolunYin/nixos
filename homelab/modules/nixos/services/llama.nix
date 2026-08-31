@@ -19,6 +19,7 @@
             device = "CUDA0";
 
             reasoning = "off";
+            tensor-read-lazy = "auto";
 
             host = "0.0.0.0";
             port = 2001;
