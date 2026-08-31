@@ -20,6 +20,8 @@
             load-mode = "mmap";
             tensor-read-lazy = "on";
             flash-attn = "on";
+            spec-type = "draft-mtp";
+            spec-draft-n-max = 2;
 
             host = "0.0.0.0";
             port = 2001;

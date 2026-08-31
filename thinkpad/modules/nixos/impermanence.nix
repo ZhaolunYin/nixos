@@ -17,7 +17,6 @@
         directories = [
             "/etc/NetworkManager/system-connections"
             "/var/log"
-            "/var/cache"
             "/var/lib/bluetooth"
             "/var/lib/flatpak"
             "/var/lib/fprint"

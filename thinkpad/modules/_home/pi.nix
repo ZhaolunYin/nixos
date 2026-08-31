@@ -15,7 +15,7 @@
                     "npm:pi-subagents",
                     "npm:pi-llama-cpp"
                 ],
-                "llamaServerUrl": "http://127.0.0.1:9931;http://192.168.1.11:2001"
+                "llamaServerUrl": "http://192.168.1.11:2001"
             }
         '';
         ".config/mcp/mcp.json".text = ''
