@@ -16,6 +16,7 @@
             alias = "Qwen3.8-Flash-Next";
 
             device = "CUDA0";
+            ctx-size = 0;
 
             load-mode = "mmap";
             tensor-read-lazy = "on";
