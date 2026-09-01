@@ -7,7 +7,7 @@
         settings = {
             device = "CUDA0";
             flash-attn = "on";
-            fit = "off";
+            fit = "on";
 
             host = "0.0.0.0";
             port = 2001;
@@ -43,8 +43,7 @@
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
 
-                    # ctx-size = 98304;
-                    ctx-size = 65536;
+                    ctx-size = 98304;
                 };
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ1_M";
@@ -60,8 +59,46 @@
         };
     };
 
-    systemd.services.llama-cpp.serviceConfig = {
-        SystemCallFilter = lib.mkForce [];
+    systemd.services.llama-cpp = {
+        environment = {
+            LLAMA_CACHE = "/var/cache/llama-cpp";
+            HF_HOME = "/var/cache/llama-cpp";
+        };
+
+        serviceConfig = {
+            User = lib.mkForce "root";
+            DynamicUser = lib.mkForce false;
+
+            PrivateUsers = lib.mkForce false;
+            PrivateMounts = lib.mkForce false;
+            PrivateTmp = lib.mkForce false;
+
+            ProtectHome = lib.mkForce false;
+            ProtectSystem = lib.mkForce false;
+
+            NoNewPrivileges = lib.mkForce false;
+            MemoryDenyWriteExecute = lib.mkForce false;
+
+            RestrictNamespaces = lib.mkForce false;
+            RestrictSUIDSGID = lib.mkForce false;
+            RestrictRealtime = lib.mkForce false;
+
+            SystemCallFilter = lib.mkForce [];
+            SystemCallArchitectures = lib.mkForce [];
+            RestrictAddressFamilies = lib.mkForce [];
+
+            LockPersonality = lib.mkForce false;
+            ProtectClock = lib.mkForce false;
+            ProtectControlGroups = lib.mkForce false;
+            ProtectHostname = lib.mkForce false;
+            ProtectKernelLogs = lib.mkForce false;
+            ProtectKernelModules = lib.mkForce false;
+            ProtectKernelTunables = lib.mkForce false;
+            ProtectProc = lib.mkForce "default";
+            ProcSubset = lib.mkForce "all";
+
+            LimitMEMLOCK = lib.mkForce "infinity";
+        };
     };
 
     environment.systemPackages = [
