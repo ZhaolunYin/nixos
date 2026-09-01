@@ -20,7 +20,7 @@
             cache-type-v = "q4_0";
 
             # ctx-size = 98304;
-            ctx-size = 8192;
+            ctx-size = 16384;
             /*models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
                 "Qwen3.6-35B-A3B" = {
