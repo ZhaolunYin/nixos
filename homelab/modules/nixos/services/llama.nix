@@ -36,7 +36,7 @@
                     hf-repo = "unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL";
 
                     spec-type = "draft-mtp";
-                    spec-draft-n-max = 6;
+                    spec-draft-n-max = 5;
 
                     cache-type-k = "f16";
                     cache-type-v = "f16";
