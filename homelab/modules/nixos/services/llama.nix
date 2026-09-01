@@ -47,7 +47,8 @@
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
 
                     spec-type = "draft-mtp";
-                    spec-draft-hf = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
+                    spec-draft-hf = "unsloth/Qwen3.8-27B-GGUF";
+                    spec-draft-file = "MTP/mtp-Qwen3.8-27B-Q4_0.gguf";
                     spec-draft-n-max = 1;
 
                     ctx-size = 0;
