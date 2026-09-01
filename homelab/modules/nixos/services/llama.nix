@@ -25,6 +25,7 @@
                 "Qwen3.6-35B-A3B" = {
                     hf-repo = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL";
                     spec-type = "draft-mtp";
+                    spec-draft-n-max = 3;
                 };
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ1_M";
