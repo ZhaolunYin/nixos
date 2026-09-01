@@ -5,11 +5,6 @@
         package = inputs.llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda;
 
         settings = {
-            # hf-repo = "unsloth/Qwen3.8-27B-GGUF";
-            # hf-file = "Qwen3.8-27B-UD-IQ3_XXS.gguf";
-            # hf-repo = "ornith-ai/Ornith-1.5-35B-A3B-GGUF";
-            # hf-file = "Ornith-1.5-35B-Q4_K_M.gguf";
-
             device = "CUDA0";
             flash-attn = "on";
             fit = "on";
@@ -45,12 +40,6 @@
                 };
                 "Qwen3.8-27B" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
-
-                    spec-type = "draft-mtp";
-                    spec-draft-hf = "unsloth/Qwen3.8-27B-GGUF";
-                    spec-draft-file = "MTP/mtp-Qwen3.8-27B-Q4_0.gguf";
-                    spec-draft-n-max = 1;
-
                     ctx-size = 0;
                 };
                 "Qwen3.8-Flash-Next" = {
