@@ -33,7 +33,9 @@
                     load-on-startup = true;
                 };
                 "gemma-4-E4B" = {
-                    hf-repo = "unsloth/gemma-4-E4B-it-GGUF:IQ4_NL";
+                    hf-repo = "unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL";
+                    spec-type = "draft-mtp";
+                    spec-draft-n-max = 1;
                     ctx-size = 0;
                 };
                 "Qwen3.8-Flash-Next" = {
