@@ -29,6 +29,8 @@
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 1;
                     ctx-size = 131072;
+
+                    load-on-startup = true;
                 };
                 "Qwen3.5-4B" = {
                     hf-repo = "unsloth/Qwen3.5-4B-GGUF:UD-Q5_K_XL";
