@@ -14,6 +14,9 @@
             flash-attn = "on";
             fit = "on";
 
+            cache-type-k = "q8_0";
+            cache-type-c = "q8_0";
+
             host = "0.0.0.0";
             port = 2001;
             threads = 8;
