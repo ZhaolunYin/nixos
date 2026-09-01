@@ -43,7 +43,8 @@
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
 
-                    ctx-size = 98304;
+                    # ctx-size = 98304;
+                    ctx-size = 65536;
                 };
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ1_M";
