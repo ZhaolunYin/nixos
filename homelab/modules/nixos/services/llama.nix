@@ -44,7 +44,6 @@
 
                     load-mode = "mmap";
                     tensor-read-lazy = "on";
-                    n-gpu-layers = 999;
 
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
