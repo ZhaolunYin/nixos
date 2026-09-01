@@ -11,8 +11,6 @@
             # hf-file = "Ornith-1.5-35B-Q4_K_M.gguf";
 
             device = "CUDA0";
-            ctx-size = 0;
-
             flash-attn = "on";
             fit = "on";
 
