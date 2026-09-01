@@ -66,6 +66,8 @@
         };
     };
 
+    systemd.services.llama-cpp.serviceConfig.LimitMEMLOCK = "infinity";
+
     environment.systemPackages = [
         inputs.llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
     ];
