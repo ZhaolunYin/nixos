@@ -9,7 +9,6 @@
             flash-attn = "on";
             fit = "on";
 
-
             host = "0.0.0.0";
             port = 2001;
             threads = 8;
@@ -18,9 +17,7 @@
             models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
                 "Qwen3.6-35B-A3B" = {
-                    load-on-startup = true;
                     hf-repo = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL";
-                    fit = "on";
 
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 1;
@@ -45,7 +42,7 @@
 
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
-                    ctx-size = 4096;
+                    ctx-size = 98304;
                 };
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ1_M";
