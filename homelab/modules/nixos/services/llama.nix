@@ -40,6 +40,9 @@
                 "Qwen3.8-27B" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
 
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
+
                     ctx-size = 98304;
                 };
                 "Qwen3.8-Flash-Next" = {
