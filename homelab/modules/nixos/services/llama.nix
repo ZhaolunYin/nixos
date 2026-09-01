@@ -34,8 +34,13 @@
                 };
                 "gemma-4-E4B" = {
                     hf-repo = "unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL";
+
                     spec-type = "draft-mtp";
-                    spec-draft-n-max = 1;
+                    spec-draft-n-max = 4;
+
+                    cache-type-k = "f16";
+                    cache-type-v = "f16";
+
                     ctx-size = 0;
                 };
                 "Qwen3.8-Flash-Next" = {
