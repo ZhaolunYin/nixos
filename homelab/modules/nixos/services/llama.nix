@@ -7,7 +7,7 @@
         settings = {
             device = "CUDA0";
             flash-attn = "on";
-            fit = "off";
+            fit = "on";
 
             host = "0.0.0.0";
             port = 2001;
