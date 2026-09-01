@@ -7,7 +7,7 @@
         settings = {
             device = "CUDA0";
             flash-attn = "on";
-            fit = "on";
+            fit = "off";
 
             host = "0.0.0.0";
             port = 2001;
@@ -38,7 +38,8 @@
                     ctx-size = 0;
                 };
                 "Qwen3.8-27B" = {
-                    hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
+                    # hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
+                    model = "/var/cache/llama-cpp/models--unsloth--Qwen3.8-27B-GGUF/snapshots/4ca720788d1e01f1bff70c033e0d0028fd02e502/Qwen3.8-27B-UD-IQ2_S.gguf";
 
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
@@ -59,46 +60,8 @@
         };
     };
 
-    systemd.services.llama-cpp = {
-        environment = {
-            LLAMA_CACHE = "/var/cache/llama-cpp";
-            HF_HOME = "/var/cache/llama-cpp";
-        };
-
-        serviceConfig = {
-            User = lib.mkForce "root";
-            DynamicUser = lib.mkForce false;
-
-            PrivateUsers = lib.mkForce false;
-            PrivateMounts = lib.mkForce false;
-            PrivateTmp = lib.mkForce false;
-
-            ProtectHome = lib.mkForce false;
-            ProtectSystem = lib.mkForce false;
-
-            NoNewPrivileges = lib.mkForce false;
-            MemoryDenyWriteExecute = lib.mkForce false;
-
-            RestrictNamespaces = lib.mkForce false;
-            RestrictSUIDSGID = lib.mkForce false;
-            RestrictRealtime = lib.mkForce false;
-
-            SystemCallFilter = lib.mkForce [];
-            SystemCallArchitectures = lib.mkForce [];
-            RestrictAddressFamilies = lib.mkForce [];
-
-            LockPersonality = lib.mkForce false;
-            ProtectClock = lib.mkForce false;
-            ProtectControlGroups = lib.mkForce false;
-            ProtectHostname = lib.mkForce false;
-            ProtectKernelLogs = lib.mkForce false;
-            ProtectKernelModules = lib.mkForce false;
-            ProtectKernelTunables = lib.mkForce false;
-            ProtectProc = lib.mkForce "default";
-            ProcSubset = lib.mkForce "all";
-
-            LimitMEMLOCK = lib.mkForce "infinity";
-        };
+    systemd.services.llama-cpp.serviceConfig = {
+        SystemCallFilter = lib.mkForce [];
     };
 
     environment.systemPackages = [
