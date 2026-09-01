@@ -9,8 +9,6 @@
             flash-attn = "on";
             fit = "on";
 
-            cache-type-k = "q8_0";
-            cache-type-v = "q8_0";
 
             host = "0.0.0.0";
             port = 2001;
@@ -20,12 +18,16 @@
             models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
                 "Qwen3.6-35B-A3B" = {
+                    load-on-startup = true;
                     hf-repo = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL";
+
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 1;
+
+                    cache-type-k = "q8_0";
+                    cache-type-v = "q8_0";
                     ctx-size = 131072;
 
-                    load-on-startup = true;
                 };
                 "gemma-4-E4B" = {
                     hf-repo = "unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL";
@@ -35,7 +37,6 @@
 
                     cache-type-k = "f16";
                     cache-type-v = "f16";
-
                     ctx-size = 0;
                 };
                 "Qwen3.8-27B" = {
@@ -43,7 +44,6 @@
 
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
-
                     ctx-size = 98304;
                 };
                 "Qwen3.8-Flash-Next" = {
@@ -52,6 +52,8 @@
                     load-mode = "mmap";
                     tensor-read-lazy = "on";
 
+                    cache-type-k = "q8_0";
+                    cache-type-v = "q8_0";
                     ctx-size = 0;
                 };
             };
