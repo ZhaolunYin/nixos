@@ -14,14 +14,7 @@
             threads = 8;
             parallel = 1;
 
-            hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
-
-            cache-type-k = "q4_0";
-            cache-type-v = "q4_0";
-
-            # ctx-size = 98304;
-            ctx-size = 65536;
-            /*models-max = 1;
+            models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
                 "Qwen3.6-35B-A3B" = {
                     hf-repo = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL";
@@ -63,7 +56,6 @@
                     ctx-size = 0;
                 };
             };
-            */
         };
     };
 
