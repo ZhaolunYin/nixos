@@ -43,6 +43,14 @@
 
                     ctx-size = 0;
                 };
+                "Qwen3.8-27B" = {
+                    hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
+
+                    spec-type = "draft-mtp";
+                    spec-draft-n-max = 1;
+
+                    ctx-size = 0;
+                };
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ1_M";
                     load-mode = "mmap";
