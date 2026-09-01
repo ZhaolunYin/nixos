@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, ... }:
+{ pkgs, inputs, ... }:
 {
     services.llama-cpp = {
         enable = true;
@@ -66,7 +66,7 @@
         };
     };
 
-    systemd.services.llama-cpp.serviceConfig.PrivateUsers = lib.mkForce false;
+    systemd.services.llama-cpp.serviceConfig.PrivateUsers = false;
 
     environment.systemPackages = [
         inputs.llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
