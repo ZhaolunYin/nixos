@@ -14,6 +14,9 @@
             threads = 8;
             parallel = 1;
 
+            cache-type-k = "q4_0";
+            cache-type-v = "q4_0";
+
             models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
                 "Qwen3.6-35B-A3B" = {
@@ -22,8 +25,6 @@
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 1;
 
-                    cache-type-k = "q8_0";
-                    cache-type-v = "q8_0";
                     ctx-size = 131072;
 
                 };
@@ -33,15 +34,11 @@
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 4;
 
-                    cache-type-k = "f16";
-                    cache-type-v = "f16";
                     ctx-size = 0;
                 };
                 "Qwen3.8-27B" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
 
-                    cache-type-k = "q4_0";
-                    cache-type-v = "q4_0";
                     ctx-size = 98304;
                 };
                 "Qwen3.8-Flash-Next" = {
@@ -50,8 +47,6 @@
                     load-mode = "mmap";
                     tensor-read-lazy = "on";
 
-                    cache-type-k = "q8_0";
-                    cache-type-v = "q8_0";
                     ctx-size = 0;
                 };
             };
