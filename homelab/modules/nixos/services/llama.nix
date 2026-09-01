@@ -14,6 +14,8 @@
             threads = 8;
             parallel = 1;
 
+            no-mmproj = true;
+
             models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
                 "Qwen3.6-35B-A3B" = {
@@ -38,8 +40,7 @@
                     ctx-size = 0;
                 };
                 "Qwen3.8-27B" = {
-                    # hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
-                    model = "/var/cache/llama-cpp/models--unsloth--Qwen3.8-27B-GGUF/snapshots/4ca720788d1e01f1bff70c033e0d0028fd02e502/Qwen3.8-27B-UD-IQ2_S.gguf";
+                    hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-IQ2_S";
 
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
