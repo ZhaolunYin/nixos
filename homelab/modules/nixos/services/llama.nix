@@ -32,8 +32,8 @@
 
                     load-on-startup = true;
                 };
-                "Qwen3.5-4B" = {
-                    hf-repo = "unsloth/Qwen3.5-4B-GGUF:UD-Q5_K_XL";
+                "gemma-4-E4B" = {
+                    hf-repo = "unsloth/gemma-4-E4B-it-GGUF:IQ4_NL";
                     ctx-size = 0;
                 };
                 "Qwen3.8-Flash-Next" = {
