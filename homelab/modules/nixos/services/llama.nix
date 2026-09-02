@@ -49,6 +49,7 @@
                 };
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
+                    hf-repo-draft = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
 
                     load-mode = "mmap";
                     tensor-read-lazy = "on";
