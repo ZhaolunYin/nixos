@@ -62,9 +62,9 @@
 
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
-                    ctx-size = 16384;
                     reasoning = "off";
                     */
+                    ctx-size = 16384;
                 };
             };
         };
