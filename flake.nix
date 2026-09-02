@@ -11,6 +11,7 @@
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
         llama-cpp.url = "github:ggml-org/llama.cpp";
+        llm-agents.url = "github:numtide/llm-agents.nix";
         minesweeper.url = "github:zhaolunyin/minesweeper-tui";
         nixpkgs.url = "nixpkgs/nixos-unstable";
         nixpkgs-23_11.url = "nixpkgs/nixos-23.11";
@@ -31,7 +32,7 @@
     home-manager-23_11,
     impermanence,
     import-tree,
-    llama-cpp,
+    llm-agents,
     minesweeper,
     nixpkgs,
     nixpkgs-23_11,
@@ -58,6 +59,9 @@
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
+                            extraSpecialArgs = {
+                                inherit llm-agents;
+                            };
                             users.zhaolun = {
                                 imports = [
                                     noctalia.homeModules.default

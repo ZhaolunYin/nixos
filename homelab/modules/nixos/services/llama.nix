@@ -48,10 +48,17 @@
                     ctx-size = 98304;
                 };
                 "Qwen3.8-Flash-Next" = {
-                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ1_M";
+                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
 
                     load-mode = "mmap";
                     tensor-read-lazy = "on";
+
+                    spec-type = "draft-mtp,ngram-mod";
+                    spec-draft-n-max = 3;
+                    spec-ngram-mod-n-min = 24;
+                    spec-ngram-mod-n-max = 64;
+
+                    no-mmproj = true;
 
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
