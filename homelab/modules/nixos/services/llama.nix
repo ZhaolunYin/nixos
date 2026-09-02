@@ -49,15 +49,16 @@
                 };
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
-                    hf-repo-draft = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
 
                     load-mode = "mmap";
                     tensor-read-lazy = "on";
+                    cpu-moe = true;
 
-                    spec-type = "draft-mtp,ngram-mod";
-                    spec-draft-n-max = 3;
+                    spec-type = "ngram-mod";
                     spec-ngram-mod-n-min = 24;
-                    spec-ngram-mod-n-max = 64;
+                    spec-ngram-mod-n-max = 128;
+                    spec-ngram-mod-n-match = 24;
+                    spec-draft-n-max = 4;
 
                     no-mmproj = true;
 
