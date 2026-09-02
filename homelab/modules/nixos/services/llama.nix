@@ -7,14 +7,12 @@
         settings = {
             device = "CUDA0";
             flash-attn = "on";
-            fit = "off";
+            fit = "on";
 
             host = "0.0.0.0";
             port = 2001;
             threads = 8;
             parallel = 1;
-
-            no-mmproj = true;
 
             models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
@@ -44,6 +42,8 @@
 
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
+
+                    no-mmproj = true;
 
                     ctx-size = 98304;
                 };
