@@ -23,13 +23,13 @@
                 "mcpServers": {
                     "searxng": {
                         "command": "npx",
-                            "args": [
-                                "-y",
+                        "args": [
+                            "-y",
                             "mcp-searxng"
-                            ],
-                            "env": {
-                                "SEARXNG_URL": "http://192.168.1.11:2002"
-                            }
+                        ],
+                        "env": {
+                            "SEARXNG_URL": "http://192.168.1.11:2002"
+                        }
                     }
                 }
             }
