@@ -54,7 +54,7 @@
                     spec-draft-n-max = 4;
                     spec-ngram-mod-n-match = 24;
                     spec-ngram-mod-n-min = 24;
-                    spec-ngram-mod-n-max = 128;
+                    spec-ngram-mod-n-max = 64;
 
                     no-mmproj = true;
                     cpu-moe = true;
