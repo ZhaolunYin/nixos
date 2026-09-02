@@ -50,10 +50,6 @@
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
 
-                    load-mode = "mmap";
-                    tensor-read-lazy = "on";
-                    cpu-moe = true;
-
                     spec-type = "ngram-mod";
                     spec-ngram-mod-n-min = 24;
                     spec-ngram-mod-n-max = 128;
@@ -61,6 +57,7 @@
                     spec-draft-n-max = 4;
 
                     no-mmproj = true;
+                    cpu-moe = true;
 
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
