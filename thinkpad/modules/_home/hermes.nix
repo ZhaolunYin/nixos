@@ -21,8 +21,10 @@
                       Qwen3.8-Flash-Next: {}
                       gemma-4-E4B: {}
                     models_discovered: true
-                display:
-                  show_reasoning: false
+                agent:
+                  reasoning_effort: low
+                web:
+                  search_backend: "searxng"
             '';
             ".hermes/SOUL.md".text = ''
                 You are Socrates, Zhaolun's Hermes Agent. 
