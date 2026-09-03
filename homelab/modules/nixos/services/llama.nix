@@ -52,7 +52,6 @@
 
                     spec-type = "ngram-mod";
                     spec-draft-n-max = 4;
-                    spec-ngram-mod-n-match = 24;
 
                     no-mmproj = true;
                     cpu-moe = true;
