@@ -15,7 +15,7 @@
             parallel = 1;
 
             jinja = true;
-            lv = 1;
+            verbosity = 4;
 
             models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
