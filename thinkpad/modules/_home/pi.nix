@@ -11,8 +11,6 @@
                 "defaultProvider": "llama-cpp",
                 "packages": [
                     "npm:pi-mcp-adapter",
-                    "npm:pi-agenticoding",
-                    "npm:pi-subagents",
                     "npm:pi-llama-cpp"
                 ],
                 "llamaServerUrl": "http://192.168.1.11:2001"

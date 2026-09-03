@@ -16,16 +16,6 @@
 
             jinja = true;
 
-                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
-
-                    no-mmproj = true;
-                    cpu-moe = true;
-
-                    cache-type-k = "q8_0";
-                    cache-type-v = "q8_0";
-
-                    ctx-size = 16384;
-            /*
             models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
                 "Qwen3.6-35B-A3B" = {
@@ -70,7 +60,6 @@
                     ctx-size = 0;
                 };
             };
-            */
         };
     };
 
