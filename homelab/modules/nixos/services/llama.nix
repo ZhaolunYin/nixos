@@ -50,9 +50,6 @@
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
 
-                    spec-type = "ngram-mod";
-                    spec-draft-n-max = 4;
-
                     no-mmproj = true;
                     cpu-moe = true;
 
