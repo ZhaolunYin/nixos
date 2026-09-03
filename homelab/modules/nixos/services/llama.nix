@@ -43,7 +43,7 @@
                     ctx-size = 0;
                 };
                 "Qwen3.8-27B" = {
-                    hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-2_K_XL";
+                    hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q2_K_XL";
 
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
