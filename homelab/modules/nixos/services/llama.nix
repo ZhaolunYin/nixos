@@ -24,7 +24,7 @@
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
 
-                    ctx-size = 0;
+                    ctx-size = 16384;
             /*
             models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
