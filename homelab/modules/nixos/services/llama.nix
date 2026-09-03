@@ -50,7 +50,7 @@
 
                     no-mmproj = true;
 
-                    ctx-size = 98304;
+                    ctx-size = 65536;
                 };
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
