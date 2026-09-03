@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, ... }:
+{ pkgs, inputs, ... }:
 {
     services.llama-cpp = {
         enable = true;
@@ -59,10 +59,6 @@
                 };
             };
         };
-    };
-
-    systemd.services.llama-cpp.serviceConfig = {
-        SystemCallFilter = lib.mkForce [];
     };
 
     environment.systemPackages = [
