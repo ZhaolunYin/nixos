@@ -24,8 +24,6 @@
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 1;
 
-                    cpu-moe = true;
-
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
                     rope-scaling = "yarn";
