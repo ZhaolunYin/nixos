@@ -106,7 +106,7 @@
             nixosConfigurations.homelab = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 specialArgs = {
-                    inherit inputs;
+                    inherit llama-cpp;
                 };
                 modules = [
                     (import-tree ./homelab)
@@ -167,7 +167,7 @@
             nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
                 system = "i686-linux";
                 specialArgs = {
-                    inherit llama-cpp;
+                    inherit inputs;
                 };
                 modules = [
                     (import-tree ./X60s)
