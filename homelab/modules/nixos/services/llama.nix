@@ -24,9 +24,14 @@
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 1;
 
+                    cpu-moe = true;
+
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
-                    ctx-size = 131072;
+                    rope-scaling = "yarn";
+                    rope-scale = 4;
+                    yarn-orig-ctx = 262144;
+                    ctx-size = 1048576;
 
                 };
                 "gemma-4-E4B" = {
