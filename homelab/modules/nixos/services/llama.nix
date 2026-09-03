@@ -1,8 +1,8 @@
-{ pkgs, inputs, ... }:
+{ pkgs, llama-cpp, ... }:
 {
     services.llama-cpp = {
         enable = true;
-        package = inputs.llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda;
+        package = llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda;
 
         settings = {
             device = "CUDA0";
@@ -13,6 +13,8 @@
             port = 2001;
             threads = 8;
             parallel = 1;
+
+            jinja = true;
 
             models-max = 1;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
@@ -62,6 +64,6 @@
     };
 
     environment.systemPackages = [
-        inputs.llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
+        llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
     ];
 }

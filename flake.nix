@@ -32,6 +32,7 @@
     home-manager-23_11,
     impermanence,
     import-tree,
+    llama-cpp,
     llm-agents,
     minesweeper,
     nixpkgs,
@@ -166,7 +167,7 @@
             nixosConfigurations.X60s = nixpkgs-23_11.lib.nixosSystem {
                 system = "i686-linux";
                 specialArgs = {
-                    inherit inputs;
+                    inherit llama-cpp;
                 };
                 modules = [
                     (import-tree ./X60s)
