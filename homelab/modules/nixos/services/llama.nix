@@ -1,4 +1,10 @@
 { pkgs, llama-cpp, ... }:
+let
+    qwen-3-8-27b-mtp = pkgs.fetchurl {
+        url = "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/resolve/main/MTP/mtp-Qwen3.8-27B-Q4_0.gguf";
+        hash = "sha256-...";
+    };
+in
 {
     services.llama-cpp = {
         enable = true;
@@ -57,7 +63,7 @@
 
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 2;
-                    spec-draft-hf = "unsloth/Qwen3.8-27B-GGUF:mtp-Qwen3.8-27B-Q4_0.gguf";
+                    spec-draft-model = "${qwen-3-8-27b-mtp}";
 
                     ctx-size = 0;
                 };
