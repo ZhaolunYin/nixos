@@ -1,8 +1,8 @@
-{ pkgs, llama-cpp, ... }:
+{ pkgs, llama-cpp, lib, ... }:
 let
     qwen-3-8-27b-mtp = pkgs.fetchurl {
         url = "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/resolve/main/MTP/mtp-Qwen3.8-27B-Q4_0.gguf";
-        hash = "sha256-...";
+        hash = lib.fakeHash;
     };
 in
 {
