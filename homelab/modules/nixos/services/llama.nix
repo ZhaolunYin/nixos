@@ -39,7 +39,7 @@
                     cache-type-v = "f16";
                     ctx-size = 0;
                 };
-                "Qwen3.8-27B" = {
+                "Qwen3.8-27B-Q2" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q2_K_XL";
 
                     cache-type-k = "q4_0";
@@ -48,6 +48,14 @@
                     no-mmproj = true;
 
                     ctx-size = 65536;
+                };
+                "Qwen3.8-27B-Q4" = {
+                    hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M";
+
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
+
+                    ctx-size = 0;
                 };
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
