@@ -58,13 +58,16 @@ in
                 "Qwen3.8-27B-Q4" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M";
 
-                    cache-type-k = "q4_0";
-                    cache-type-v = "q4_0";
 
                     spec-type = "draft-mtp,ngram-mod";
                     spec-draft-n-max = 2;
                     spec-draft-model = "${qwen-3-8-27b-mtp}";
+                    spec-draft-ngl = 0;
 
+                    n-cpu-ffn = 10;
+
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
                     cache-type-k-draft = "q4_0";
                     cache-type-v-draft = "q4_0";
 
