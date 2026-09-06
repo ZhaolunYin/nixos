@@ -55,6 +55,10 @@
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
 
+                    spec-type = "draft-mtp";
+                    spec-draft-n-max = 2;
+                    spec-draft-hf = "unsloth/Qwen3.8-27B-GGUF";
+
                     ctx-size = 0;
                 };
                 "Qwen3.8-Flash-Next" = {
