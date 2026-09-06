@@ -17,6 +17,7 @@
                       apiKeyEnv: LLAMA_CPP_API_KEY
                       api: openai-completions
                       baseURL: http://192.168.1.11:2001/v1
+                      defaultMaxTokens: 2097152
                       models:
                         - id: Qwen3.6-35B-A3B
                         - id: Qwen3.8-27B

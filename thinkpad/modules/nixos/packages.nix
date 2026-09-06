@@ -10,6 +10,7 @@
 
     services.upower.enable = true;
     services.fwupd.enable = true;
+    services.openssh.enable = true;
 
     security.polkit.enable = true;
 

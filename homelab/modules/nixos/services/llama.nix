@@ -26,10 +26,7 @@
 
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
-                    rope-scaling = "yarn";
-                    rope-scale = 2;
-                    yarn-orig-ctx = 262144;
-                    ctx-size = 524288;
+                    ctx-size = 262144;
 
                 };
                 "gemma-4-E4B" = {
