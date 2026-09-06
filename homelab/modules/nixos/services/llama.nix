@@ -57,7 +57,7 @@
 
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 2;
-                    spec-draft-hf = "unsloth/Qwen3.8-27B-GGUF";
+                    spec-draft-hf = "unsloth/Qwen3.8-27B-GGUF:mtp-Qwen3.8-27B-Q4_0.gguf";
 
                     ctx-size = 0;
                 };
