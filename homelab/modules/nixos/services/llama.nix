@@ -61,9 +61,12 @@ in
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
 
-                    spec-type = "draft-mtp";
+                    spec-type = "draft-mtp,ngram-mod";
                     spec-draft-n-max = 2;
                     spec-draft-model = "${qwen-3-8-27b-mtp}";
+
+                    cache-type-k-draft = "q4_0";
+                    cache-type-v-draft = "q4_0";
 
                     ctx-size = 0;
                 };
