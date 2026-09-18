@@ -195,6 +195,7 @@
                     (import-tree ./vm)
                     (import-tree ./share)
                     disko.nixosModules.disko
+                    nur.modules.nixos.default
                     home-manager.nixosModules.home-manager
                     {
                         home-manager = {
