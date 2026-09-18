@@ -66,7 +66,7 @@
                 "..." = "cd ../..";
                 "...." = "cd ../../..";
                 q = "exit";
-                rm = ''printf "%s/n" "This command is disabled. Use trash-put or \\rm instead."'';
+                rm = ''printf "%s\n" "This command is disabled. Use trash-put or \\rm instead."'';
                 sudo = "sudo ";
                 nano = "nvim";
             };

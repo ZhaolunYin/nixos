@@ -189,5 +189,30 @@
                         }
                 ];
             };
+            nixosConfigurations.vm = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                modules = [
+                    (import-tree ./vm)
+                    (import-tree ./share)
+                    disko.nixosModules.disko
+                    home-manager.nixosModules.home-manager
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                            users.zhaolun = {
+                                imports = [
+                                    nixvim.homeModules.nixvim
+                                    minesweeper.homeModules.default
+                                    (import-tree ./vm/modules/_home)
+                                    (import-tree ./share/_home)
+                                ];
+                                home.stateVersion = "26.05";
+                            };
+                            backupFileExtension = "hm-backup";
+                        };
+                    }
+                ];
+            };
         };
 }
