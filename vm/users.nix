@@ -1,5 +1,6 @@
 {
     users.mutableUsers = false;
+    programs.zsh.enable = true;
     users.users.zhaolun = {
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
