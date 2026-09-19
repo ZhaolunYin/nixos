@@ -1,5 +1,5 @@
 {
-    networking.hostName = "projector";
+    networking.hostName = "nixos-vm";
 
     services.avahi = {
         enable = true;
