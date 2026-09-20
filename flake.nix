@@ -190,7 +190,7 @@
                 ];
             };
             nixosConfigurations.vm = nixpkgs.lib.nixosSystem {
-                system = "x86_64-linux";
+                system = "aarch64-linux";
                 modules = [
                     (import-tree ./vm)
                     (import-tree ./share)
