@@ -6,7 +6,6 @@
         gdb
         google-chrome
         hugo
-        hyprshutdown
         kdePackages.kamoso
         mousepad
         noto-fonts-cjk-sans
