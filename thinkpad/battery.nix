@@ -17,8 +17,11 @@
             CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
             CPU_ENERGY_PERF_POLICY_ON_SAV = "power";
             CPU_BOOST_ON_AC = 1;
-            CPU_BOOST_ON_BAT = 0;
+            CPU_BOOST_ON_BAT = 1;
             CPU_BOOST_ON_SAV = 0;
+            CPU_FREQ_GOVERNATOR_ON_AC = "performance";
+            CPU_FREQ_GOVERNATOR_ON_BAT = "schedutil";
+            CPU_FREQ_GOVERNATOR_ON_SAV = "powersave";
             PLATFORM_PROFILE_ON_AC = "performance";
             PLATFORM_PROFILE_ON_BAT = "balanced";
             PLATFORM_PROFILE_ON_SAV = "low-power";
