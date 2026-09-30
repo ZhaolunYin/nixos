@@ -132,7 +132,6 @@
                     }
                 ];
             };
-
             nixosConfigurations.projector = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 modules = [
@@ -196,7 +195,6 @@
                 modules = [
                     (import-tree ./vm)
                     (import-tree ./share)
-                    (import-tree ./share/_hyprland)
                     disko.nixosModules.disko
                     nur.modules.nixos.default
                     home-manager.nixosModules.home-manager
@@ -206,11 +204,9 @@
                             useUserPackages = true;
                             users.zhaolun = {
                                 imports = [
-                                    noctalia.homeModules.default
                                     nixvim.homeModules.nixvim
                                     minesweeper.homeModules.default
                                     (import-tree ./share/_home)
-                                    (import-tree ./share/_hyprland/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
