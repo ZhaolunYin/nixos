@@ -3,6 +3,9 @@
     home.packages = [ pkgs.hyprshutdown ];
     wayland.windowManager.hyprland = {
         enable = true;
+        package = null;
+        portalPackage = null;
+        systemd.enable = false;
         configType = "lua";
         extraConfig = ''
             -- Colors
