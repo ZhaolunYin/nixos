@@ -142,8 +142,6 @@
             end, { locked = true })
             hl.bind(main_mod  .. " + F",     hl.dsp.exec_cmd("firefox"))
             hl.bind(shift_mod .. " + P",     hl.dsp.exec_cmd("firefox --private-window"))
-            hl.bind(shift_mod .. " + C",     hl.dsp.exec_cmd("google-chrome-stable"))
-            hl.bind("SUPER + ALT + C",       hl.dsp.exec_cmd('google-chrome-stable --profile-directory="Guest Profile"'))
             hl.bind(shift_mod .. " + S",     hl.dsp.exec_cmd("noctalia msg screenshot-region"))
             hl.bind(main_mod  .. " + W",     hl.dsp.exec_cmd("noctalia msg panel-toggle wallpaper"))
             hl.bind(main_mod  .. " + I",     hl.dsp.exec_cmd("noctalia msg panel-toggle control-center"))

@@ -62,11 +62,10 @@
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
 
                     no-mmproj = true;
-                    cpu-moe = true;
 
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
-                    ctx-size = 0;
+                    ctx-size = 131072;
                 };
             };
         };

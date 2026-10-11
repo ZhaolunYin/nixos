@@ -4,7 +4,6 @@
         bambu-studio
         ddcutil
         gdb
-        google-chrome
         hugo
         kdePackages.kamoso
         mousepad
