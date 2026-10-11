@@ -10,8 +10,10 @@
             {
                 "defaultProvider": "llama-cpp",
                 "packages": [
-                    "npm:pi-mcp-adapter",
-                    "npm:pi-llama-cpp"
+                    "npm:pi-llama-cpp",
+                    "npm:@juicesharp/rpiv-ask-user-question",
+                    "npm:@narumitw/pi-plan-mode",
+                    "npm:billion-context"
                 ],
                 "llamaServerUrl": "http://192.168.1.11:2001"
             }
