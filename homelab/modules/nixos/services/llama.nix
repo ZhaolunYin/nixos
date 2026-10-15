@@ -50,13 +50,14 @@
 
                     ctx-size = 65536;
                 };
-                "Qwen3.8-27B-Q4" = {
-                    hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M";
+                "Qwen3.8-Flash-Next" = {
+                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
 
-                    cache-type-k = "q4_0";
-                    cache-type-v = "q4_0";
+                    no-mmproj = true;
 
-                    ctx-size = 65536;
+                    cache-type-k = "q8_0";
+                    cache-type-v = "q8_0";
+                    ctx-size = 131072;
                 };
             };
         };
