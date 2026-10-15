@@ -51,7 +51,7 @@
                     ctx-size = 65536;
                 };
                 "Qwen3.8-Flash-Next" = {
-                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ1_K_M";
+                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ1_M";
 
                     no-mmproj = true;
 
