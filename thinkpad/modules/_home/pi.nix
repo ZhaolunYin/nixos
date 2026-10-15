@@ -12,6 +12,7 @@
                 "packages": [
                     "npm:pi-llama-cpp",
                     "npm:@juicesharp/rpiv-ask-user-question",
+                    "npm:pi-token-speed",
                     "npm:@narumitw/pi-plan-mode",
                     "npm:billion-context"
                 ],
