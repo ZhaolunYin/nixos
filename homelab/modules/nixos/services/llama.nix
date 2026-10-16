@@ -55,8 +55,12 @@
 
                     no-mmproj = true;
 
-                    cache-type-k = "q8_0";
-                    cache-type-v = "q8_0";
+                    n-gpu-layers = 999;
+                    # fine tuned for rtx 5070
+                    n-cpu-moe = 42;
+
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
                     ctx-size = 131072;
                 };
             };
