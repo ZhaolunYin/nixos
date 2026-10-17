@@ -30,6 +30,13 @@
                     ctx-size = 262144;
 
                 };
+                "Nvidia-Nemotron-Bolt-74B-A9B" = {
+                    hf-repo = "unsloth/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-GGUF:UD-IQ2_XXS";
+
+                    cache-type-k = "q8_0";
+                    cache-type-v = "q8_0";
+                    ctx-size = 262144;
+                };
                 "gemma-4-E4B" = {
                     hf-repo = "unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL";
 
@@ -40,7 +47,7 @@
                     cache-type-v = "f16";
                     ctx-size = 0;
                 };
-                "Qwen3.8-27B-Q2" = {
+                "Qwen3.8-27B" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q2_K_XL";
 
                     cache-type-k = "q4_0";
