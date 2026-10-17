@@ -16,3 +16,7 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
+
+# Extra notes
+# Hardware: RTX 5070, i7-12400, 64GB RAM
+# MAC Address: 64:4e:d7:68:73:09

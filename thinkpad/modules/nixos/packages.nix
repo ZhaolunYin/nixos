@@ -27,16 +27,14 @@
         gnumake
         jq
         libnotify
-        lm_sensors
         man-pages
         man-pages-posix
-        OVMF
         pkg-config
         qemu
         rustc
-        rustup
         tmux
         unzip
+        wakeonlan
         wget
         wl-clipboard
         zip

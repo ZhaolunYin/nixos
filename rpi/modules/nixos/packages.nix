@@ -11,6 +11,7 @@
         python3
         ripgrep
         trash-cli
+        wakeonlan
         uwsm
     ];
 }
