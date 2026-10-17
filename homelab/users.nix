@@ -14,6 +14,11 @@
         }
     ];
 
+    services.displayManager.autoLogin = {
+        enable = true;
+        user = "yxk";
+    };
+
     users.users.lab = {
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
