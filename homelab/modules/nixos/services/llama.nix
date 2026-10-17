@@ -33,9 +33,9 @@
                 "Nvidia-Nemotron-Bolt-74B-A9B" = {
                     hf-repo = "unsloth/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-GGUF:UD-IQ2_XXS";
 
-                    cache-type-k = "q8_0";
-                    cache-type-v = "q8_0";
-                    ctx-size = 262144;
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
+                    ctx-size = 131072;
                 };
                 "gemma-4-E4B" = {
                     hf-repo = "unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL";

@@ -16,6 +16,9 @@
         proton-vpn
         python3
         otpclient
+        tor
+        torsocks
+        tor-browser
         unrar
         valgrind
         yazi
