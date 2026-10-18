@@ -6,6 +6,7 @@
         gdb
         hugo
         kdePackages.kamoso
+        llama-cpp-vulkan
         mousepad
         noto-fonts-cjk-sans
         noto-fonts-color-emoji
