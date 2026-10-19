@@ -19,7 +19,7 @@
             models-max = 1;
             sleep-idle-seconds = 30;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
-                "Qwen3.6-35B-A3B" = {
+                "DEFAULT Qwen3.6-35B-A3B" = {
                     hf-repo = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL";
 
                     spec-type = "draft-mtp";
@@ -31,9 +31,10 @@
                     ctx-size = 262144;
 
                 };
-                "Nvidia-Nemotron-Bolt-74B-A9B" = {
+                "Nvidia-Nemotron-3.5-Bolt-74B-A9B" = {
                     hf-repo = "unsloth/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-GGUF:UD-IQ2_XXS";
 
+                    moe-cache-mib = 2048;
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
                     ctx-size = 131072;
