@@ -17,6 +17,7 @@
         proton-vpn
         python3
         otpclient
+        supertuxkart
         tor
         torsocks
         tor-browser
