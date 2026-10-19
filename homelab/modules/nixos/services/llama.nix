@@ -25,6 +25,7 @@
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 1;
 
+                    moe-cache-mib = 1792;
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
                     ctx-size = 262144;
@@ -62,10 +63,7 @@
 
                     no-mmproj = true;
 
-                    n-gpu-layers = 999;
-                    # fine tuned for rtx 5070
-                    n-cpu-moe = 42;
-
+                    moe-cache-mib = 2688;
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
                     ctx-size = 131072;
