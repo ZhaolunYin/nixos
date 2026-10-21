@@ -75,5 +75,6 @@
 
     environment.systemPackages = [
         llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
+        pkgs.huggingface-hub
     ];
 }
