@@ -17,7 +17,7 @@
             jinja = true;
 
             models-max = 1;
-            sleep-idle-seconds = 30;
+            sleep-idle-seconds = 600;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
                 "DEFAULT Qwen3.6-35B-A3B" = {
                     hf-repo = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL";
@@ -60,7 +60,7 @@
                     ctx-size = 65536;
                 };
                 "Qwen3.8-Flash-Next" = {
-                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ3_XXS";
+                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ4_XS";
 
                     no-mmproj = true;
 
