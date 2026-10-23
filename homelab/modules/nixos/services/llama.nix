@@ -64,7 +64,7 @@
 
                     no-mmproj = true;
 
-                    moe-cache-mib = 2688;
+                    moe-cache-mib = 3072;
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
                     ctx-size = 65536;
