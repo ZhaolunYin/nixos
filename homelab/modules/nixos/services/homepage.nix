@@ -9,23 +9,13 @@
                     {
                         Llama = {
                             href = "http://192.168.1.11:2001";
-                            description = "Qwen3.6 35B A3B";
+                            description = "Local AI models";
                         };
                     }
                     {
                         SearXNG = {
                             href = "http://192.168.1.11:2002";
                             description = "SearXNG search";
-                        };
-                    }
-                ];
-            }
-            {
-                Development = [
-                    {
-                        Forgejo = {
-                            href = "http://192.168.1.11:2003";
-                            description = "Forgejo self-hosted Git";
                         };
                     }
                 ];
