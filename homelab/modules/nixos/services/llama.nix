@@ -30,6 +30,12 @@
                     cache-type-v = "q8_0";
                     ctx-size = 262144;
 
+                    temperature=0.6;
+                    top-p = 0.95;
+                    top-k = 20;
+                    min-p = 0.0;
+                    presence-penalty = 0.0;
+                    repeat-penalty = 1.0;
                 };
                 "Nvidia-Nemotron-3.5-Bolt-74B-A9B" = {
                     hf-repo = "unsloth/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-GGUF:UD-IQ2_XXS";
@@ -38,6 +44,9 @@
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
                     ctx-size = 131072;
+
+                    temperature = 1.0;
+                    top-p = 0.95;
                 };
                 "gemma-4-E4B" = {
                     hf-repo = "unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL";
@@ -48,6 +57,10 @@
                     cache-type-k = "f16";
                     cache-type-v = "f16";
                     ctx-size = 0;
+
+                    temperature = 1.0;
+                    top-p = 0.95;
+                    top-k = 64;
                 };
                 "Qwen3.8-27B" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q2_K_XL";
@@ -58,6 +71,13 @@
                     no-mmproj = true;
 
                     ctx-size = 65536;
+
+                    temperature = 1.0;
+                    top-p = 0.95;
+                    top-k = 20;
+                    min-p = 0.0;
+                    presence-penalty = 0.0;
+                    repeat-penalty = 1.0;
                 };
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ3_XXS";
@@ -68,6 +88,13 @@
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
                     ctx-size = 65536;
+
+                    temperature = 1.0;
+                    top-p = 0.95;
+                    top-k = 20;
+                    min-p = 0.0;
+                    presence-penalty = 0.0;
+                    repeat-penalty = 1.0;
                 };
             };
         };
