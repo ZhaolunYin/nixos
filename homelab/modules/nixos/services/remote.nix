@@ -4,7 +4,7 @@
     ];
     nix.settings = {
         trusted-users = [ "root" "lab" ];
-        extra-platforms = [ "i686-linux" ];
+        extra-platforms = [ "aarch64-linux" "i686-linux" ];
         system-features = [ "kvm" "nixos-test" "big-parallel" ];
     };
 }
