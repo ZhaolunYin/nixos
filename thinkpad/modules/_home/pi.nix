@@ -13,8 +13,10 @@
                     "npm:pi-llama-cpp",
                     "npm:@juicesharp/rpiv-ask-user-question",
                     "npm:pi-token-speed",
+                    "npm:@sting8k/pi-vcc",
                     "npm:@narumitw/pi-plan-mode",
-                    "npm:billion-context"
+                    "npm:pi-subagents",
+                    "npm:pi-atelier"
                 ],
                 "llamaServerUrl": "http://192.168.1.11:2001"
             }
