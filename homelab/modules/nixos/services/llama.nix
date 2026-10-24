@@ -103,7 +103,7 @@
                     cpu-moe = true;
 
                     # moe-cache-mib = 2688;
-                    moe-cache-mib = 3008;
+                    moe-cache-mib = 2944;
                     cache-type-k = "iq4_nl";
                     cache-type-v = "iq4_nl";
                     ctx-size = 131072;
