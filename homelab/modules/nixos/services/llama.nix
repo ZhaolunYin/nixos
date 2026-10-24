@@ -113,6 +113,23 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
+                "Qwen3.8-Flash-Next Q4_K_XL" = {
+                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL";
+
+                    no-mmproj = true;
+
+                    moe-cache-mib = 2688;
+                    cache-type-k = "iq4_nl";
+                    cache-type-v = "iq4_nl";
+                    ctx-size = 131072;
+
+                    temperature = 1.0;
+                    top-p = 0.95;
+                    top-k = 20;
+                    min-p = 0.0;
+                    presence-penalty = 0.0;
+                    repeat-penalty = 1.0;
+                };
             };
         };
     };
