@@ -84,10 +84,14 @@
 
                     no-mmproj = true;
 
+                    spec-type = "draft-mtp";
+                    spec-draft-hf = "bartowski/Qwen3.8-Flash-Next-GGUF:Q4_0";
+                    spec-draft-n-max = 2;
+
                     moe-cache-mib = 3072;
-                    cache-type-k = "q8_0";
-                    cache-type-v = "q8_0";
-                    ctx-size = 65536;
+                    cache-type-k = "iq4_nl";
+                    cache-type-v = "iq4_nl";
+                    ctx-size = 131072;
 
                     temperature = 1.0;
                     top-p = 0.95;
@@ -101,10 +105,14 @@
 
                     no-mmproj = true;
 
+                    spec-type = "draft-mtp";
+                    spec-draft-hf = "bartowski/Qwen3.8-Flash-Next-GGUF:Q4_0";
+                    spec-draft-n-max = 2;
+
                     moe-cache-mib = 2688;
-                    cache-type-k = "q8_0";
-                    cache-type-v = "q8_0";
-                    ctx-size = 65536;
+                    cache-type-k = "iq4_nl";
+                    cache-type-v = "iq4_nl";
+                    ctx-size = 131072;
 
                     temperature = 1.0;
                     top-p = 0.95;
