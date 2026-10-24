@@ -79,12 +79,29 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
-                "Qwen3.8-Flash-Next" = {
+                "Qwen3.8-Flash-Next IQ3_XXS" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ3_XXS";
 
                     no-mmproj = true;
 
                     moe-cache-mib = 3072;
+                    cache-type-k = "q8_0";
+                    cache-type-v = "q8_0";
+                    ctx-size = 65536;
+
+                    temperature = 1.0;
+                    top-p = 0.95;
+                    top-k = 20;
+                    min-p = 0.0;
+                    presence-penalty = 0.0;
+                    repeat-penalty = 1.0;
+                };
+                "Qwen3.8-Flash-Next IQ4_XS" = {
+                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ4_XS";
+
+                    no-mmproj = true;
+
+                    moe-cache-mib = 2688;
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
                     ctx-size = 65536;
