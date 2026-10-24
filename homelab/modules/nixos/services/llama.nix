@@ -100,6 +100,7 @@
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ4_XS";
 
                     no-mmproj = true;
+                    cpu-moe = true;
 
                     # moe-cache-mib = 2688;
                     moe-cache-mib = 3072;
