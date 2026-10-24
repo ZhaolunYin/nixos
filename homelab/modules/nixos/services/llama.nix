@@ -100,10 +100,8 @@
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ4_XS";
 
                     no-mmproj = true;
-                    cpu-moe = true;
 
-                    # moe-cache-mib = 2688;
-                    moe-cache-mib = 2944;
+                    moe-cache-mib = 2688;
                     cache-type-k = "iq4_nl";
                     cache-type-v = "iq4_nl";
                     ctx-size = 131072;

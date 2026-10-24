@@ -22,6 +22,7 @@
         torsocks
         tor-browser
         unrar
+        unsloth-desktop
         valgrind
         yazi
         zathura
