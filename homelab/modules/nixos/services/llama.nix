@@ -26,8 +26,8 @@
                     spec-draft-n-max = 2;
 
                     moe-cache-mib = 3072;
-                    cache-type-k = "iq4_nl";
-                    cache-type-v = "iq4_nl";
+                    cache-type-k = "q8_0";
+                    cache-type-v = "q8_0";
                     ctx-size = 0;
 
                     temperature=0.6;
@@ -74,8 +74,8 @@
                     no-mmproj = true;
 
                     moe-cache-mib = 3072;
-                    cache-type-k = "iq4_nl";
-                    cache-type-v = "iq4_nl";
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
                     ctx-size = 131072;
 
                     temperature = 1.0;
@@ -91,8 +91,8 @@
                     no-mmproj = true;
 
                     moe-cache-mib = 2688;
-                    cache-type-k = "iq4_nl";
-                    cache-type-v = "iq4_nl";
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
                     ctx-size = 131072;
 
                     temperature = 1.0;
