@@ -19,7 +19,7 @@
             models-max = 1;
             sleep-idle-seconds = 600;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
-                "DEFAULT Qwen3.6-35B-A3B" = {
+                "Qwen3.6-35B-A3B" = {
                     hf-repo = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL";
 
                     spec-type = "draft-mtp";
