@@ -2,6 +2,10 @@
     programs.fastfetch = {
         enable = true;
         settings = {
+            logo = {
+                source = "NixOS_small";
+                type = "auto";
+            };
             display = {
                 separator = "  ";
                 color = {

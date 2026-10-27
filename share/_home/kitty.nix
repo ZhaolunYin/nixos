@@ -43,12 +43,33 @@
         settings = {
             cursor_shape = "beam";
             cursor_blink_interval = 0.5;
+            # Mauve beam, crust text under it: the theme's own cursor colours leave
+            # the glyph unreadable.
+            cursor = "#cba6f7";
+            cursor_text_color = "#11111b";
+            # 0 disables pointer hiding altogether (kitty's default is 3.0s; any
+            # positive number hides the pointer that many seconds *after it stops
+            # moving*, which is why it vanished while sitting still). tmux is
+            # innocent here: it never touches the host cursor.
+            mouse_hide_wait = 0;
 
-            background_opacity = 0.85;
+            # Unfocused terminals fade back the way Hyprland dims inactive windows.
+            inactive_text_alpha = 0.8;
+
+            background_opacity = 0.88;
             window_padding_width = 12;
+
+            selection_foreground = "#1e1e2e";
+            selection_background = "#cba6f7";
+            url_color = "#89b4fa";
 
             scrollback_lines = 10000;
             enable_audio_bell = "no";
+
+            # Font size on demand.
+            "map ctrl+equal" = "change_font_size all +0.5";
+            "map ctrl+minus" = "change_font_size all -0.5";
+            "map ctrl+0" = "change_font_size all 0";
 
             shell = "${config.home.homeDirectory}/.local/bin/launch-tmux";
 

@@ -77,11 +77,7 @@
                 GIT_EDITOR = "nvim";
                 MANPAGER = "nvim +Man!";
                 BROWSER = "firefox";
-                # Hyprland
-                XCURSOR_SIZE = "36";
-                XCURSOR_THEME = "catppuccin-mocha-mauve-cursors";
-                HYPRCURSOR_SIZE = "36";
-                HYPRCURSOR_THEME = "catppuccin-mocha-mauve-cursors";
+                # Hyprland (cursor theme/size come from _hyprland/_home/cursor.nix)
                 WLR_NO_HARDWARE_CURSORS = "1";
                 LIBVA_DRIVER_NAME = "amd";
                 # Data dirs

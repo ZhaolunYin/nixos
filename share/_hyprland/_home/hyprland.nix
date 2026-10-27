@@ -1,6 +1,10 @@
 { pkgs, ... }:
 {
-    home.packages = [ pkgs.hyprshutdown ];
+    home.packages = with pkgs; [
+        hyprshutdown
+        hyprpicker # colour picker, bound to CTRL+SHIFT+P
+    ];
+
     wayland.windowManager.hyprland = {
         enable = true;
         package = null;
@@ -10,32 +14,55 @@
         extraConfig = ''
             -- Colors
             local mauve    = "rgb(cba6f7)"
-            local rosewater = "rgb(f5e0dc)"
+            local overlay0 = "rgb(6c7086)"
+            local crust    = "rgba(11111bb4)"
 
             -- General
             hl.config({
                 general = {
-                    gaps_in  = 3,
-                    gaps_out = 6,
+                    gaps_in  = 5,
+                    gaps_out = 10,
                     border_size = 2,
                     ["col.active_border"]   = mauve,
-                    ["col.inactive_border"] = rosewater,
+                    ["col.inactive_border"] = overlay0,
                 },
                 decoration = {
                     rounding = 12,
+                    rounding_power = 2.0,
+
+                    -- Two real passes + vibrancy: translucent surfaces read as
+                    -- frosted rather than muddy grey.
                     blur = {
                         enabled = true,
-                        size = 8,
-                        passes = 1,
+                        size = 6,
+                        passes = 2,
+                        noise = 0.01,
+                        contrast = 0.890001,
+                        vibrancy = 0.28,
+                        vibrancy_darkness = 0.15,
+                        xray = false,
+                        popups = true,
+                        ignore_opacity = false,
                     },
+
+                    -- Tighter crust-tinted shadow: grounds windows without the
+                    -- grey halo of the old range 20 / power 3 black shadow.
                     shadow = {
                         enabled = true,
-                        range = 20,
-                        render_power = 3,
-                        color = "rgba(000000aa)",
+                        range = 14,
+                        render_power = 2,
+                        scale = 1.05,
+                        color = crust,
+                        color_inactive = "rgba(11111b70)",
                     },
+
+                    -- Focus hierarchy by dimming inactive windows instead of
+                    -- ghosting every unfocused window at 0.8 opacity.
                     active_opacity = 1.0,
-                    inactive_opacity = 0.8,
+                    inactive_opacity = 1.0,
+                    dim_inactive = true,
+                    dim_strength = 0.20,
+                    fullscreen_opacity = 1.0,
                 },
                 dwindle = {
                     force_split = 0,
@@ -43,6 +70,8 @@
                 misc = {
                     force_default_wallpaper  = -1,
                     disable_hyprland_logo    = true,
+                    disable_splash_rendering = true,
+                    background_color = "rgb(1e1e2e)",
                     mouse_move_enables_dpms  = true,
                     key_press_enables_dpms   = true,
                     allow_session_lock_restore = true,
@@ -115,6 +144,15 @@
                 suppress_event = "maximize",
             })
 
+            -- Pickers and portal dialogs stay crisp: blurring behind a colour
+            -- picker makes it unusable.
+            hl.window_rule({
+                name     = "crisp-overlays",
+                match    = { class = "^(hyprpicker|xdg-desktop-portal-gtk|xdg-desktop-portal-hyprland)$" },
+                no_blur  = true,
+                no_anim  = true,
+            })
+
             -- Device
             hl.device({
                 name        = "epic-mouse-v1",
@@ -147,6 +185,7 @@
             hl.bind(main_mod  .. " + I",     hl.dsp.exec_cmd("noctalia msg panel-toggle control-center"))
             hl.bind(shift_mod  .. " + V",     hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
             hl.bind(main_mod  .. " + N",     hl.dsp.exec_cmd("rm -r ~/.local/state/noctalia/"))
+            hl.bind("CTRL + SHIFT + P",      hl.dsp.exec_cmd("hyprpicker -a"))
 
             -- Focus
             hl.bind(main_mod .. " + Left",  hl.dsp.focus({ direction = "l" }))
