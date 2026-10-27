@@ -11,28 +11,44 @@
                 "defaultProvider": "llama-cpp",
                 "packages": [
                     "npm:pi-llama-cpp",
+
+                    "npm:pi-token-speed",
+                    "npm:pi-tool-display",
+
                     "npm:@juicesharp/rpiv-ask-user-question",
-                    "npm:@sting8k/pi-vcc",
                     "npm:@narumitw/pi-plan-mode",
-                    "npm:pi-atelier"
+                    "npm:@narumitw/pi-btw",
+                    "npm:@narumitw/pi-progress",
+
+                    "npm:@sting8k/pi-vcc",
+                    "npm:pi-context-prune",
+                    "npm:pi-searxng",
+                    "npm:pi-subagents"
                 ],
-                "llamaServerUrl": "http://192.168.1.11:2001"
+                "llamaServerUrl": "http://192.168.1.11:2001",
+                "llamaSettings": {
+                    "serverTimeout": 3600000
+                }
             }
         '';
-        ".config/mcp/mcp.json".text = ''
+        ".pi/searxng.json".text = ''
             {
-                "mcpServers": {
-                    "searxng": {
-                        "command": "npx",
-                        "args": [
-                            "-y",
-                            "mcp-searxng"
-                        ],
-                        "env": {
-                            "SEARXNG_URL": "http://192.168.1.11:2002"
-                        }
-                    }
-                }
+                "searxngUrl": "http://192.168.1.11:2002",
+                "timeoutMs": 30000,
+                "maxResults": 10
+            }
+        '';
+        ".pi/agent/context-prune/settings.json".text = ''
+            {
+                "enabled": true,
+                "showPruneStatusLine": true,
+                "showStartupNotice": true,
+                "summarizerModel": "default",
+                "summarizerThinking": "default",
+                "pruneOn": "agentic-auto",
+                "remindUnprunedCount": true,
+                "notifySkipped": true,
+                "batchingMode": "agent-message"
             }
         '';
     };

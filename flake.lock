@@ -391,11 +391,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1791834555,
-        "narHash": "sha256-nKFDTFutDdrIPFt45oIheAxoeOcshRkWUVeU+c7N0No=",
+        "lastModified": 1793060586,
+        "narHash": "sha256-xKCRcPvNXTJwjvGbdn1cgWJZ2o93Xz2SzL52Lfe8ISc=",
         "owner": "zhaolunyin",
         "repo": "minesweeper-tui",
-        "rev": "1579ab80c33025bbbe90a9533389d277308c71ed",
+        "rev": "47f23028f0868718bb4656fc29212361f1d656e1",
         "type": "github"
       },
       "original": {
