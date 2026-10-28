@@ -18,7 +18,6 @@
                     "npm:@juicesharp/rpiv-ask-user-question",
                     "npm:@narumitw/pi-plan-mode",
                     "npm:@narumitw/pi-btw",
-                    "npm:@narumitw/pi-progress",
 
                     "npm:@sting8k/pi-vcc",
                     "npm:pi-context-prune",
