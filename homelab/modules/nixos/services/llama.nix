@@ -85,15 +85,15 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
-                "Qwen3.8-Flash-Next IQ4_XS" = {
-                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ4_XS";
+                "Deepseek V4.1 Flash 1017 " = {
+                    hf-repo = "unsloth/DeepSeek-V4.1-Flash-1017-GGUF:UD-Q2_K_XL";
 
                     no-mmproj = true;
 
-                    moe-cache-mib = 2688;
+                    moe-cache-mib = 2048;
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
-                    ctx-size = 131072;
+                    ctx-size = 65536;
 
                     temperature = 1.0;
                     top-p = 0.95;
