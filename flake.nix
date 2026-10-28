@@ -97,6 +97,7 @@
                             useUserPackages = true;
                             users.admin = {
                                 imports = [
+                                    catppuccin.homeModules.catppuccin
                                     nixvim.homeModules.nixvim
                                     (import-tree ./share/_home)
                                 ];
@@ -125,6 +126,7 @@
                             useUserPackages = true;
                             users.lab = {
                                 imports = [
+                                    catppuccin.homeModules.catppuccin
                                     nixvim.homeModules.nixvim
                                     (import-tree ./share/_home)
                                 ];
@@ -149,6 +151,7 @@
                             useUserPackages = true;
                             users.projector = {
                                 imports = [
+                                    catppuccin.homeModules.catppuccin
                                     plasma-manager.homeModules.plasma-manager
                                     nixvim.homeModules.nixvim
                                     (import-tree ./projector/modules/_home)
@@ -158,6 +161,7 @@
                             };
                             users.admin = {
                                 imports = [
+                                    catppuccin.homeModules.catppuccin
                                     nixvim.homeModules.nixvim
                                     (import-tree ./share/_home)
                                 ];
@@ -207,6 +211,7 @@
                             useUserPackages = true;
                             users.zhaolun = {
                                 imports = [
+                                    catppuccin.homeModules.catppuccin
                                     nixvim.homeModules.nixvim
                                     minesweeper.homeModules.default
                                     (import-tree ./share/_home)
