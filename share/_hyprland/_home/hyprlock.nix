@@ -18,24 +18,12 @@
 
             background = [
                 {
-                    monitor = "";
                     blur_passes = 0;
                     color = "rgb(1e1e2e)";
                 }
             ];
 
             label = [
-                # Layout
-                {
-                    monitor = "";
-                    text = "Layout: $LAYOUT";
-                    color = "rgb(cdd6f4)";
-                    font_size = 25;
-                    font_family = "JetBrainsMono Nerd Font";
-                    position = "30, -30";
-                    halign = "left";
-                    valign = "top";
-                }
                 # Time
                 {
                     monitor = "";
@@ -43,8 +31,8 @@
                     color = "rgb(cdd6f4)";
                     font_size = 90;
                     font_family = "JetBrainsMono Nerd Font";
-                    position = "-30, 0";
-                    halign = "right";
+                    position = "0, -250";
+                    halign = "center";
                     valign = "top";
                 }
                 # Date
@@ -54,8 +42,8 @@
                     color = "rgb(cdd6f4)";
                     font_size = 25;
                     font_family = "JetBrainsMono Nerd Font";
-                    position = "-30, -150";
-                    halign = "right";
+                    position = "0, -400";
+                    halign = "center";
                     valign = "top";
                 }
             ];
