@@ -30,7 +30,6 @@
         unrar
         unsloth-desktop
         valgrind
-        yazi
         zathura
     ];
 }

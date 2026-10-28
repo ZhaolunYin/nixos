@@ -2,6 +2,7 @@
     description = "My Nixos config";
 
     inputs = {
+        catppuccin.url = "github:catppuccin/nix";
         disko.url = "github:nix-community/disko";
         home-manager.url = "github:nix-community/home-manager";
         home-manager-23_11 = {
@@ -27,6 +28,7 @@
     };
 
     outputs = inputs@{
+    catppuccin,
     disko,
     home-manager,
     home-manager-23_11,
@@ -66,6 +68,7 @@
                             };
                             users.zhaolun = {
                                 imports = [
+                                    catppuccin.homeModules.catppuccin
                                     noctalia.homeModules.default
                                     nixvim.homeModules.nixvim
                                     minesweeper.homeModules.default

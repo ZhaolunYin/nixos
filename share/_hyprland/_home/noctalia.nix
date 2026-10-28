@@ -49,10 +49,6 @@
                 mode = "dark";
                 source = "builtin";
                 builtin = "Catppuccin";
-                templates = {
-                    builtin_ids = [ "gtk3" "gtk4" "qt"];
-                    community_ids = [ "yazi" ];
-                };
             };
 
 
