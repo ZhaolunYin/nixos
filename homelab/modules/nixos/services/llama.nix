@@ -89,18 +89,17 @@
                     hf-repo = "unsloth/DeepSeek-V4.1-Flash-1017-GGUF:UD-Q2_K_XL";
 
                     no-mmproj = true;
+                    chat-template-kwargs = "{\"enable_thinking\":false}";
 
                     moe-cache-mib = 2048;
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
-                    ctx-size = 65536;
+                    ctx-size = 32768;
 
-                    temperature = 1.0;
-                    top-p = 0.95;
-                    top-k = 20;
+                    temp = 1.0;
+                    top-p = 1.0;
+                    top-k = 0;
                     min-p = 0.0;
-                    presence-penalty = 0.0;
-                    repeat-penalty = 1.0;
                 };
             };
         };
