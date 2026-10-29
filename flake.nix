@@ -22,6 +22,7 @@
             inputs.nixpkgs.follows = "nixpkgs-23_11";
         };
         nix-flatpak.url = "github:gmodena/nix-flatpak";
+        openclaw.url = "github:openclaw/nix-openclaw";
         nur.url = "github:nix-community/NUR";
         noctalia.url = "github:noctalia-dev/noctalia-shell";
         plasma-manager.url = "github:nix-community/plasma-manager";
@@ -42,6 +43,7 @@
     nixvim,
     nixvim-23_11,
     nix-flatpak,
+    openclaw,
     nur,
     noctalia,
     plasma-manager,
@@ -112,7 +114,7 @@
             nixosConfigurations.homelab = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 specialArgs = {
-                    inherit llama-cpp;
+                    inherit llama-cpp openclaw;
                 };
                 modules = [
                     (import-tree ./homelab)

@@ -85,6 +85,24 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
+                "qwen3.8-27B-uncensored" = {
+                    hf-repo = "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF:Q2_K_P";
+
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
+
+                    no-mmproj = true;
+                    fit-target = 256;
+
+                    ctx-size = 65536;
+
+                    temperature = 1.0;
+                    top-p = 0.95;
+                    top-k = 20;
+                    min-p = 0.0;
+                    presence-penalty = 0.0;
+                    repeat-penalty = 1.0;
+                };
             };
         };
     };
