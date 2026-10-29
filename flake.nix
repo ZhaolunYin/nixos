@@ -24,7 +24,6 @@
         nix-flatpak.url = "github:gmodena/nix-flatpak";
         nur.url = "github:nix-community/NUR";
         noctalia.url = "github:noctalia-dev/noctalia-shell";
-        openclaw.url = "github:Scout-DJ/openclaw-nix";
         plasma-manager.url = "github:nix-community/plasma-manager";
     };
 
@@ -45,7 +44,6 @@
     nix-flatpak,
     nur,
     noctalia,
-    openclaw,
     plasma-manager,
     ...
     }:
@@ -122,7 +120,6 @@
                     disko.nixosModules.disko
                     home-manager.nixosModules.home-manager
                     nur.modules.nixos.default
-                    openclaw.nixosModules.default
                     {
                         home-manager = {
                             useGlobalPkgs = true;
