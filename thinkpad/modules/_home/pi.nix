@@ -33,7 +33,7 @@
                 },
                 "subagents": {
                     "defaultProvider": "llama-cpp",
-                    "defaultModel": "Qwen3.8-27B"
+                    "defaultModel": "qwen3.8-27B"
                 }
             }
         '';

@@ -19,7 +19,24 @@
             models-max = 1;
             sleep-idle-seconds = 600;
             models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
-                "Qwen3.6-35B-A3B" = {
+                "Qwen3.8-Flash-Next" = {
+                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ3_XXS";
+
+                    no-mmproj = true;
+
+                    moe-cache-mib = 3072;
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
+                    ctx-size = 131072;
+
+                    temperature = 1.0;
+                    top-p = 0.95;
+                    top-k = 20;
+                    min-p = 0.0;
+                    presence-penalty = 0.0;
+                    repeat-penalty = 1.0;
+                };
+                "qwen3.6-35B-A3B" = {
                     hf-repo = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL";
 
                     spec-type = "draft-mtp";
@@ -51,7 +68,7 @@
                     top-p = 0.95;
                     top-k = 64;
                 };
-                "Qwen3.8-27B" = {
+                "qwen3.8-27B" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q2_K_XL";
 
                     cache-type-k = "q4_0";
@@ -60,23 +77,6 @@
                     no-mmproj = true;
 
                     ctx-size = 65536;
-
-                    temperature = 1.0;
-                    top-p = 0.95;
-                    top-k = 20;
-                    min-p = 0.0;
-                    presence-penalty = 0.0;
-                    repeat-penalty = 1.0;
-                };
-                "Qwen3.8-Flash-Next IQ3_XXS" = {
-                    hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ3_XXS";
-
-                    no-mmproj = true;
-
-                    moe-cache-mib = 3072;
-                    cache-type-k = "q4_0";
-                    cache-type-v = "q4_0";
-                    ctx-size = 131072;
 
                     temperature = 1.0;
                     top-p = 0.95;
