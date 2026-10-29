@@ -28,11 +28,12 @@
                 ],
                 "llamaServerUrl": "http://192.168.1.11:2001",
                 "llamaSettings": {
-                    "serverTimeout": 3600000
-                }
+                    "serverTimeout": 3600000,
+                    "pollingTimeout": 300000
+                },
                 "subagents": {
                     "defaultProvider": "llama-cpp",
-                    "defaultModel": "Qwen3.8-27B",
+                    "defaultModel": "Qwen3.8-27B"
                 }
             }
         '';
