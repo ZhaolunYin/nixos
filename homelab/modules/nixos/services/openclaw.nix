@@ -113,6 +113,7 @@ in
               id = "qwen3.6-35B-A3B";
               name = "Qwen3.6 35B A3B";
               input = [ "text" ];
+              reasoning = false;
               contextWindow = 32768;
               cost = {
                 input = 0;
@@ -125,6 +126,7 @@ in
               id = "Qwen3.8-Flash-Next";
               name = "Qwen3.8 Flash Next";
               input = [ "text" ];
+              reasoning = false;
               contextWindow = 131072;
               cost = {
                 input = 0;
@@ -137,6 +139,7 @@ in
               id = "qwen3.8-27B-uncensored";
               name = "Qwen3.8 27B Uncensored";
               input = [ "text" ];
+              reasoning = false;
               contextWindow = 65536;
               cost = {
                 input = 0;
@@ -178,6 +181,33 @@ in
   systemd.services.openclaw-gateway = {
     after = lib.optionals config.services.llama-cpp.enable [ "llama-cpp.service" ];
     wants = lib.optionals config.services.llama-cpp.enable [ "llama-cpp.service" ];
+
+    # Sandbox: the agent can only write to its own state dir and a private /tmp.
+    # If eval says an option is "defined multiple times", the upstream module
+    # already sets it: change that line to lib.mkForce.
+    # MemoryDenyWriteExecute and SystemCallFilter are deliberately left out:
+    # Node's JIT breaks under the first and exec tools are fragile under the second.
+    serviceConfig = {
+      NoNewPrivileges = true;
+      ProtectSystem = "strict";
+      ProtectHome = true;
+      PrivateTmp = true;
+      PrivateDevices = true;
+      ProtectKernelTunables = true;
+      ProtectKernelModules = true;
+      ProtectKernelLogs = true;
+      ProtectControlGroups = true;
+      ProtectClock = true;
+      ProtectHostname = true;
+      RestrictSUIDSGID = true;
+      RestrictRealtime = true;
+      RestrictNamespaces = true;
+      LockPersonality = true;
+      SystemCallArchitectures = "native";
+      CapabilityBoundingSet = "";
+      RestrictAddressFamilies = [ "AF_INET" "AF_INET6" "AF_UNIX" ];
+      ReadWritePaths = [ cfg.stateDir ];
+    };
   };
 
   environment.systemPackages = [ openclawCtl ];
