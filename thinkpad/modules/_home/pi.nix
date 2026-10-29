@@ -9,6 +9,7 @@
         ".pi/agent/settings.json".text = ''
             {
                 "defaultProvider": "llama-cpp",
+                "defaultModel": "Qwen3.8-Flash-Next",
                 "packages": [
                     "npm:pi-llama-cpp",
 
@@ -28,6 +29,10 @@
                 "llamaServerUrl": "http://192.168.1.11:2001",
                 "llamaSettings": {
                     "serverTimeout": 3600000
+                }
+                "subagents": {
+                    "defaultProvider": "llama-cpp",
+                    "defaultModel": "Qwen3.8-27B",
                 }
             }
         '';
