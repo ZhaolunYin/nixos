@@ -93,6 +93,9 @@ in
 
     config = {
       gateway = {
+        # Required since 2026.10: without it the gateway refuses to start
+        # ("existing config is missing gateway.mode", exit status 78).
+        mode = "local";
         bind = "loopback";
       };
 
