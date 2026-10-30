@@ -38,6 +38,7 @@ let
   cfg = config.services.openclaw-gateway;
 
   secretsFile = "/etc/openclaw/env";
+  backupDir = "/var/backups/openclaw";
 
   # Runs the openclaw CLI against the *service's* config/state instead of
   # ~/.openclaw, so pairing and status probes hit the systemd unit.
@@ -188,13 +189,11 @@ in
       SystemCallArchitectures = "native";
       CapabilityBoundingSet = "";
       RestrictAddressFamilies = [ "AF_INET" "AF_INET6" "AF_UNIX" ];
-      ReadWritePaths = [ cfg.stateDir ];
+      ReadWritePaths = [ cfg.stateDir backupDir ];
     };
   };
-
   environment.systemPackages = [ openclawCtl ];
-	systemd.tmpfiles.rules = [
-	  "d /var/backup/openclaw 0750 openclaw openclaw -"
-	];
-	systemd.services.openclaw-gateway.serviceConfig.ReadWritePaths = [ "/var/lib/openclaw" "/var/backup/openclaw" ];
+  systemd.tmpfiles.rules = [
+    "d ${backupDir} 0750 openclaw openclaw -"
+  ];
 }
