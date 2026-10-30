@@ -193,4 +193,7 @@ in
   };
 
   environment.systemPackages = [ openclawCtl ];
+	systemd.tmpfiles.rules = [
+	  "d /var/backup/openclaw 0750 openclaw openclaw -"
+	];
 }
