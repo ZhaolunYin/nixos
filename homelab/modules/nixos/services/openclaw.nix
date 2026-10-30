@@ -1,11 +1,7 @@
 # OpenClaw gateway as a systemd system service.
 #
 # Upstream module: github:openclaw/nix-openclaw -> nixosModules.openclaw-gateway
-# It renders services.openclaw-gateway.config to /etc/openclaw/openclaw.json and
-# runs `openclaw gateway --port <port>` as the `openclaw` system user.
-#
-# Channel docs:
-#   https://docs.openclaw.ai/channels/telegram/setup
+# It renders services.openclaw-gateway.config to /etc/openclaw/openclaw.json and runs `openclaw gateway --port <port>` as the `openclaw` system user. Channel docs: https://docs.openclaw.ai/channels/telegram/setup
 #
 # ── Secrets ───────────────────────────────────────────────────────────────────
 # Nothing secret lives in this file or in the nix store. The gateway reads
@@ -114,7 +110,7 @@ in
               name = "Qwen3.6 35B A3B";
               input = [ "text" ];
               reasoning = false;
-              contextWindow = 32768;
+              contextWindow = 262144;
               cost = {
                 input = 0;
                 output = 0;
@@ -135,19 +131,6 @@ in
                 cacheWrite = 0;
               };
             }
-            {
-              id = "qwen3.8-27B-uncensored";
-              name = "Qwen3.8 27B Uncensored";
-              input = [ "text" ];
-              reasoning = false;
-              contextWindow = 65536;
-              cost = {
-                input = 0;
-                output = 0;
-                cacheRead = 0;
-                cacheWrite = 0;
-              };
-            }
           ];
         };
       };
@@ -155,9 +138,8 @@ in
       agents = {
         defaults = {
           model = {
-            primary = "llamacpp/qwen3.8-27B-uncensored";
+            primary = "llamacpp/Qwen3.8-Flash-Next";
             fallbacks = [
-              "llamacpp/Qwen3.8-Flash-Next"
               "llamacpp/qwen3.6-35B-A3B"
             ];
           };
