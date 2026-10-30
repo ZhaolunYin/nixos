@@ -196,4 +196,5 @@ in
 	systemd.tmpfiles.rules = [
 	  "d /var/backup/openclaw 0750 openclaw openclaw -"
 	];
+	systemd.services.openclaw-gateway.serviceConfig.ReadWritePaths = [ "/var/lib/openclaw" "/var/backup/openclaw" ];
 }
