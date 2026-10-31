@@ -1,3 +1,4 @@
+# vim: set tabstop=2 shiftwidth=2 expandtab :
 # OpenClaw gateway as a systemd system service.
 #
 # Upstream module: github:openclaw/nix-openclaw -> nixosModules.openclaw-gateway
@@ -156,11 +157,15 @@ in
           # The gateway owns config; keep it read-only under /etc.
           configWrites = false;
         };
+        whatsapp = {
+          dmPolicy = "allowlist";
+          allowFrom = [ "\${WHATSAPP_ALLOW_FROM}" ];
+        };
       };
     };
   };
 
-  # The agent talks to llama-server for every turn, so order behind it.
+# The agent talks to llama-server for every turn, so order behind it.
   systemd.services.openclaw-gateway = {
     after = lib.optionals config.services.llama-cpp.enable [ "llama-cpp.service" ];
     wants = lib.optionals config.services.llama-cpp.enable [ "llama-cpp.service" ];

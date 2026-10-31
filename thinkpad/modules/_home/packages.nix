@@ -15,17 +15,14 @@
         pavucontrol
         pinentry-curses
         proton-vpn
+        pssh
         python3
         otpclient
         supertuxkart
         tor
         torsocks
         tor-browser
-        # Pins the primary selection so it survives app restarts
         wl-clip-persist
-        # Colour picker (bind: CTRL+SHIFT+P)
-        hyprpicker
-        # GUI for the same settings.ini / fontconfig that gtk.nix writes
         nwg-look
         unrar
         unsloth-desktop
