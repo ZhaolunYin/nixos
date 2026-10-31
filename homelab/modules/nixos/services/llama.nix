@@ -36,6 +36,23 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
+                "qwen3.8-flash-next-uncensored" = {
+                    hf-repo = "SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF:IQ3_XXS";
+
+                    no-mmproj = true;
+
+                    moe-cache-mib = 3072;
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
+                    ctx-size = 131072;
+
+                    temperature = 1.0;
+                    top-p = 0.95;
+                    top-k = 20;
+                    min-p = 0.0;
+                    presence-penalty = 0.0;
+                    repeat-penalty = 1.0;
+                };
                 "qwen3.6-35B-A3B" = {
                     hf-repo = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL";
 
