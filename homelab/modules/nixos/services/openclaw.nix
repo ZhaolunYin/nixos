@@ -77,6 +77,7 @@ in
 
   # Exposes pkgs.openclaw / pkgs.openclaw-gateway / pkgs.openclawRuntimePlugins.
   nixpkgs.overlays = [ openclaw.overlays.default ];
+  programs.openclaw.runtimePluginSources = [{ id = "whatsapp"; spec = "clawhub:@openclaw/whatsapp@2026.6.1"; }];
 
   services.openclaw-gateway = {
     enable = true;
