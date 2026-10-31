@@ -120,8 +120,8 @@ in
               };
             }
             {
-              id = "Qwen3.8-Flash-Next";
-              name = "Qwen3.8 Flash Next";
+              id = "qwen3.8-flash-next-uncensored";
+              name = "Qwen3.8 Flash Next Uncensored";
               input = [ "text" ];
               reasoning = false;
               contextWindow = 131072;
@@ -139,7 +139,7 @@ in
       agents = {
         defaults = {
           model = {
-            primary = "llamacpp/Qwen3.8-Flash-Next";
+            primary = "llamacpp/qwen3.8-flash-next-uncensored";
             fallbacks = [
               "llamacpp/qwen3.6-35B-A3B"
             ];
