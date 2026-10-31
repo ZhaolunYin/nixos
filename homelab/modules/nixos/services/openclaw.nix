@@ -77,7 +77,6 @@ in
 
   # Exposes pkgs.openclaw / pkgs.openclaw-gateway / pkgs.openclawRuntimePlugins.
   nixpkgs.overlays = [ openclaw.overlays.default ];
-  programs.openclaw.runtimePluginSources = [{ id = "whatsapp"; spec = "clawhub:@openclaw/whatsapp@2026.6.1"; }];
 
   services.openclaw-gateway = {
     enable = true;
@@ -157,10 +156,6 @@ in
           groups."*" = { requireMention = true; };
           # The gateway owns config; keep it read-only under /etc.
           configWrites = false;
-        };
-        whatsapp = {
-          dmPolicy = "allowlist";
-          allowFrom = [ "\${WHATSAPP_ALLOW_FROM}" ];
         };
       };
     };
