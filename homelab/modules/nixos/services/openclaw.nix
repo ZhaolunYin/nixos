@@ -145,8 +145,10 @@ in
               "llamacpp/qwen3.6-35B-A3B"
             ];
           };
+          heartbeat.every = "0m";
         };
       };
+
       plugins = {
         load.paths = [
           "${openclaw.packages.${pkgs.stdenv.hostPlatform.system}.openclaw-runtime-plugin-whatsapp}"
@@ -154,19 +156,29 @@ in
         entries.whatsapp.enabled = true;
       };
 
+      messages.groupChat.visibleReplies = "automatic";
       channels = {
         telegram = {
           enabled = true;
           # token comes from $TELEGRAM_BOT_TOKEN in ${secretsFile}
           dmPolicy = "pairing";
-          groups."*" = { requireMention = true; };
           # The gateway owns config; keep it read-only under /etc.
           configWrites = false;
+          groups."*" = {
+            requireMention = true;
+            tools.deny = [ "group:openclaw" "group:plugins" ];
+          };
         };
         whatsapp = {
           enabled = true;
           dmPolicy = "allowlist";
           allowFrom = [ "\${WHATSAPP_ALLOW_FROM}" ];
+
+          groupPolicy = "open";
+          groups."*" = {
+            requireMention = true;
+            tools.deny = [ "group:openclaw" "group:plugins" ];
+          };
         };
       };
     };
