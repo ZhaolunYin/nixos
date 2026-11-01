@@ -110,7 +110,7 @@ in
             {
               id = "qwen3.6-35B-A3B";
               name = "Qwen3.6 35B A3B";
-              input = [ "text" ];
+              input = [ "text" "image" ];
               reasoning = false;
               contextWindow = 262144;
               cost = {
@@ -123,9 +123,9 @@ in
             {
               id = "qwen3.8-flash-next-uncensored";
               name = "Qwen3.8 Flash Next Uncensored";
-              input = [ "text" ];
+              input = [ "text" "image" ];
               reasoning = false;
-              contextWindow = 131072;
+              contextWindow = 65536;
               cost = {
                 input = 0;
                 output = 0;
