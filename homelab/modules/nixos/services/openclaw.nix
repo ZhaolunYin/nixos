@@ -166,7 +166,7 @@ in
           configWrites = false;
           groups."*" = {
             requireMention = true;
-            tools.deny = [ "group:openclaw" "group:plugins" ];
+            tools.deny = [ "group:openclaw" "group:plugins" "exec" "process" "read" "write" "edit" "apply_patch" "browser" ];
           };
         };
         whatsapp = {
@@ -177,7 +177,7 @@ in
           groupPolicy = "open";
           groups."*" = {
             requireMention = true;
-            tools.deny = [ "group:openclaw" "group:plugins" ];
+            tools.deny = [ "group:openclaw" "group:plugins" "exec" "process" "read" "write" "edit" "apply_patch" "browser" ];
           };
         };
       };
