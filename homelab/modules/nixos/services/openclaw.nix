@@ -146,6 +146,7 @@ in
             ];
           };
           heartbeat.every = "0m";
+          silentReply.group = "allow";
         };
       };
 
@@ -165,7 +166,7 @@ in
           # The gateway owns config; keep it read-only under /etc.
           configWrites = false;
           groups."*" = {
-            requireMention = true;
+            requireMention = false;
             tools.deny = [ "group:openclaw" "group:plugins" "exec" "process" "read" "write" "edit" "apply_patch" "browser" ];
           };
         };
@@ -176,7 +177,7 @@ in
 
           groupPolicy = "open";
           groups."*" = {
-            requireMention = true;
+            requireMention = false;
             tools.deny = [ "group:openclaw" "group:plugins" "exec" "process" "read" "write" "edit" "apply_patch" "browser" ];
           };
         };
