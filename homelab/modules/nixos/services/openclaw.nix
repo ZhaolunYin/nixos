@@ -172,6 +172,8 @@ in
         };
         whatsapp = {
           enabled = true;
+          replyToMode = "all";
+
           dmPolicy = "allowlist";
           allowFrom = [ "\${WHATSAPP_ALLOW_FROM}" ];
 
