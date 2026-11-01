@@ -39,8 +39,6 @@
                 "qwen3.8-flash-next-uncensored" = {
                     hf-repo = "SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF:IQ3_XXS";
 
-                    no-mmproj = true;
-
                     moe-cache-mib = 3072;
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
