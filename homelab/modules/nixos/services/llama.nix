@@ -83,6 +83,20 @@
                     top-p = 0.95;
                     top-k = 64;
                 };
+                "gemma-4-E4B-uncensored" = {
+                    hf-repo = "HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive";
+
+                    spec-type = "draft-mtp";
+                    spec-draft-n-max = 4;
+
+                    cache-type-k = "q8_0";
+                    cache-type-v = "q8_0";
+                    ctx-size = 65536;
+
+                    temperature = 1.0;
+                    top-p = 0.95;
+                    top-k = 64;
+                };
                 "qwen3.8-27B" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q2_K_XL";
 
