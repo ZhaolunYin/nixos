@@ -39,7 +39,9 @@
                 "qwen3.8-flash-next-uncensored" = {
                     hf-repo = "SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF:IQ3_XXS";
 
-                    moe-cache-mib = 2688;
+                    no-mmproj = true;
+
+                    moe-cache-mib = 3072;
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
                     ctx-size = 65536;
@@ -86,14 +88,16 @@
                 "gemma-4-E4B-uncensored" = {
                     hf-repo = "HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive:Q4_K_P";
 
+                    no-mmproj = true;
+
                     spec-type = "draft-mtp";
-                    spec-draft-n-max = 4;
+                    spec-draft-n-max = 6;
 
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
                     ctx-size = 65536;
 
-                    temperature = 1.0;
+                    temperature = 1.6;
                     top-p = 0.95;
                     top-k = 64;
                 };
