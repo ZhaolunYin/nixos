@@ -134,8 +134,8 @@ in
               };
             }
             {
-              id = "gemma-4-E4B";
-              name = "gemma 4 E4B";
+              id = "gemma-4-E4B-uncensored";
+              name = "gemma 4 E4B-uncensored";
               input = [ "text" "image" ];
               reasoning = false;
               contextWindow = 65536;
@@ -153,9 +153,10 @@ in
       agents = {
         defaults = {
           model = {
-            primary = "llamacpp/qwen3.8-flash-next-uncensored";
+            primary = "llamacpp/gemma-4-E4B-uncensored";
             fallbacks = [
               "llamacpp/qwen3.6-35B-A3B"
+              "llamacpp/qwen3.8-flash-next-uncensored"
             ];
           };
           heartbeat.every = "0m";
