@@ -137,7 +137,7 @@ in
               id = "gemma-4-E4B-uncensored";
               name = "gemma 4 E4B-uncensored";
               input = [ "text" ];
-              reasoning = true;
+              reasoning = false;
               contextWindow = 65536;
               cost = {
                 input = 0;
@@ -161,7 +161,6 @@ in
           };
           heartbeat.every = "0m";
           silentReply.group = "allow";
-          thinkingDefault = "low";
         };
       };
 
