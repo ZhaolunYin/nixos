@@ -76,6 +76,7 @@
                                     minesweeper.homeModules.default
                                     (import-tree ./thinkpad/modules/_home)
                                     (import-tree ./share/_home)
+                                    (import-tree ./share/_coding/_home)
                                     (import-tree ./share/_hyprland/_home)
                                 ];
                                 home.stateVersion = "26.05";
@@ -100,7 +101,6 @@
                             users.admin = {
                                 imports = [
                                     catppuccin.homeModules.catppuccin
-                                    nixvim.homeModules.nixvim
                                     (import-tree ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
@@ -129,7 +129,6 @@
                             users.lab = {
                                 imports = [
                                     catppuccin.homeModules.catppuccin
-                                    nixvim.homeModules.nixvim
                                     (import-tree ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
@@ -155,7 +154,6 @@
                                 imports = [
                                     catppuccin.homeModules.catppuccin
                                     plasma-manager.homeModules.plasma-manager
-                                    nixvim.homeModules.nixvim
                                     (import-tree ./projector/modules/_home)
                                     (import-tree ./share/_home)
                                 ];
@@ -164,7 +162,6 @@
                             users.admin = {
                                 imports = [
                                     catppuccin.homeModules.catppuccin
-                                    nixvim.homeModules.nixvim
                                     (import-tree ./share/_home)
                                 ];
                                 home.stateVersion = "26.05";
@@ -217,6 +214,7 @@
                                     nixvim.homeModules.nixvim
                                     minesweeper.homeModules.default
                                     (import-tree ./share/_home)
+                                    (import-tree ./share/_coding/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
