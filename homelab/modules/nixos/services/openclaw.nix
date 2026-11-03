@@ -110,7 +110,7 @@ in
             {
               id = "qwen3.6-35B-A3B";
               name = "Qwen3.6 35B A3B";
-              input = [ "text" "image" ];
+              input = [ "text" ];
               reasoning = false;
               contextWindow = 262144;
               cost = {
@@ -123,7 +123,7 @@ in
             {
               id = "qwen3.8-flash-next-uncensored";
               name = "Qwen3.8 Flash Next Uncensored";
-              input = [ "text" "image" ];
+              input = [ "text" ];
               reasoning = false;
               contextWindow = 65536;
               cost = {
@@ -136,8 +136,8 @@ in
             {
               id = "gemma-4-E4B-uncensored";
               name = "gemma 4 E4B-uncensored";
-              input = [ "text" "image" ];
-              reasoning = false;
+              input = [ "text" ];
+              reasoning = true;
               contextWindow = 65536;
               cost = {
                 input = 0;
@@ -161,6 +161,7 @@ in
           };
           heartbeat.every = "0m";
           silentReply.group = "allow";
+          thinkingDefault = "low";
         };
       };
 
