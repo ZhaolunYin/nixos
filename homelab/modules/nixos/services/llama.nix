@@ -71,6 +71,24 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
+                "gemma-4-26B-A4B-uncensored" = {
+                    hf-repo = "HauhauCS/Gemma4-26B-A4B-QAT-Uncensored-HauhauCS-Balanced-MTP:Q4_K_M";
+
+                    spec-type = "draft-mtp";
+                    spec-draft-n-max = 2;
+
+                    moe-cache-mib = 3072;
+                    cache-type-k = "q8_0";
+                    cache-type-v = "q8_0";
+                    ctx-size = 65536;
+
+                    temperature=0.6;
+                    top-p = 0.95;
+                    top-k = 20;
+                    min-p = 0.0;
+                    presence-penalty = 0.0;
+                    repeat-penalty = 1.0;
+                };
                 "gemma-4-E4B" = {
                     hf-repo = "unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL";
 
