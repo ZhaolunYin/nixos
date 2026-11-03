@@ -84,7 +84,7 @@
                     top-k = 64;
                 };
                 "gemma-4-E4B-uncensored" = {
-                    hf-repo = "HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive";
+                    hf-repo = "HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive:Q4_K_P";
 
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 4;
