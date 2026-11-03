@@ -133,6 +133,19 @@ in
                 cacheWrite = 0;
               };
             }
+            {
+              id = "gemma-4-E4B";
+              name = "gemma 4 E4B";
+              input = [ "text" "image" ];
+              reasoning = false;
+              contextWindow = 65536;
+              cost = {
+                input = 0;
+                output = 0;
+                cacheRead = 0;
+                cacheWrite = 0;
+              };
+            }
           ];
         };
       };
