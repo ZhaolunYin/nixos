@@ -90,9 +90,6 @@
 
                     no-mmproj = true;
 
-                    spec-type = "draft-mtp";
-                    spec-draft-n-max = 6;
-
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
                     ctx-size = 65536;
