@@ -76,6 +76,7 @@
 
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 2;
+                    no-mmproj = true;
 
                     moe-cache-mib = 3072;
                     cache-type-k = "q8_0";
