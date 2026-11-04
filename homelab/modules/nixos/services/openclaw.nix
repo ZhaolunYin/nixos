@@ -175,10 +175,16 @@ in
         entries.whatsapp.enabled = true;
       };
 
-      messages.queue = {
-        mode = "collect";
-        cap = 30;
-        drop = "old";
+      messages = {
+        queue = {
+          mode = "collect";
+          cap = 30;
+          drop = "old";
+        };
+        groupChat = {
+          historyLimit = 0;
+          unmentionedInbound = "ignore";
+        };
       };
       channels = {
         telegram = {
