@@ -64,7 +64,7 @@
                     cache-type-v = "q8_0";
                     ctx-size = 0;
 
-                    temperature=0.6;
+                    temperature = 0.6;
                     top-p = 0.95;
                     top-k = 20;
                     min-p = 0.0;
@@ -76,18 +76,19 @@
 
                     spec-type = "draft-mtp";
                     spec-draft-n-max = 2;
+
                     no-mmproj = true;
+
+                    reasoning-budget = 128;
 
                     moe-cache-mib = 3072;
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
                     ctx-size = 65536;
 
-                    temperature=0.6;
-                    top-p = 0.95;
-                    top-k = 20;
-                    min-p = 0.0;
-                    presence-penalty = 0.0;
+                    temperature = 0.6;
+                    top-p = 0.90;
+                    top-k = 45;
                     repeat-penalty = 1.0;
                 };
                 "gemma-4-E4B" = {
@@ -101,19 +102,6 @@
                     ctx-size = 0;
 
                     temperature = 1.0;
-                    top-p = 0.95;
-                    top-k = 64;
-                };
-                "gemma-4-E4B-uncensored" = {
-                    hf-repo = "HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive:Q4_K_P";
-
-                    no-mmproj = true;
-
-                    cache-type-k = "q8_0";
-                    cache-type-v = "q8_0";
-                    ctx-size = 65536;
-
-                    temperature = 1.6;
                     top-p = 0.95;
                     top-k = 64;
                 };
