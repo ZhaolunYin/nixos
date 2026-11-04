@@ -177,7 +177,6 @@ in
 
       messages.queue = {
         mode = "collect";
-        debounceMs = 2000;
         cap = 30;
         drop = "old";
       };
