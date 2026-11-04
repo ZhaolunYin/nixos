@@ -41,7 +41,11 @@ let
   secretsFile = "/etc/openclaw/env";
   backupDir = "/var/backups/openclaw";
 
-  # Runs the openclaw CLI against the *service's* config/state instead of
+  groupRules = {
+    requireMention = false;
+    tools.deny = [ "group:openclaw" "group:plugins" "exec" "process" "read" "write" "edit" "apply_patch" "browser" ];
+  };
+# Runs the openclaw CLI against the *service's* config/state instead of
   # ~/.openclaw, so pairing and status probes hit the systemd unit.
   # writeShellScriptBin rather than writeShellApplication: the script sources a
   # runtime file, which nixpkgs' strict shellcheck gate refuses.
@@ -171,7 +175,12 @@ in
         entries.whatsapp.enabled = true;
       };
 
-      messages.groupChat.visibleReplies = "automatic";
+      messages.queue = {
+        mode = "collect";
+        debounceMs = 2000;
+        cap = 30;
+        drop = "old";
+      };
       channels = {
         telegram = {
           enabled = true;
@@ -179,10 +188,7 @@ in
           dmPolicy = "pairing";
           # The gateway owns config; keep it read-only under /etc.
           configWrites = false;
-          groups."*" = {
-            requireMention = false;
-            tools.deny = [ "group:openclaw" "group:plugins" "exec" "process" "read" "write" "edit" "apply_patch" "browser" ];
-          };
+          groups."*" = groupRules;
         };
         whatsapp = {
           enabled = true;
@@ -192,10 +198,7 @@ in
           allowFrom = [ "\${WHATSAPP_ALLOW_FROM}" ];
 
           groupPolicy = "open";
-          groups."*" = {
-            requireMention = false;
-            tools.deny = [ "group:openclaw" "group:plugins" "exec" "process" "read" "write" "edit" "apply_patch" "browser" ];
-          };
+          groups."*" = groupRules;
         };
       };
     };
