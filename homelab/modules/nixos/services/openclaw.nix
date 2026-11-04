@@ -137,7 +137,7 @@ in
               id = "gemma-4-26B-A4B-uncensored";
               name = "gemma 4 26B A4B uncensored";
               input = [ "text" ];
-              reasoning = false;
+              reasoning = true;
               contextWindow = 65536;
               cost = {
                 input = 0;
