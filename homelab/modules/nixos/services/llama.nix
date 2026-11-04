@@ -79,8 +79,6 @@
 
                     no-mmproj = true;
 
-                    reasoning-budget = 128;
-
                     moe-cache-mib = 3072;
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
