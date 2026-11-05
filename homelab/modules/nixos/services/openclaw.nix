@@ -163,7 +163,7 @@ in
               "llamacpp/qwen3.8-flash-next-uncensored"
             ];
           };
-          thinking.tier = "low";
+          thinkingDefault = "minimal";
           heartbeat.every = "0m";
           silentReply.group = "allow";
         };
