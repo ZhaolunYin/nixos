@@ -1,4 +1,28 @@
 { pkgs, llama-cpp, ... }:
+let
+  openclawCtl = pkgs.writeShellScriptBin "llama-download-ctl" ''
+    if [[ $# -lt 1 ]]; then
+      echo "Usage: llama-download-ctl <repo>:<quant> [extra arguments...]"
+      exit 1
+    fi
+
+    model="$1"
+    shift
+
+    repo="''${model%%:*}"
+    quant="''${model#*:}"
+
+    if [[ "$repo" == "$quant" ]]; then
+      echo "Error: expected repo:quant"
+      exit 1
+    fi
+
+    exec ${pkgs.huggingface-hub}/bin/hf download "$repo" \
+      --include "*$quant*" \
+      --cache-dir /var/cache/llama-cpp \
+          "$@
+  '';
+in
 {
     services.llama-cpp = {
         enable = true;
