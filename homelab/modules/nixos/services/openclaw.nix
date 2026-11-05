@@ -181,10 +181,7 @@ in
           cap = 30;
           drop = "old";
         };
-        groupChat = {
-          historyLimit = 0;
-          unmentionedInbound = "ignore";
-        };
+        groupChat.historyLimit = 0;
       };
       channels = {
         telegram = {
