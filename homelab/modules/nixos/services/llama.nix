@@ -20,7 +20,7 @@ let
     exec ${pkgs.python3Packages.huggingface-hub}/bin/hf download "$repo" \
       --include "*$quant*" \
       --cache-dir /var/cache/llama-cpp \
-          "$@
+          "$@"
   '';
 in
 {
