@@ -1,6 +1,6 @@
 { pkgs, llama-cpp, ... }:
 let
-  openclawCtl = pkgs.writeShellScriptBin "llama-download-ctl" ''
+  downloadCtl = pkgs.writeShellScriptBin "llama-download-ctl" ''
     if [[ $# -lt 1 ]]; then
       echo "Usage: llama-download-ctl <repo>:<quant> [extra arguments...]"
       exit 1
@@ -151,5 +151,6 @@ in
     environment.systemPackages = [
         llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
         pkgs.python3Packages.huggingface-hub
+        downloadCtl
     ];
 }
