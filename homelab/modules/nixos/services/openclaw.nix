@@ -182,7 +182,7 @@ in
           cap = 30;
           drop = "old";
         };
-        groupChat.historyLimit = 0;
+        groupChat.historyLimit = 15;
       };
       channels = {
         telegram = {
