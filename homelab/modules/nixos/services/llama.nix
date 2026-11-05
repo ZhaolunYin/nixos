@@ -16,7 +16,7 @@ let
       echo "Error: expected repo:quant"
       exit 1
     fi
-
+    export HF_XET_HIGH_PERFORMANCE=1
     exec ${pkgs.huggingface-hub}/bin/hf download "$repo" \
       --include "*$quant*" \
       --cache-dir /var/cache/llama-cpp \
