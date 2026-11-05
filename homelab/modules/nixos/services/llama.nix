@@ -1,28 +1,4 @@
 { pkgs, llama-cpp, ... }:
-let
-  downloadCtl = pkgs.writeShellScriptBin "llama-download-ctl" ''
-    if [[ $# -lt 1 ]]; then
-      echo "Usage: llama-download-ctl <repo>:<quant> [extra arguments...]"
-      exit 1
-    fi
-
-    model="$1"
-    shift
-
-    repo="''${model%%:*}"
-    quant="''${model#*:}"
-
-    if [[ "$repo" == "$quant" ]]; then
-      echo "Error: expected repo:quant"
-      exit 1
-    fi
-    export HF_XET_HIGH_PERFORMANCE=1
-    exec ${pkgs.python3Packages.huggingface-hub}/bin/hf download "$repo" \
-      --include "*$quant*" \
-      --cache-dir /var/cache/llama-cpp \
-          "$@"
-  '';
-in
 {
     services.llama-cpp = {
         enable = true;
@@ -144,6 +120,16 @@ in
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
+                "lfm2.5-24B-A2B" = {
+                    hf-repo = "abenzerps/LFM2.5-24B-A2B-Uncensored-GSQ-RCO-GGUF:IQ3_XS";
+
+                    spec-type = "draft-dspark";
+
+                    moe-cache-mib = 6144;
+                    cache-type-k = "q8_0";
+                    cache-type-v = "q8_0";
+                    ctx-size = 65536;
+                };
             };
         };
     };
@@ -151,6 +137,5 @@ in
     environment.systemPackages = [
         llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
         pkgs.python3Packages.huggingface-hub
-        downloadCtl
     ];
 }
