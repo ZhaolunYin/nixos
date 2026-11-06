@@ -123,7 +123,9 @@
                 "lfm2.5-24B-A2B" = {
                     hf-repo = "abenzerps/LFM2.5-24B-A2B-Uncensored-GSQ-RCO-GGUF:IQ3_XS";
 
+                    spec-draft-hf = "abenzerps/LFM2.5-24B-A2B-Uncensored-GSQ-RCO-GGUF:Q8_0";
                     spec-type = "draft-dspark";
+                    spec-draft-n-max = 3;
 
                     moe-cache-mib = 6144;
                     cache-type-k = "q8_0";
