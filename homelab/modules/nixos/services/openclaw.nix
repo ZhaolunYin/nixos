@@ -173,6 +173,7 @@ in
             fallbacks = [
               "llamacpp/qwen3.6-35B-A3B"
               "llamacpp/qwen3.8-flash-next-uncensored"
+              "llamacpp/lfm-2.5-24B-A2B-uncensored"
             ];
           };
           thinkingDefault = "minimal";
