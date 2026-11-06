@@ -151,7 +151,7 @@ in
               };
             }
             {
-              id = "lfm-2.5-24B-A2B-uncensored";
+              id = "lfm2.5-24B-A2B-uncensored";
               name = "LFM 2.5 24B A2B uncensored";
               input = [ "text" ];
               contextWindow = 65536;
@@ -173,7 +173,7 @@ in
             fallbacks = [
               "llamacpp/qwen3.6-35B-A3B"
               "llamacpp/qwen3.8-flash-next-uncensored"
-              "llamacpp/lfm-2.5-24B-A2B-uncensored"
+              "llamacpp/lfm2.5-24B-A2B-uncensored"
             ];
           };
           thinkingDefault = "minimal";
