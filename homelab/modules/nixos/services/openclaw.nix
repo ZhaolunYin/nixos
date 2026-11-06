@@ -149,7 +149,18 @@ in
                 cacheRead = 0;
                 cacheWrite = 0;
               };
-            }
+              {
+                id = "lfm-2.5-24B-A2B-uncensored";
+                name = "LFM 2.5 24B A2B uncensored";
+                input = [ "text" ];
+                contextWindow = 65536;
+                cost = {
+                  input = 0;
+                  output = 0;
+                  cacheRead = 0;
+                  cacheWrite = 0;
+                };
+              }
           ];
         };
       };
