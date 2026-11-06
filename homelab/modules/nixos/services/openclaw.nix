@@ -176,7 +176,6 @@ in
               "llamacpp/lfm2.5-24B-A2B-uncensored"
             ];
           };
-          thinkingDefault = "minimal";
           heartbeat.every = "0m";
           silentReply.group = "allow";
         };
@@ -190,11 +189,7 @@ in
       };
 
       messages = {
-        queue = {
-          mode = "collect";
-          cap = 30;
-          drop = "old";
-        };
+        queue.mode = "interrupt";
         groupChat.historyLimit = 15;
       };
       channels = {
