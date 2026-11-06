@@ -127,6 +127,8 @@
                     spec-type = "draft-dspark";
                     spec-draft-n-max = 3;
 
+                    cpu-moe = true;
+
                     moe-cache-mib = 6144;
                     cache-type-k = "q8_0";
                     cache-type-v = "q8_0";
