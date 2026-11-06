@@ -125,7 +125,7 @@
 
                     spec-draft-hf = "abenzerps/LFM2.5-24B-A2B-Uncensored-GSQ-RCO-GGUF:Q8_0";
                     spec-type = "draft-dspark";
-                    spec-draft-n-max = 6;
+                    spec-draft-n-max = 4;
 
                     cpu-moe = true;
 
