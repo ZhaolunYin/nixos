@@ -120,7 +120,7 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
-                "lfm2.5-24B-A2B" = {
+                "lfm2.5-24B-A2B-uncensored" = {
                     hf-repo = "abenzerps/LFM2.5-24B-A2B-Uncensored-GSQ-RCO-GGUF:IQ3_XS";
 
                     spec-draft-hf = "abenzerps/LFM2.5-24B-A2B-Uncensored-GSQ-RCO-GGUF:Q8_0";
