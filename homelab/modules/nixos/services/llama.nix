@@ -18,7 +18,7 @@
 
             models-max = 1;
             sleep-idle-seconds = 600;
-            models-preset = (pkgs.formats.ini { }).generate "models-preset.ini" {
+            modelsPreset = {
                 "Qwen3.8-Flash-Next" = {
                     hf-repo = "unsloth/Qwen3.8-Flash-Next-GGUF:UD-IQ3_XXS";
 
