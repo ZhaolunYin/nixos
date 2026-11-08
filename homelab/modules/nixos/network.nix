@@ -4,7 +4,7 @@
     services.avahi = {
         enable = true;
         nssmdns4 = true;
-        publish = {
+        settings.publish = {
             publish-addresses = true;
             publish-workstation = true;
         };
