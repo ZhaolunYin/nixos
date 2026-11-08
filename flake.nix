@@ -32,6 +32,7 @@
     outputs = inputs@{
     catppuccin,
     disko,
+    hermes-agent,
     home-manager,
     home-manager-23_11,
     impermanence,
@@ -115,7 +116,7 @@
             nixosConfigurations.homelab = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 specialArgs = {
-                    inherit llama-cpp openclaw;
+                    inherit llama-cpp openclaw hermes-agent;
                 };
                 modules = [
                     (import-tree ./homelab)
