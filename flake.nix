@@ -4,6 +4,7 @@
     inputs = {
         catppuccin.url = "github:catppuccin/nix";
         disko.url = "github:nix-community/disko";
+        hermes-agent.url = "github:NousResearch/hermes-agent";
         home-manager.url = "github:nix-community/home-manager";
         home-manager-23_11 = {
             url = "github:nix-community/home-manager/release-23.11";
