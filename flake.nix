@@ -4,7 +4,6 @@
     inputs = {
         catppuccin.url = "github:catppuccin/nix";
         disko.url = "github:nix-community/disko";
-        hermes-agent.url = "github:NousResearch/hermes-agent";
         home-manager.url = "github:nix-community/home-manager";
         home-manager-23_11 = {
             url = "github:nix-community/home-manager/release-23.11";
@@ -32,7 +31,6 @@
     outputs = inputs@{
     catppuccin,
     disko,
-    hermes-agent,
     home-manager,
     home-manager-23_11,
     impermanence,
@@ -116,7 +114,7 @@
             nixosConfigurations.homelab = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 specialArgs = {
-                    inherit llama-cpp openclaw hermes-agent;
+                    inherit llama-cpp openclaw;
                 };
                 modules = [
                     (import-tree ./homelab)
