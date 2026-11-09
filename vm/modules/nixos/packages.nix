@@ -4,6 +4,7 @@
     environment.systemPackages = with pkgs; [
         cargo
         gcc
+        pass
         python3
         rustc
     ];
