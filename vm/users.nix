@@ -1,4 +1,15 @@
 {
+    security.sudo.extraRules = [
+        {
+            users = [ "zhaolun" ];
+            commands = [
+                {
+                    command = "ALL";
+                    options = [ "NOPASSWD" ];
+                }
+            ];
+        }
+    ];
     users.mutableUsers = false;
     programs.zsh.enable = true;
     users.users.zhaolun = {
