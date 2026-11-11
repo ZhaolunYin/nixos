@@ -129,6 +129,7 @@
                             users.lab = {
                                 imports = [
                                     catppuccin.homeModules.catppuccin
+                                    nixvim.homeModules.nixvim
                                     (import-tree ./share/_home)
                                     (import-tree ./share/_coding/_home)
                                 ];
