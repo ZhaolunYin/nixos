@@ -26,11 +26,11 @@ in
                 addr = "127.0.0.1";
                 port = torHttpPort;
             };
-
             UseBridges = true;
-            ClientTransportPlugin = "snowflake exec ${pkgs.snowflake}/bin/client";
+            ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/lyrebird";
             Bridge = [
-                "snowflake 192.0.2.3:80 2B280B23E1107BB62ABFC40DDCC8824814F80A72 fingerprint=2B280B23E1107BB62ABFC40DDCC8824814F80A72 url=https://1098762253.rsc.cdn77.org/ fronts=www.cdn77.com,www.phpmyadmin.net ice=stun:stun.antisip.com:3478,stun:stun.epygi.com:3478,stun:stun.uls.co.za:3478,stun:stun.voipgate.com:3478 utls-imitate=hellorandomizedalpn"
+                "obfs4 93.224.89.203:38697 AABE1DC146DF55E9B2B1D32FD0427C3A800BD9AD cert=TPbW/AGJO6DsofB6c8JwmnMyHIjaxlFb1a2trky23ood7vs/S0CSqC2lOeWNaJr5Tc4bdg iat-mode=0"
+                "obfs4 79.134.121.43:8443 7F016A33C0789FD21D51F2AFAAFC4FEDF6865069 cert=7nieVFV4BFhW51Y37C/M4FLuvmU43RSXIKjhhteDbOJctKSpckMbWoUOz41NovIrZtdOfQ iat-mode=0"
             ];
         };
     };

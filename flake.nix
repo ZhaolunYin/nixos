@@ -130,6 +130,7 @@
                                 imports = [
                                     catppuccin.homeModules.catppuccin
                                     (import-tree ./share/_home)
+                                    (import-tree ./share/_coding/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
