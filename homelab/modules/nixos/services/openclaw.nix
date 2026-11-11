@@ -43,7 +43,25 @@ let
 
   groupRules = {
     requireMention = false;
-    tools.deny = [ "group:openclaw" "group:plugins" "exec" "process" "read" "write" "edit" "apply_patch" "browser" ];
+    tools.deny = [
+      "group:plugins"
+      "group:runtime"     # exec, process
+      "group:fs"          # read, write, edit, apply_patch
+      "group:ui"          # browser, canvas
+      "group:automation"  # cron, gateway
+      "group:nodes"
+      "group:sessions"
+      "group:memory"
+      "group:messaging"
+      "group:media"
+      "exec"
+      "process"
+      "read"
+      "write"
+      "edit"
+      "apply_patch"
+      "browser"
+    ];
   };
 # Runs the openclaw CLI against the *service's* config/state instead of
   # ~/.openclaw, so pairing and status probes hit the systemd unit.
@@ -181,11 +199,22 @@ in
         };
       };
 
+      tools.web.search = {
+        enabled = true;
+        provider = "searxng";
+      };
+
       plugins = {
         load.paths = [
           "${openclaw.packages.${pkgs.stdenv.hostPlatform.system}.openclaw-runtime-plugin-whatsapp}"
         ];
         entries.whatsapp.enabled = true;
+        entries.searxng = {
+          enabled = true;
+          config.webSearch = {
+            baseUrl = "http://127.0.0.1:2002";  # wherever your SearXNG listens
+          };
+        };
       };
 
       messages = {
