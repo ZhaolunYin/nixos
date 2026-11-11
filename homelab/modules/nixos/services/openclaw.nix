@@ -207,6 +207,7 @@ in
       plugins = {
         load.paths = [
           "${openclaw.packages.${pkgs.stdenv.hostPlatform.system}.openclaw-runtime-plugin-whatsapp}"
+          "${openclaw.packages.${pkgs.stdenv.hostPlatform.system}.openclaw-runtime-plugin-searxng}"
         ];
         entries.whatsapp.enabled = true;
         entries.searxng = {
