@@ -5,7 +5,13 @@
         package = pkgs.pkgsCuda.comfyui;
         listen = [ "0.0.0.0" "::" ];
         port = 2003;
-        extraArgs = [ "--disable-auto-launch" "--lowvram" ];
+        extraArgs = [
+            "--disable-auto-launch"
+            "--lowvram"
+            "--output-directory" "/run/comfyui/output"
+            "--temp-directory" "/run/comfyui/temp"
+            "--disable-metadata"
+        ];
 
         models = [
             {
@@ -27,5 +33,13 @@
                 installPaths = "text_encoders";
             }
         ];
+    };
+    systemd.services.comfyui = {
+        serviceConfig.RuntimeDirectory = "comfyui"; # /run/comfyui, deleted when the service stops
+        environment = {
+            XDG_CACHE_HOME = "/run/comfyui/cache";
+            TRITON_CACHE_DIR = "/run/comfyui/cache/triton";
+            TORCHINDUCTOR_CACHE_DIR = "/run/comfyui/cache/inductor";
+        };
     };
 }
