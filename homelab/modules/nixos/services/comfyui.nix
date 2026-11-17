@@ -1,7 +1,6 @@
 {
     services.comfyui = {
         enable = true;
-        acceleration = "cuda";
         listen = "0.0.0.0";
         port = 2003;
 
