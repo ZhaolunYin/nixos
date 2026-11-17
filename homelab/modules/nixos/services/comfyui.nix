@@ -37,7 +37,6 @@
     systemd.services.comfyui = {
         serviceConfig = {
             RuntimeDirectory = "comfyui";
-            RuntimeDirectoryMode = "0700";
             UMask = "0077";
         };
         environment = {
