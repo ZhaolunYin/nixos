@@ -17,7 +17,7 @@
             {
                 name = "qwen_image_2.1_vae_bf16.safetensors";
                 url = "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/vae/qwen_image_2.1_vae_bf16.safetensors";
-                hash = "";
+                hash = "sha256-uyH3RzBR4aw2hRXdPy4VzUTXoRdI7ogj4d3KPkh2t8k=";
                 installPaths = "vae";
             }
             {
