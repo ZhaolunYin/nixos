@@ -23,7 +23,7 @@
             {
                 name = "qwen3vl_8b_int8_convrot.safetensors";
                 url = "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3vl_8b_int8_convrot.safetensors";
-                hash = "sha256-kYKrrlb+BUWYQKhtIqvSH5cgYckvzgMmMK9oDIxReNM=";
+                hash = "sha256-i/0PbhKr8tLWl+zIiOXpCw1nQdZwjwV5n1OvpWBFLo8=";
                 installPaths = "text_encoders";
             }
         ];
