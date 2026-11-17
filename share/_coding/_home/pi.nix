@@ -26,14 +26,16 @@
                     "npm:pi-searxng",
                     "npm:pi-subagents"
                 ],
-                "llamaServerUrl": "http://192.168.1.11:2001",
                 "llamaSettings": {
+                    "servers": [
+                        {
+                            "url": "http://192.168.1.11:2001",
+                            "id": "homelab",
+                            "name": "Homelab"
+                        }
+                    ],
                     "serverTimeout": 3600000,
                     "pollingTimeout": 300000
-                },
-                "subagents": {
-                    "defaultProvider": "llama-cpp",
-                    "defaultModel": "qwen3.8-27B"
                 }
             }
         '';

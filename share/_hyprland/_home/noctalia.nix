@@ -14,7 +14,6 @@
             shell = {
                 font_family = "JetBrainsMono Nerd Font Mono";
                 polkit_agent = true;
-                telementry_enabled = false;
                 screen_time_enabled = true;
 
                 animation.speed = 0.75;
@@ -27,12 +26,9 @@
                 };
 
                 panel = {
-                    background_blur = true;
                     transparency_mode = "glass";
                     borders = true;
                     shadow = true;
-                    launcher_placement = "centered";
-                    clipboard_placement = "centered";
                     control_center_placement = "attached";
                     wallpaper_placement = "attached";
                     session_placement = "attached";
@@ -66,10 +62,7 @@
                 transition_duration = 1500;
                 edge_smoothness = 0.3;
                 directory = "~/Pictures/Wallpapers";
-                automation = {
-                    automation = true;
-                    interval_seconds = 120;
-                };
+                automation.interval_seconds = 120;
                 default = {
                     path = "~/Pictures/Wallpapers/nix-catppuccin.png";
                 };
@@ -98,14 +91,14 @@
                 ];
                 capsule_group = [
                     {
-                        fill = "surface_variant";
+                        fill = "surface_container";
                         id = "g1";
                         members = [ "active_window" "clock" ];
                         opacity = 1.0;
                         padding = 6.0;
                     }
                     {
-                        fill = "surface_variant";
+                        fill = "surface_container";
                         id = "g2";
                         members = [ "caffeine" "wallpaper" ];
                         opacity = 1.0;
@@ -113,7 +106,7 @@
                     }
 
                     {
-                        fill = "surface_variant";
+                        fill = "surface_container";
                         id = "g3";
                         members = [ "volume" "brightness" ];
                         opacity = 1.0;
@@ -121,7 +114,7 @@
                     }
 
                     {
-                        fill = "surface_variant";
+                        fill = "surface_container";
                         id = "g4";
                         members = [ "control-center" "notifications" ];
                         opacity = 1.0;
@@ -129,7 +122,7 @@
                     }
 
                     {
-                        fill = "surface_variant";
+                        fill = "surface_container";
                         id = "g5";
                         members = [ "battery" "network" ];
                         opacity = 1.0;
@@ -137,11 +130,6 @@
                     }
                 ];
             };
-
-            control_center.shortcuts = [
-                "wifi"
-                "bluetooth"
-            ];
 
             desktop_widgets = {
                 schema_version = 1;
@@ -162,11 +150,8 @@
                     cy = 226.0;
                     output = "";
                     rotation = 0.0;
-                    scale = 1.0;
                     type = "clock";
-                    settings = {
-                        background = false;
-                    };
+                    settings.background = false;
                 };
 
                 widget.desktop-widget-2 = {
@@ -174,11 +159,8 @@
                     cy = 900.0;
                     output = "";
                     rotation = 0.0;
-                    scale = 1.6000000238418579;
                     type = "audio_visualizer";
                     settings = {
-                        aspect_ratio = 2.5;
-                        bands = 32;
                         show_when_idle = true;
                         background = false;
                     };
@@ -189,9 +171,8 @@
                     cy = 321.5;
                     output = "";
                     rotation = 0.0;
-                    scale = 1.0;
                     type = "sysmon";
-                    background = false;
+                    settings.background = false;
                 };
             };
 
