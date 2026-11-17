@@ -35,11 +35,16 @@
         ];
     };
     systemd.services.comfyui = {
-        serviceConfig.RuntimeDirectory = "comfyui"; # /run/comfyui, deleted when the service stops
+        serviceConfig = {
+            RuntimeDirectory = "comfyui";
+            RuntimeDirectoryMode = "0700";
+            UMask = "0077";
+        };
         environment = {
             XDG_CACHE_HOME = "/run/comfyui/cache";
             TRITON_CACHE_DIR = "/run/comfyui/cache/triton";
             TORCHINDUCTOR_CACHE_DIR = "/run/comfyui/cache/inductor";
+            RuntimeDirectory = "comfyui";
         };
     };
 }
