@@ -14,6 +14,24 @@
                 hash = "sha256-y3QRPLA/rs15YRsB/X/WQvCqYNbwuVCGq+4hTXXqpX0=";
                 installPaths = "diffusion_models";
             }
+            {
+                name = "qwen_image_2.1_vae_bf16.safetensors";
+                url = "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/vae/qwen_image_2.1_vae_bf16.safetensors";
+                hash = "";
+                installPaths = "vae";
+            }
+            {
+                name = "qwen3vl_8b_int8_convrot.safetensors";
+                url = "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3vl_8b_int8_convrot.safetensors";
+                hash = "";
+                installPaths = "text_encoders";
+            }
+            {
+                name = "qwen3.5_9b_qwen_image_2.1_pe_t2i.int8_convrot.safetensors";
+                url = "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3.5_9b_qwen_image_2.1_pe_t2i.int8_convrot.safetensors";
+                hash = "";
+                installPaths = "text_encoders";
+            }
         ];
     };
 }
