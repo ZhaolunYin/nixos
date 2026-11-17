@@ -1,7 +1,7 @@
 {
     services.comfyui = {
         enable = true;
-        listen = "0.0.0.0";
+        listen = [ "0.0.0.0" "::" ];
         port = 2003;
 
         models = [
