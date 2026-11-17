@@ -1,6 +1,8 @@
+{ pkgs, ... }:
 {
     services.comfyui = {
         enable = true;
+        package = pkgs.pkgsCuda.comfyui;
         listen = [ "0.0.0.0" "::" ];
         port = 2003;
         extraArgs = [ "--disable-auto-launch" "--lowvram" ];
