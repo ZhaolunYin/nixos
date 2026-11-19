@@ -143,35 +143,10 @@ in
               };
             }
             {
-              id = "qwen3.8-flash-next-uncensored";
-              name = "Qwen3.8 Flash Next Uncensored";
-              input = [ "text" ];
-              reasoning = false;
-              contextWindow = 65536;
-              cost = {
-                input = 0;
-                output = 0;
-                cacheRead = 0;
-                cacheWrite = 0;
-              };
-            }
-            {
               id = "gemma-4-26B-A4B-uncensored";
               name = "gemma 4 26B A4B uncensored";
               input = [ "text" ];
               reasoning = false;
-              contextWindow = 65536;
-              cost = {
-                input = 0;
-                output = 0;
-                cacheRead = 0;
-                cacheWrite = 0;
-              };
-            }
-            {
-              id = "lfm2.5-24B-A2B-uncensored";
-              name = "LFM 2.5 24B A2B uncensored";
-              input = [ "text" ];
               contextWindow = 65536;
               cost = {
                 input = 0;

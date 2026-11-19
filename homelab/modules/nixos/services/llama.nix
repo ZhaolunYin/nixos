@@ -36,23 +36,6 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
-                "qwen3.8-flash-next-uncensored" = {
-                    hf-repo = "SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF:IQ3_XXS";
-
-                    no-mmproj = true;
-
-                    moe-cache-mib = 3072;
-                    cache-type-k = "q8_0";
-                    cache-type-v = "q8_0";
-                    ctx-size = 65536;
-
-                    temperature = 1.0;
-                    top-p = 0.95;
-                    top-k = 20;
-                    min-p = 0.0;
-                    presence-penalty = 0.0;
-                    repeat-penalty = 1.0;
-                };
                 "qwen3.6-35B-A3B" = {
                     hf-repo = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL";
 
@@ -120,19 +103,23 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
-                "lfm2.5-24B-A2B-uncensored" = {
-                    hf-repo = "abenzerps/LFM2.5-24B-A2B-Uncensored-GSQ-RCO-GGUF:IQ3_XS";
-
-                    spec-draft-hf = "abenzerps/LFM2.5-24B-A2B-Uncensored-GSQ-RCO-GGUF:Q8_0";
-                    spec-type = "draft-dspark";
-                    spec-draft-n-max = 3;
-
-                    cpu-moe = true;
+                "deepseek-v4.1-flash" = {
+                    hf-repo = "unsloth/DeepSeek-V4.1-Flash-1017-GGUF:UD-IQ1_M";
 
                     moe-cache-mib = 6144;
-                    cache-type-k = "q8_0";
-                    cache-type-v = "q8_0";
-                    ctx-size = 65536;
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
+
+                    load-mode = "mmap";
+                    lazy-mode = "on";
+                    override-tensor = "per_layer_token_embd.weight=CPU";
+
+                    no-mmproj = true;
+
+                    ctx-size = 0;
+
+                    temperature = 1.0;
+                    top-p = 1.0;
                 };
             };
         };
