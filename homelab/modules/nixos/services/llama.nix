@@ -11,6 +11,7 @@
 
             host = "0.0.0.0";
             port = 2001;
+            no-webui = true;
             threads = 8;
             parallel = 1;
 
