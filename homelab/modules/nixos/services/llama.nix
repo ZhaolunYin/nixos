@@ -1,5 +1,29 @@
 { pkgs, llama-cpp, ... }:
 {
+    nixpkgs.overlays = [
+    # Wherever you're applying the overlay from the llama-cpp flake
+        llama-cpp.overlays.default
+            (_self': super': {
+            llamaPackages = super'.llamaPackages.overrideScope (_self: super: {
+                llama-cpp = super.llama-cpp.overrideAttrs (_finalAttrs': { webui, ... }: {
+                webui = webui.overrideAttrs (_finalAttrs: _previousAttrs: {
+                    installPhase = let
+                        llamaBrand = fetchTarball {
+                            url = "https://codeload.github.com/ggml-org/llama-brand/tar.gz/f05540643c1ca2a18d732ed6491c839686da9a3a";
+                            sha256 = "sha256:1066a6x1a259yzf4gblb6fxgplw6dmrjl2zy9gw4v1avnz37d01p";
+                        };
+                    in ''
+                        chmod -R u+w .
+                        rm -rf node_modules/llama-brand
+                        cp -r ${llamaBrand} node_modules/llama-brand
+                        chmod -R u+w node_modules/llama-brand
+                        LLAMA_UI_OUT_DIR=$out npm run build --offline
+                    '';
+                    });
+                });
+         });
+             })
+    ];
     services.llama-cpp = {
         enable = true;
         package = llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda;
@@ -126,6 +150,6 @@
 
     environment.systemPackages = [
         llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
-        pkgs.python3Packages.huggingface-hub
+            pkgs.python3Packages.huggingface-hub
     ];
 }
