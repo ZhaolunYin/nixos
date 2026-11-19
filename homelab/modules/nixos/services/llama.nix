@@ -112,7 +112,6 @@
 
                     load-mode = "mmap";
                     lazy-mode = "on";
-                    override-tensor = "per_layer_token_embd.weight=CPU";
 
                     no-mmproj = true;
 
