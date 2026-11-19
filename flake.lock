@@ -408,15 +408,16 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1795116619,
-        "narHash": "sha256-kwjnskNY1e7eA+kSZP5jMit6dg4rk7DqOds7qCNNIAs=",
-        "owner": "ggml-org",
+        "lastModified": 1795120450,
+        "narHash": "sha256-QPAwyjyoMvr3UQ3D8MARXJOa7NxBbDKR68DIVXahFN4=",
+        "owner": "zhaolunyin",
         "repo": "llama.cpp",
-        "rev": "c406f4367e19bea7930e7f74e1984c9acc6d44bf",
+        "rev": "2cbb1dfd0b1a08cd922deb8fc028b54fc57db015",
         "type": "github"
       },
       "original": {
-        "owner": "ggml-org",
+        "owner": "zhaolunyin",
+        "ref": "webui-nix-fix",
         "repo": "llama.cpp",
         "type": "github"
       }
