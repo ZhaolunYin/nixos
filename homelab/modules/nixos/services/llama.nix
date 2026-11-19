@@ -1,13 +1,8 @@
 { pkgs, llama-cpp, ... }:
-let
-    llama = llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda.override {
-        useWebUi = false;
-    };
-in
 {
     services.llama-cpp = {
         enable = true;
-        package = llama;
+        package = llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda;
 
         settings = {
             device = "CUDA0";
@@ -130,7 +125,7 @@ in
     };
 
     environment.systemPackages = [
-        llama
+        llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
         pkgs.python3Packages.huggingface-hub
     ];
 }
