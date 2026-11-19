@@ -11,7 +11,7 @@
         };
         impermanence.url = "github:nix-community/impermanence";
         import-tree.url = "github:denful/import-tree";
-        llama-cpp.url = "github:ggml-org/llama.cpp";
+        llama-cpp.url = "github:zhaolunyin/llama.cpp/webui-nix-fix";
         llm-agents.url = "github:numtide/llm-agents.nix";
         minesweeper.url = "github:zhaolunyin/minesweeper-tui";
         nixpkgs.url = "nixpkgs/nixos-unstable";
