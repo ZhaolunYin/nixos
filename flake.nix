@@ -14,7 +14,6 @@
         llama-cpp.url = "github:zhaolunyin/llama.cpp/webui-nix-fix";
         llm-agents.url = "github:numtide/llm-agents.nix";
         minesweeper.url = "github:zhaolunyin/minesweeper-tui";
-        nixos-hardware.url = "github:NixOS/nixos-hardware";
         nixpkgs.url = "nixpkgs/nixos-unstable";
         nixpkgs-23_11.url = "nixpkgs/nixos-23.11";
         nixvim.url = "github:nix-community/nixvim";
@@ -39,7 +38,6 @@
     llama-cpp,
     llm-agents,
     minesweeper,
-    nixos-hardware,
     nixpkgs,
     nixpkgs-23_11,
     nixvim,
@@ -231,7 +229,6 @@
                     (import-tree ./rpi)
                     (import-tree ./share)
                     home-manager.nixosModules.home-manager
-                    nixos-hardware.nixosModules.raspberry-pi-4
                     nur.modules.nixos.default
                     {
                         home-manager = {
