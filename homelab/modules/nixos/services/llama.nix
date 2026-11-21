@@ -103,6 +103,16 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
+                "Inkling-2-Mini" = {
+                    hf-repo = "unsloth/Inkling-2-Mini-GGUF:UD-Q4_K_M";
+
+                    no-mmproj = true;
+
+                    moe-cache-mib = 3072;
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
+                    ctx-size = 524288;
+                };
                 "deepseek-v4.1-flash" = {
                     hf-repo = "unsloth/DeepSeek-V4.1-Flash-1017-GGUF:UD-IQ1_M";
 
