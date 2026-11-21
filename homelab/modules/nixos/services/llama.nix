@@ -103,7 +103,7 @@
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
                 };
-                "Inkling-2-Mini" = {
+                "inkling-2-mini" = {
                     hf-repo = "unsloth/Inkling-2-Mini-GGUF:UD-Q4_K_M";
 
                     no-mmproj = true;
