@@ -130,6 +130,7 @@
                                     nixvim.homeModules.nixvim
                                     (import-tree ./share/_home)
                                     (import-tree ./share/_coding/_home)
+                                    (import-tree ./share/_gui/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
@@ -156,6 +157,7 @@
                                     plasma-manager.homeModules.plasma-manager
                                     (import-tree ./projector/modules/_home)
                                     (import-tree ./share/_home)
+                                    (import-tree ./share/_gui/_home)
                                 ];
                                 home.stateVersion = "26.05";
                             };
