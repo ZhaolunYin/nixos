@@ -109,7 +109,7 @@
                     moe-cache-mib = 3072;
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
-                    ctx-size = 262144;
+                    ctx-size = 131072;
                 };
                 "deepseek-v4.1-flash" = {
                     hf-repo = "unsloth/DeepSeek-V4.1-Flash-1017-GGUF:UD-IQ1_M";
