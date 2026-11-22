@@ -73,6 +73,24 @@
                     top-k = 45;
                     repeat-penalty = 1.0;
                 };
+                "qwen3.5-2B" = {
+                    hf-repo = "unsloth/Qwen3.5-2B-GGUF:UD-Q4_K_XL";
+
+                    cache-type-k = "q4_0";
+                    cache-type-v = "q4_0";
+
+                    no-mmproj = true;
+
+                    ctx-size = 131072;
+                    parallel = 8;
+
+                    temperature = 0.6;
+                    top-p = 0.95;
+                    top-k = 20;
+                    min-p = 0.0;
+                    presence-penalty = 0.0;
+                    repeat-penalty = 1.0;
+                };
                 "qwen3.8-27B" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q2_K_XL";
 
