@@ -24,7 +24,8 @@
 
                     no-mmproj = true;
 
-                    moe-cache-mib = 3072;
+                    cpu-moe = true;
+                    moe-cache-mib = 4736;
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
                     ctx-size = 131072;
@@ -72,20 +73,6 @@
                     top-k = 45;
                     repeat-penalty = 1.0;
                 };
-                "gemma-4-E4B" = {
-                    hf-repo = "unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL";
-
-                    spec-type = "draft-mtp";
-                    spec-draft-n-max = 4;
-
-                    cache-type-k = "f16";
-                    cache-type-v = "f16";
-                    ctx-size = 0;
-
-                    temperature = 1.0;
-                    top-p = 0.95;
-                    top-k = 64;
-                };
                 "qwen3.8-27B" = {
                     hf-repo = "unsloth/Qwen3.8-27B-GGUF:UD-Q2_K_XL";
 
@@ -102,14 +89,6 @@
                     min-p = 0.0;
                     presence-penalty = 0.0;
                     repeat-penalty = 1.0;
-                };
-                "inkling-2-mini" = {
-                    hf-repo = "ggml-org/Inkling-2-Mini-GGUF:IQ4_NL";
-
-                    moe-cache-mib = 3072;
-                    cache-type-k = "q4_0";
-                    cache-type-v = "q4_0";
-                    ctx-size = 65536;
                 };
                 "deepseek-v4.1-flash" = {
                     hf-repo = "unsloth/DeepSeek-V4.1-Flash-1017-GGUF:UD-IQ1_M";
