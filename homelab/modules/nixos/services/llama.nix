@@ -25,7 +25,7 @@
                     no-mmproj = true;
 
                     cpu-moe = true;
-                    moe-cache-mib = 4736;
+                    moe-cache-mib = 3072;
                     cache-type-k = "q4_0";
                     cache-type-v = "q4_0";
                     ctx-size = 131072;
