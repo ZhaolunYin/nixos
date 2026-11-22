@@ -104,9 +104,7 @@
                     repeat-penalty = 1.0;
                 };
                 "inkling-2-mini" = {
-                    hf-repo = "unsloth/Inkling-2-Mini-GGUF:UD-Q4_K_M";
-
-                    no-mmproj = true;
+                    hf-repo = "ggml-org/Inkling-2-Mini-GGUF:IQ4_NL";
 
                     moe-cache-mib = 3072;
                     cache-type-k = "q4_0";
