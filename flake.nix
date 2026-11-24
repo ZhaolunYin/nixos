@@ -225,18 +225,5 @@
                     }
                 ];
             };
-            nixosConfigurations.rpi2 = nixpkgs.lib.nixosSystem {
-                system = "aarch64-linux";
-                modules = [
-                    (import-tree ./rpi)
-                    (import-tree ./share)
-<<<<<<< Updated upstream
-                    home-manager.nixosModules.home-manager
-=======
-                    nixos-hardware.nixosModules.raspberry-pi-4
->>>>>>> Stashed changes
-                    nur.modules.nixos.default
-                ];
-            };
         };
 }
