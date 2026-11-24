@@ -230,22 +230,12 @@
                 modules = [
                     (import-tree ./rpi)
                     (import-tree ./share)
+<<<<<<< Updated upstream
                     home-manager.nixosModules.home-manager
+=======
+                    nixos-hardware.nixosModules.raspberry-pi-4
+>>>>>>> Stashed changes
                     nur.modules.nixos.default
-                    {
-                        home-manager = {
-                            useGlobalPkgs = true;
-                            useUserPackages = true;
-                            users.admin = {
-                                imports = [
-                                    catppuccin.homeModules.catppuccin
-                                    (import-tree ./share/_home)
-                                ];
-                                home.stateVersion = "26.05";
-                            };
-                            backupFileExtension = "hm-backup";
-                        };
-                    }
                 ];
             };
         };

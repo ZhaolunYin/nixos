@@ -24,8 +24,7 @@
         extraGroups = [ "wheel" "networkmanager" ];
         hashedPassword = "$y$j9T$Cur1cOb.2uQWpyl4zQrYZ/$28ebqpkeYmFAI4eHXDIkmt/gNnvIzTyYIJUbdCqIYq6";
         packages = with pkgs; [
-            btop
-            firefox
+            pass
         ];
     };
     users.users.yxk = {
