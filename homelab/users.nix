@@ -21,7 +21,7 @@
 
     users.users.lab = {
         isNormalUser = true;
-        extraGroups = [ "wheel" "networkmanager" ];
+        extraGroups = [ "wheel" "networkmanager" "libvirtd" ];
         hashedPassword = "$y$j9T$Cur1cOb.2uQWpyl4zQrYZ/$28ebqpkeYmFAI4eHXDIkmt/gNnvIzTyYIJUbdCqIYq6";
         packages = with pkgs; [
             pass

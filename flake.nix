@@ -77,6 +77,7 @@
                                     (import-tree ./thinkpad/modules/_home)
                                     (import-tree ./share/_home)
                                     (import-tree ./share/_coding/_home)
+                                    (import-tree ./share/_gui/_home)
                                     (import-tree ./share/_hyprland/_home)
                                 ];
                                 home.stateVersion = "26.05";

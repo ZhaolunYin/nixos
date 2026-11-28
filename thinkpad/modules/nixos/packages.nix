@@ -6,6 +6,7 @@
     programs.firefox.enable = true;
     programs.nix-ld.enable = true;
     programs.steam.enable = true;
+    programs.virt-manager.enable = true;
     programs.zsh.enable = true;  
 
     services.upower.enable = true;
